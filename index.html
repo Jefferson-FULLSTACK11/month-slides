@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumen de Desarrollo Junio 2026 — Servimax</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sv-primary:   #d82053; /* magenta — marca, revenue, headings */
+      --sv-secondary: #15ba59; /* verde — positivo, operación */
+      --sv-accent:    #9ace43; /* verde lima — acento cliente */
+      --sv-teal:      #0e9488; /* verde azulado — variedad sin usar azul */
+      --sv-forest:    #0b6e3d; /* verde oscuro — infra / slides dark */
+      --sv-bg:        #f3f5ef;
+      --sv-text:      #1e2a24;
+    }
+    body { font-family: 'Manrope', sans-serif; background: var(--sv-bg); color: var(--sv-text); }
+    .slide { page-break-after: always; margin-bottom: 40px; }
+
+    .accent-primary { border-top: 4px solid var(--sv-primary); }
+    .accent-green   { border-top: 4px solid var(--sv-secondary); }
+    .accent-lime    { border-top: 4px solid var(--sv-accent); }
+    .accent-teal    { border-top: 4px solid var(--sv-teal); }
+    .accent-forest  { border-top: 4px solid var(--sv-forest); }
+
+    .tag { display:inline-flex;align-items:center;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.3px }
+    .tag-primary { background:color-mix(in srgb, var(--sv-primary) 14%, white);color:var(--sv-primary) }
+    .tag-green   { background:color-mix(in srgb, var(--sv-secondary) 16%, white);color:#0a7d3b }
+    .tag-lime    { background:color-mix(in srgb, var(--sv-accent) 24%, white);color:#4c6b1f }
+    .tag-teal    { background:color-mix(in srgb, var(--sv-teal) 16%, white);color:var(--sv-teal) }
+    .tag-prod    { background:#e3f7e9;color:#0a7d3b;border:1px solid #b8ebc7 }
+    .tag-progress{ background:#eaf3ff11;background:color-mix(in srgb, var(--sv-teal) 14%, white);color:var(--sv-teal);border:1px solid color-mix(in srgb, var(--sv-teal) 35%, white) }
+    .tag-roadmap { background:color-mix(in srgb, var(--sv-primary) 10%, white);color:var(--sv-primary);border:1px solid color-mix(in srgb, var(--sv-primary) 30%, white) }
+
+    .pill { display:inline-flex;align-items:center;gap:5px;padding:3px 12px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase }
+    .pill-primary { background:var(--sv-primary);color:#fff }
+    .pill-green   { background:var(--sv-secondary);color:#fff }
+    .pill-lime    { background:var(--sv-accent);color:#2b3a13 }
+    .pill-teal    { background:var(--sv-teal);color:#fff }
+    .pill-forest  { background:var(--sv-forest);color:#fff }
+    .pill-month   { background:var(--sv-text);color:var(--sv-accent) }
+
+    .feat-row { display:flex;align-items:flex-start;gap:10px;padding:9px 12px;border-radius:10px;background:#f8faf6;border:1px solid #e4e9dd }
+    .feat-ico  { width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px }
+
+    .impact { padding:12px 16px;border-radius:12px;border-left:4px solid }
+    .impact-primary { background:color-mix(in srgb, var(--sv-primary) 6%, white);border-color:var(--sv-primary) }
+    .impact-green   { background:color-mix(in srgb, var(--sv-secondary) 8%, white);border-color:var(--sv-secondary) }
+    .impact-teal    { background:color-mix(in srgb, var(--sv-teal) 8%, white);border-color:var(--sv-teal) }
+    .impact-lime    { background:color-mix(in srgb, var(--sv-accent) 12%, white);border-color:var(--sv-accent) }
+    .impact-forest  { background:color-mix(in srgb, var(--sv-forest) 8%, white);border-color:var(--sv-forest) }
+
+    .kpi-num { font-size:48px;font-weight:800;line-height:1;letter-spacing:-2px }
+    .kpi-sm  { font-size:36px;font-weight:800;line-height:1;letter-spacing:-1px }
+
+    .cbar { height:8px;border-radius:4px }
+
+    .sec-lbl { font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#8a9a89;margin-bottom:10px;display:flex;align-items:center;gap:8px }
+    .sec-lbl::after { content:'';flex:1;height:1px;background:#e4e9dd }
+
+    .brand-mark { font-weight:800; letter-spacing:-0.02em; }
+    .brand-mark .dot { color: var(--sv-accent); }
+
+    .slide-logo-bar {
+      display:flex; align-items:center; justify-content:flex-end; gap:10px;
+      margin-top:14px; padding-top:10px; border-top:1px solid #eef1ea;
+      font-size:11px; color:#9aa89a; font-weight:600;
+    }
+
+    .dev-link {
+      display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:99px;
+      text-decoration:none;font-size:10px;font-weight:700;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 0 — INTRODUCCIÓN
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto rounded-3xl shadow-xl overflow-hidden"
+       style="background:linear-gradient(145deg,#0f1f16 0%,#16281c 60%,#0f1f16 100%)">
+    <div class="h-1.5 w-full" style="background:linear-gradient(90deg,var(--sv-primary),var(--sv-secondary),var(--sv-accent),var(--sv-teal))"></div>
+    <div class="p-10">
+
+      <div class="flex items-center gap-3 mb-10">
+        <span class="brand-mark text-white" style="font-size:22px">SERVIMAX<span class="dot">.</span></span>
+        <div style="width:1px;height:24px;background:#334236"></div>
+        <span style="color:#8fb99a;font-size:12px;font-weight:600;letter-spacing:.05em">Equipo de Ingeniería</span>
+      </div>
+
+      <div class="mb-2">
+        <span class="pill pill-month" style="font-size:13px">Junio 2026</span>
+      </div>
+      <h1 class="font-black leading-tight mb-4" style="font-size:2.8rem;color:#f4f9f4">
+        Esto es lo que construimos<br>en <span style="color:var(--sv-accent)">junio</span>
+      </h1>
+      <p style="color:#a9c2ac;font-size:1.05rem;max-width:580px;line-height:1.65" class="mb-10">
+        Un mes de motores parametrizables llegando a producción, una segmentación geográfica real para Pedidos Express, abastecimiento con inteligencia estadística por proveedor, y una migración completa de infraestructura en la nube.
+      </p>
+
+      <div class="grid grid-cols-2 gap-3">
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:12px 16px">
+          <div style="color:var(--sv-accent);font-size:11px;font-weight:800;letter-spacing:.05em;margin-bottom:8px">FRENTES DE DESARROLLO</div>
+          <div class="space-y-1.5">
+            <div style="color:#cfe0d1;font-size:12px">💰 Cashback y Premios &amp; Misiones parametrizables</div>
+            <div style="color:#cfe0d1;font-size:12px">🗺️ Pedidos Express — cobertura por localidad/barrio</div>
+            <div style="color:#cfe0d1;font-size:12px">📦 Abastecimiento — motor estadístico multiproveedor</div>
+            <div style="color:#cfe0d1;font-size:12px">🚚 Migración del Bot de Abonos a Django</div>
+            <div style="color:#cfe0d1;font-size:12px">🐛 Investigación y estabilidad de plataforma</div>
+          </div>
+        </div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:12px 16px">
+          <div style="color:var(--sv-accent);font-size:11px;font-weight:800;letter-spacing:.05em;margin-bottom:8px">MÁS EN ESTA SESIÓN</div>
+          <div class="space-y-1.5">
+            <div style="color:#cfe0d1;font-size:12px">☁️ Migración de infraestructura en la nube</div>
+            <div style="color:#cfe0d1;font-size:12px">🎓 Aprendizaje del equipo — Terraform, Obsidian</div>
+            <div style="color:#cfe0d1;font-size:12px">📊 El mes en números — ritmo y contribuciones</div>
+            <div style="color:#cfe0d1;font-size:12px">🚀 Roadmap Julio — lo que ya arrancó</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:32px;padding-top:16px;border-top:1px solid #1c2b20;display:flex;align-items:center;justify-content:space-between">
+        <div style="color:#5b7362;font-size:11px">Equipo de Ingeniería · Servimax</div>
+        <div style="color:#5b7362;font-size:11px">Junio 2026</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 1 — PORTADA JUNIO 2026
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
+    <div class="h-1.5 w-full" style="background:linear-gradient(90deg,var(--sv-primary),var(--sv-secondary),var(--sv-accent),var(--sv-teal))"></div>
+    <div class="p-10">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="pill pill-month">Junio · 2026</span>
+        <span class="text-sm text-slate-400 font-medium">Equipo de Ingeniería · Servimax</span>
+      </div>
+      <h1 class="text-5xl font-black leading-tight mb-3" style="color:var(--sv-text)">
+        Resumen de <span style="color:var(--sv-primary)">Desarrollo</span><br>Junio 2026
+      </h1>
+      <p class="text-slate-500 text-lg mb-10 max-w-2xl">
+        Los motores parametrizables (Cashback, Premios) se afinaron con datos reales, Pedidos Express avanzó a code review con cobertura geográfica real, y Abastecimiento sumó inteligencia estadística por proveedor — todo sobre una infraestructura en la nube recién consolidada.
+      </p>
+
+      <div class="grid grid-cols-2 gap-5 mb-8">
+        <div class="rounded-2xl p-5 accent-primary" style="background:color-mix(in srgb, var(--sv-primary) 6%, white)">
+          <div class="kpi-num" style="color:var(--sv-primary)">422</div>
+          <div class="text-sm font-600 text-slate-600 mt-1">Cambios al código</div>
+          <div class="text-xs text-slate-400">225 backend · 197 frontend</div>
+        </div>
+        <div class="rounded-2xl p-5 accent-green" style="background:color-mix(in srgb, var(--sv-secondary) 8%, white)">
+          <div class="kpi-num" style="color:var(--sv-secondary)">33</div>
+          <div class="text-sm font-600 text-slate-600 mt-1">Tareas Jira con movimiento</div>
+          <div class="text-xs text-slate-400">Historias, bugs y estudios técnicos</div>
+        </div>
+      </div>
+
+      <div class="mb-8">
+        <div class="sec-lbl">Hitos del mes — qué cambió en Junio</div>
+        <div class="grid grid-cols-3 gap-4">
+          <div class="rounded-2xl p-4" style="background:color-mix(in srgb, var(--sv-primary) 5%, white);border:2px solid color-mix(in srgb, var(--sv-primary) 20%, white)">
+            <div class="flex items-center gap-2 mb-3"><span class="pill pill-primary text-xs">Cashback &amp; Premios</span><span class="tag tag-prod">Producción</span></div>
+            <div class="text-xs text-slate-600 space-y-1">
+              <div>💳 Términos y condiciones dinámicos por campaña</div>
+              <div>👥 Beneficiarios remodelados en una sola tabla</div>
+              <div>🏪 Explorador con catálogo real y precios exactos</div>
+              <div>🏆 Liquidación secuencial de retos en Premios</div>
+            </div>
+          </div>
+          <div class="rounded-2xl p-4" style="background:color-mix(in srgb, var(--sv-secondary) 6%, white);border:2px solid color-mix(in srgb, var(--sv-secondary) 22%, white)">
+            <div class="flex items-center gap-2 mb-3"><span class="pill pill-green text-xs">Pedidos Express</span><span class="tag tag-progress">Code Review</span></div>
+            <div class="text-xs text-slate-600 space-y-1">
+              <div>🗺️ Cobertura localidad → barrio → cliente</div>
+              <div>🔷 Polígonos cóncavos fieles al territorio real</div>
+              <div>📊 Funnel de activación con datos reales</div>
+              <div>⏱️ Horas de corte de facturación (Cristian)</div>
+            </div>
+          </div>
+          <div class="rounded-2xl p-4" style="background:color-mix(in srgb, var(--sv-teal) 6%, white);border:2px solid color-mix(in srgb, var(--sv-teal) 22%, white)">
+            <div class="flex items-center gap-2 mb-3"><span class="pill pill-teal text-xs">Abastecimiento</span><span class="tag tag-prod">Producción</span></div>
+            <div class="text-xs text-slate-600 space-y-1">
+              <div>📈 Motor estadístico — Stock de Seguridad y ROP</div>
+              <div>🗂️ Maestro de Productos SUPER (fuente de verdad)</div>
+              <div>⚙️ Calibración por proveedor (POLAR/SUPER/SULICOR/FAMILIA)</div>
+              <div>💰 Simulación de impacto — SUPER −47% en costo/ciclo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec-lbl">Equipo de Ingeniería</div>
+      <div class="grid grid-cols-4 gap-6">
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold text-lg" style="background:var(--sv-primary)">JC</div>
+          <div class="text-sm font-700 text-slate-800">Jeferson Camero</div>
+          <div class="text-xs text-slate-400">Lead — Full-stack &amp; Arquitectura</div>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold text-lg" style="background:var(--sv-secondary)">CB</div>
+          <div class="text-sm font-700 text-slate-800">Cristian Becerra</div>
+          <div class="text-xs text-slate-400">Investigación &amp; Pedidos Express</div>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2 font-bold text-lg" style="background:var(--sv-accent);color:#2b3a13">MA</div>
+          <div class="text-sm font-700 text-slate-800">Miguel Aguirre</div>
+          <div class="text-xs text-slate-400">Bots &amp; Portal de Despacho</div>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold text-lg" style="background:var(--sv-teal)">WP</div>
+          <div class="text-sm font-700 text-slate-800">William Pavón</div>
+          <div class="text-xs text-slate-400">Infraestructura &amp; Portal Soporte</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 2 — Cashback & Premios y Misiones
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-primary">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-6">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="pill pill-month">Junio 2026</span>
+            <span class="tag tag-prod">✓ Producción</span>
+          </div>
+          <span class="pill pill-primary mb-3 inline-block">💰 Cashback &amp; Premios</span>
+          <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
+            El motor de incentivos ya corre<br>con datos reales de punta a punta
+          </h2>
+          <p class="text-slate-500 mt-2">Catálogo real del app · Beneficiarios remodelados · Términos y condiciones por campaña</p>
+        </div>
+        <div class="flex flex-col items-end gap-2">
+          <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-primary)">01</div>
+          <a href="https://app.servimaxyco.com/cashback" target="_blank" class="dev-link" style="background:color-mix(in srgb, var(--sv-primary) 10%, white);color:var(--sv-primary);border:1px solid color-mix(in srgb, var(--sv-primary) 30%, white)">
+            <i class="fas fa-arrow-up-right-from-square" style="font-size:9px"></i>/cashback
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-5 mb-5">
+        <div class="rounded-2xl p-5 space-y-3" style="background:color-mix(in srgb, var(--sv-primary) 5%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 18%, white)">
+          <div class="flex items-center gap-2 mb-1">
+            <div style="width:36px;height:36px;border-radius:9px;background:var(--sv-primary);display:flex;align-items:center;justify-content:center"><i class="fas fa-store" style="color:#fff;font-size:14px"></i></div>
+            <div><div class="text-sm font-800 text-slate-800 leading-tight">Catálogo y precios reales</div><div class="text-xs text-slate-400 leading-tight">Explorador de casa/marca</div></div>
+          </div>
+          <div class="text-xs text-slate-600 leading-relaxed">
+            El explorador muestra <strong>todos los productos activos de la casa</strong> con precio exacto del app y ventas reales — ya no hay huérfanos ni conteos inflados por dimensiones sin normalizar.
+          </div>
+        </div>
+        <div class="rounded-2xl p-5 space-y-3" style="background:color-mix(in srgb, var(--sv-primary) 5%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 18%, white)">
+          <div class="flex items-center gap-2 mb-1">
+            <div style="width:36px;height:36px;border-radius:9px;background:var(--sv-primary);display:flex;align-items:center;justify-content:center"><i class="fas fa-users" style="color:#fff;font-size:14px"></i></div>
+            <div><div class="text-sm font-800 text-slate-800 leading-tight">Beneficiarios en una tabla</div><div class="text-xs text-slate-400 leading-tight">Antes eran 3 tablas separadas</div></div>
+          </div>
+          <div class="text-xs text-slate-600 leading-relaxed">
+            El panel de beneficiarios se unificó en <strong>una sola vista por cédula</strong>, filtra por audiencia real de la regla y excluye pedidos cancelados — no solo carritos descartados.
+          </div>
+        </div>
+        <div class="rounded-2xl p-5 space-y-3" style="background:color-mix(in srgb, var(--sv-primary) 5%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 18%, white)">
+          <div class="flex items-center gap-2 mb-1">
+            <div style="width:36px;height:36px;border-radius:9px;background:var(--sv-primary);display:flex;align-items:center;justify-content:center"><i class="fas fa-file-contract" style="color:#fff;font-size:14px"></i></div>
+            <div><div class="text-sm font-800 text-slate-800 leading-tight">Términos y condiciones</div><div class="text-xs text-slate-400 leading-tight">Cashback paso 7 · Premios paso 4</div></div>
+          </div>
+          <div class="text-xs text-slate-600 leading-relaxed">
+            Cada campaña genera su propia página pública de T&amp;C — el ciclo de vida (publicar/pausar/archivar) queda atado a la campaña, sin depender de un documento estático.
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 mb-5">
+        <div class="feat-row">
+          <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-trophy" style="color:var(--sv-secondary)"></i></div>
+          <div><div class="text-sm font-700 text-slate-800">Premios — liquidación secuencial</div><div class="text-xs text-slate-500">Retos con desbloqueo parametrizable (requires_previous) + panel de ganadores por audiencia y referencia</div></div>
+        </div>
+        <div class="feat-row">
+          <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-magnifying-glass-dollar" style="color:var(--sv-secondary)"></i></div>
+          <div><div class="text-sm font-700 text-slate-800">Proyección y overrides de casa</div><div class="text-xs text-slate-500">Motor de alcance/afinidad/costo + override para excluir marcas específicas por casa</div></div>
+        </div>
+      </div>
+
+      <div class="impact impact-primary">
+        <span class="font-800" style="color:var(--sv-primary)">💰 Impacto — </span>
+        <span class="text-sm" style="color:#5c1030">El motor de Cashback y Premios pasó de datos aproximados a datos exactos del catálogo real. El equipo comercial ve beneficiarios reales sin duplicados, y cada campaña tiene sus propios términos y condiciones publicables al instante.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 3 — Pedidos Express
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-green">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-6">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="pill pill-month">Junio 2026</span>
+            <span class="tag tag-progress">🔵 Code Review</span>
+          </div>
+          <span class="pill pill-green mb-3 inline-block">🗺️ Pedidos Express</span>
+          <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
+            Cobertura geográfica real, lista<br>para encender por zonas
+          </h2>
+          <p class="text-slate-500 mt-2">Localidad → barrio → cliente · Polígonos fieles al territorio · Activación parametrizable</p>
+        </div>
+        <div class="flex flex-col items-end gap-2">
+          <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-secondary)">02</div>
+          <a href="https://app.servimaxyco.com/pedidos-express" target="_blank" class="dev-link" style="background:color-mix(in srgb, var(--sv-secondary) 10%, white);color:#0a7d3b;border:1px solid color-mix(in srgb, var(--sv-secondary) 30%, white)">
+            <i class="fas fa-arrow-up-right-from-square" style="font-size:9px"></i>/pedidos-express
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-6">
+        <div class="space-y-3">
+          <div class="sec-lbl">Lo que ve el equipo comercial</div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-draw-polygon" style="color:var(--sv-secondary)"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Polígonos cóncavos, no rectángulos</div><div class="text-xs text-slate-500">La cobertura de cada localidad/barrio sigue la forma real del territorio, robusta a outliers</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-layer-group" style="color:var(--sv-secondary)"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Drill localidad → barrio → cliente</div><div class="text-xs text-slate-500">Partición de grilla compartida sin solapes, con panel rico y skeletons de carga</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-chart-funnel" style="color:var(--sv-secondary)"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Funnel de activación con datos reales</div><div class="text-xs text-slate-500">Fiel al diseño aprobado — sistema de componentes propio (xf-*)</div></div>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div class="sec-lbl">Investigación operativa (Cristian)</div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-clock" style="color:var(--sv-primary)"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Horas de corte de facturación</div><div class="text-xs text-slate-500">SRV-138 · estrategia de 2 planillas de app para evitar mensajes rechazados por validación</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-location-dot" style="color:var(--sv-primary)"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Comercios con GEO corregido</div><div class="text-xs text-slate-500">SRV-137 · creación de comercios por data normalizada — corrige rechazos por coordenadas</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-toggle-on" style="color:var(--sv-primary)"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Activación por localidad, en QA</div><div class="text-xs text-slate-500">SRV-147 · segmentación PARAMETRIZABLE de Pedidos Express — último paso antes de encender</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact impact-green mt-5">
+        <span class="font-800" style="color:#0a7d3b">🗺️ Impacto — </span>
+        <span class="text-sm" style="color:#0a5c2c">La cobertura geográfica dejó de ser una aproximación y ahora refleja el territorio real, con drill hasta cliente. Con la activación paramétrica en QA (SRV-147) y las horas de corte resueltas, Pedidos Express queda a un paso de encenderse por zona.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 4 — Abastecimiento / Supply
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-teal">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-6">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="pill pill-month">Junio 2026</span>
+            <span class="tag tag-prod">✓ Producción</span>
+          </div>
+          <span class="pill pill-teal mb-3 inline-block">📦 Abastecimiento</span>
+          <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
+            Un motor estadístico que decide<br>cuánto pedir, por proveedor
+          </h2>
+          <p class="text-slate-500 mt-2">Stock de Seguridad &amp; Punto de Reorden · Maestro de Productos SUPER · Calibración por proveedor</p>
+        </div>
+        <div class="flex flex-col items-end gap-2">
+          <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-teal)">03</div>
+          <a href="https://app.servimaxyco.com/abastecimiento/super/maestro" target="_blank" class="dev-link" style="background:color-mix(in srgb, var(--sv-teal) 10%, white);color:var(--sv-teal);border:1px solid color-mix(in srgb, var(--sv-teal) 30%, white)">
+            <i class="fas fa-arrow-up-right-from-square" style="font-size:9px"></i>/abastecimiento/super/maestro
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-6 mb-5">
+        <div class="space-y-3">
+          <div class="sec-lbl">Motor estadístico (POLAR primero)</div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-teal) 12%, white)"><i class="fas fa-shield-halved" style="color:var(--sv-teal)"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Stock de Seguridad + Punto de Reorden</div><div class="text-xs text-slate-500">Fórmula estadística por nivel de servicio, calibrable por proveedor</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-teal) 12%, white)"><i class="fas fa-cart-shopping" style="color:var(--sv-teal)"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Demanda desde pedidos, no solo facturado</div><div class="text-xs text-slate-500">Corrige un sesgo de ~28% que subestimaba lo realmente pedido</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-teal) 12%, white)"><i class="fas fa-gauge" style="color:var(--sv-teal)"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Semáforo de ESTADO por SKU</div><div class="text-xs text-slate-500">6 estados visuales — el sugerido nunca lo decide el SS, solo lo alimenta</div></div>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div class="sec-lbl">Maestro de Productos SUPER</div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-database" style="color:var(--sv-primary)"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Fuente de verdad override-curada</div><div class="text-xs text-slate-500">Resuelve los "activos fantasma" que inflaban el pedido sugerido</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-sliders" style="color:var(--sv-primary)"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Editores de parámetros por proveedor</div><div class="text-xs text-slate-500">POLAR, SUPER, SULICOR y FAMILIA calibrados por separado — ya no comparten fila</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-file-invoice-dollar" style="color:var(--sv-primary)"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Página Cierre de Ventas (contable)</div><div class="text-xs text-slate-500">Descarga XLSX directa desde Ábaco para el cierre mensual</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact impact-teal">
+        <span class="font-800" style="color:var(--sv-teal)">📦 Impacto — </span>
+        <span class="text-sm" style="color:#0a5750">El motor de abastecimiento dejó de pedir "a ojo": cada proveedor tiene su propia calibración estadística. La simulación de impacto en SUPER muestra <strong>−47% en costo por ciclo</strong> ($22.9M → $12.1M) al depurar el Maestro de Productos.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 5 — Bot de Abonos (Miguel Aguirre)
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-lime">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-6">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="pill pill-month">Junio 2026</span>
+            <span class="tag tag-prod">✓ Migración activa</span>
+          </div>
+          <span class="pill pill-lime mb-3 inline-block">🚚 Bot de Abonos</span>
+          <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
+            El Bot de Abonos deja atrás FastAPI<br>y llega a la arquitectura Django
+          </h2>
+          <p class="text-slate-500 mt-2">Miguel Aguirre · SRV-146 · Migración para la temporada refrigerados Jul-Dic</p>
+        </div>
+        <div class="flex flex-col items-end gap-2">
+          <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-accent)">04</div>
+          <a href="https://app.servimaxyco.com/operations/bots/refrigerated-abonos" target="_blank" class="dev-link" style="background:color-mix(in srgb, var(--sv-accent) 22%, white);color:#4c6b1f;border:1px solid color-mix(in srgb, var(--sv-accent) 45%, white)">
+            <i class="fas fa-arrow-up-right-from-square" style="font-size:9px"></i>/refrigerated-abonos
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-6">
+        <div class="space-y-3">
+          <div class="sec-lbl">Lo que ya migró</div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-accent) 22%, white)"><i class="fas fa-magnifying-glass-dollar" style="color:#4c6b1f"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Consulta de abonos dinámicos y estáticos</div><div class="text-xs text-slate-500">Misma lógica del bot original, ahora sobre la base Django</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-accent) 22%, white)"><i class="fas fa-file-lines" style="color:#4c6b1f"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Creación de planilla de abonos</div><div class="text-xs text-slate-500">Endpoint dedicado, patrón alineado al de Cambios</div></div>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div class="sec-lbl">Lo que queda para julio</div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:#f8faf6"><i class="fas fa-file-pdf" style="color:#94a89a"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Exportación a PDF de abonos y planillas</div><div class="text-xs text-slate-500">Lógica creada, pendiente de terminar — la consulta no devuelve aún el dato completo</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:#f8faf6"><i class="fas fa-bug" style="color:#94a89a"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">SRV-151 — imágenes de producto</div><div class="text-xs text-slate-500">Bug de permanencia de imagen en curso, en paralelo a la migración</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact impact-lime mt-5">
+        <span class="font-800" style="color:#4c6b1f">🚚 Impacto — </span>
+        <span class="text-sm" style="color:#3a5417">La migración garantiza continuidad operativa del Bot de Abonos justo antes de la temporada alta refrigerados (Jul-Dic), sin cambiar la experiencia del asesor mientras el backend se estandariza sobre Django.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 6 — Investigación & Estabilidad
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-primary">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-6">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="pill pill-month">Junio 2026</span>
+            <span class="tag tag-prod">✓ Resuelto</span>
+          </div>
+          <span class="pill pill-primary mb-3 inline-block">🐛 Investigación &amp; Estabilidad</span>
+          <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
+            Bugs que se investigaron a fondo,<br>no solo se parcharon
+          </h2>
+          <p class="text-slate-500 mt-2">Conexiones de Users · Comercios con GEO real · Datos limpios en la maestra</p>
+        </div>
+        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-primary)">05</div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4">
+        <div class="rounded-2xl p-4" style="background:#f8faf6;border:1px solid #e4e9dd">
+          <div class="flex items-center gap-2 mb-2">
+            <div style="width:30px;height:30px;border-radius:8px;background:var(--sv-secondary);display:flex;align-items:center;justify-content:center"><i class="fas fa-plug-circle-exclamation" style="color:#fff;font-size:12px"></i></div>
+            <div class="text-xs font-800 text-slate-800">SRV-101 · Cristian</div>
+          </div>
+          <div class="text-sm font-700 text-slate-800 mb-1">Conexiones del módulo Users</div>
+          <div class="text-xs text-slate-600 leading-relaxed">Investigación de un problema que cerraba conexiones y afectaba a otros servicios en cadena — resuelto en junio.</div>
+        </div>
+        <div class="rounded-2xl p-4" style="background:#f8faf6;border:1px solid #e4e9dd">
+          <div class="flex items-center gap-2 mb-2">
+            <div style="width:30px;height:30px;border-radius:8px;background:var(--sv-teal);display:flex;align-items:center;justify-content:center"><i class="fas fa-map-location-dot" style="color:#fff;font-size:12px"></i></div>
+            <div class="text-xs font-800 text-slate-800">SRV-137 · Cristian</div>
+          </div>
+          <div class="text-sm font-700 text-slate-800 mb-1">GEO de comercios rechazados</div>
+          <div class="text-xs text-slate-600 leading-relaxed">Creación de comercios normalizada — dejaron de rechazarse por coordenadas mal geocodificadas.</div>
+        </div>
+        <div class="rounded-2xl p-4" style="background:#f8faf6;border:1px solid #e4e9dd">
+          <div class="flex items-center gap-2 mb-2">
+            <div style="width:30px;height:30px;border-radius:8px;background:var(--sv-primary);display:flex;align-items:center;justify-content:center"><i class="fas fa-location-crosshairs" style="color:#fff;font-size:12px"></i></div>
+            <div class="text-xs font-800 text-slate-800">SRV-005 · Jeferson</div>
+          </div>
+          <div class="text-sm font-700 text-slate-800 mb-1">Coordenadas "mock" en la maestra</div>
+          <div class="text-xs text-slate-600 leading-relaxed">Se repararon lat/lng ficticios de clientes que distorsionaban cualquier cálculo geográfico aguas abajo.</div>
+        </div>
+      </div>
+
+      <div class="impact impact-primary mt-5">
+        <span class="font-800" style="color:var(--sv-primary)">🐛 Impacto — </span>
+        <span class="text-sm" style="color:#5c1030">Estos tres hallazgos comparten un patrón: datos de origen contaminados (GEO falso, coordenadas mock) rompían features aguas abajo como Pedidos Express y Users. Corregir la raíz, no el síntoma, evita que el mismo bug reaparezca en otro módulo.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 7 — Aprendizaje del equipo
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-forest">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-6">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="pill pill-month">Junio 2026</span>
+            <span class="tag tag-green">📚 Estudio técnico</span>
+          </div>
+          <span class="pill pill-forest mb-3 inline-block">🎓 Aprendizaje del Equipo</span>
+          <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
+            Tiempo invertido en subir el nivel<br>técnico del equipo
+          </h2>
+          <p class="text-slate-500 mt-2">Terraform &amp; IaC · Portal de soporte · Evaluación de herramientas de conocimiento</p>
+        </div>
+        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-forest)">06</div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-6">
+        <div class="space-y-3">
+          <div class="sec-lbl">William Pavón</div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-forest) 12%, white)"><i class="fas fa-diagram-project" style="color:var(--sv-forest)"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Terraform Fundamentals + provider GCP</div><div class="text-xs text-slate-500">SRV-075 · certificación oficial HashiCorp + implementación práctica migrando config manual a IaC</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-forest) 12%, white)"><i class="fas fa-headset" style="color:var(--sv-forest)"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Portal administrativo — sección Soporte</div><div class="text-xs text-slate-500">SRV-100 · sistema de diseño moderno, búsqueda inteligente por prioridad, responsivo</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-forest) 12%, white)"><i class="fas fa-robot" style="color:var(--sv-forest)"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Documentación de chatbot</div><div class="text-xs text-slate-500">SRV-143 · proceso documentado para alimentar el notebook de Google del Chatbot Agéntico RAG</div></div>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div class="sec-lbl">Miguel Aguirre</div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-accent) 24%, white)"><i class="fas fa-brain" style="color:#4c6b1f"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Evaluación de Obsidian como base de conocimiento</div><div class="text-xs text-slate-500">SRV-072 · bóveda + 6 carpetas + plantillas — conclusión: útil pero no supera a otras herramientas de notas fuera de su gráfico de relaciones</div></div>
+          </div>
+          <div class="feat-row">
+            <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-accent) 24%, white)"><i class="fas fa-warehouse" style="color:#4c6b1f"></i></div>
+            <div><div class="text-sm font-700 text-slate-800">Portal de despacho — nuevo look &amp; feel</div><div class="text-xs text-slate-500">SRV-139 · panel de auxiliares/supervisores de bodega y grupos de conductores (backend en pausa por temas de base de datos)</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="impact impact-forest mt-5">
+        <span class="font-800" style="color:var(--sv-forest)">🎓 Impacto — </span>
+        <span class="text-sm" style="color:#0a4227">El equipo invirtió tiempo deliberado en evaluar herramientas antes de adoptarlas — Terraform ya tiene un plan de implementación por fases hacia GCP, y Obsidian se descartó con criterio en vez de adoptarse por moda.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 8 — Infraestructura Cloud
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto rounded-3xl shadow-xl overflow-hidden"
+       style="background:linear-gradient(135deg,#0f1f16 0%,#0d2a1c 50%,#0f1f16 100%)">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-5">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="pill pill-month">Junio 2026</span>
+            <span class="tag" style="background:color-mix(in srgb, var(--sv-accent) 20%, transparent);color:var(--sv-accent);border:1px solid color-mix(in srgb, var(--sv-accent) 40%, transparent)">☁️ Infraestructura</span>
+          </div>
+          <h2 class="text-3xl font-black leading-tight" style="color:#f4f9f4">
+            La plataforma quedó sobre<br>una sola nube, más barata y clara
+          </h2>
+          <p class="mt-2" style="color:#a9c2ac">Migración completa Pegasus → servimax-isa · Proyecto legacy eliminado · Ahorro mensual real</p>
+        </div>
+        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-accent)">07</div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4 mb-5">
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:14px">
+          <div class="text-2xl font-black" style="color:var(--sv-accent)">100%</div>
+          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">Stack en producción</div>
+          <div class="text-xs" style="color:#7c9683">Django + frontend + Celery + Cloud SQL en <code style="color:#a9c2ac">servimax-isa-497719</code></div>
+        </div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:14px">
+          <div class="text-2xl font-black" style="color:var(--sv-accent)">−$160</div>
+          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">USD/mes de ahorro</div>
+          <div class="text-xs" style="color:#7c9683">Proyecto Pegasus (legacy) eliminado el 23 de junio</div>
+        </div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:14px">
+          <div class="text-2xl font-black" style="color:var(--sv-accent)">30d</div>
+          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">Respaldo de seguridad</div>
+          <div class="text-xs" style="color:#7c9683">Dump del Cloud SQL antiguo conservado en bucket de archivo</div>
+        </div>
+      </div>
+
+      <div class="space-y-2">
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:10px;padding:10px 12px">
+          <div class="flex items-center gap-3">
+            <div style="width:32px;height:32px;border-radius:8px;background:color-mix(in srgb, var(--sv-secondary) 30%, transparent);flex-shrink:0;display:flex;align-items:center;justify-content:center">
+              <i class="fas fa-server" style="color:var(--sv-secondary);font-size:13px"></i>
+            </div>
+            <div style="flex:1;min-width:0">
+              <div class="text-sm font-700" style="color:#e5f2e7">Cutover completo el 17 de junio</div>
+              <div class="text-xs" style="color:#7c9683">VM <code>servimax-vm</code> con Django, Celery ×3 (worker/beat/scraping), nginx, frontend y redis conviviendo en una sola instancia</div>
+            </div>
+            <span class="tag tag-prod" style="flex-shrink:0;font-size:9px">Prod</span>
+          </div>
+        </div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:10px;padding:10px 12px">
+          <div class="flex items-center gap-3">
+            <div style="width:32px;height:32px;border-radius:8px;background:color-mix(in srgb, var(--sv-teal) 30%, transparent);flex-shrink:0;display:flex;align-items:center;justify-content:center">
+              <i class="fas fa-trash-can" style="color:var(--sv-teal);font-size:13px"></i>
+            </div>
+            <div style="flex:1;min-width:0">
+              <div class="text-sm font-700" style="color:#e5f2e7">Proyecto legacy Pegasus eliminado</div>
+              <div class="text-xs" style="color:#7c9683">23 de junio · corta el gasto duplicado en infraestructura que ya no se usaba</div>
+            </div>
+            <span class="tag tag-prod" style="flex-shrink:0;font-size:9px">Prod</span>
+          </div>
+        </div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:10px;padding:10px 12px">
+          <div class="flex items-center gap-3">
+            <div style="width:32px;height:32px;border-radius:8px;background:color-mix(in srgb, var(--sv-accent) 30%, transparent);flex-shrink:0;display:flex;align-items:center;justify-content:center">
+              <i class="fas fa-code-branch" style="color:var(--sv-accent);font-size:13px"></i>
+            </div>
+            <div style="flex:1;min-width:0">
+              <div class="text-sm font-700" style="color:#e5f2e7">Terraform como próximo paso (William)</div>
+              <div class="text-xs" style="color:#7c9683">Plan de 8 fases para llevar esta infraestructura a Infrastructure-as-Code — reproducible y versionada</div>
+            </div>
+            <span class="tag tag-roadmap" style="flex-shrink:0;font-size:9px">Roadmap</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 9 — EL MES EN NÚMEROS
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-primary">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-5">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="pill pill-month">Junio 2026</span>
+          </div>
+          <span class="pill pill-primary mb-3 inline-block">📊 El Mes en Números</span>
+          <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
+            422 cambios de código, repartidos<br>en 4 semanas de trabajo sostenido
+          </h2>
+        </div>
+        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-primary)">08</div>
+      </div>
+
+      <div class="grid grid-cols-4 gap-3 mb-6">
+        <div class="rounded-2xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-primary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 20%, white)">
+          <div class="text-2xl font-black" style="color:var(--sv-primary)">422</div>
+          <div class="text-xs font-700 text-slate-700 mt-0.5">Cambios al código</div>
+          <div class="text-xs text-slate-400">225 backend · 197 frontend</div>
+        </div>
+        <div class="rounded-2xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-secondary) 8%, white);border:1px solid color-mix(in srgb, var(--sv-secondary) 22%, white)">
+          <div class="text-2xl font-black" style="color:var(--sv-secondary)">33</div>
+          <div class="text-xs font-700 text-slate-700 mt-0.5">Tareas Jira del mes</div>
+          <div class="text-xs text-slate-400">27 historias · 5 bugs · 1 tarea</div>
+        </div>
+        <div class="rounded-2xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-teal) 8%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 22%, white)">
+          <div class="text-2xl font-black" style="color:var(--sv-teal)">3</div>
+          <div class="text-xs font-700 text-slate-700 mt-0.5">Frentes grandes</div>
+          <div class="text-xs text-slate-400">Cashback/Premios · Express · Abastecimiento</div>
+        </div>
+        <div class="rounded-2xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-accent) 18%, white);border:1px solid color-mix(in srgb, var(--sv-accent) 35%, white)">
+          <div class="text-2xl font-black" style="color:#4c6b1f">4</div>
+          <div class="text-xs font-700 text-slate-700 mt-0.5">Contribuidores</div>
+          <div class="text-xs text-slate-400">Activos en código y/o Jira</div>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <div class="sec-lbl">Tareas cerradas o en curso — por persona (Jira, Junio)</div>
+        <div class="space-y-2">
+          <div class="flex items-center gap-3">
+            <div class="w-32 text-sm font-600 text-slate-700 text-right">Jeferson Camero</div>
+            <div class="flex-1 bg-slate-100 rounded-full h-5 overflow-hidden"><div class="cbar h-5" style="width:48%;background:linear-gradient(90deg,var(--sv-primary),#a3123f)"></div></div>
+            <div class="w-40 text-sm font-800 text-slate-600">16 tareas · Lead full-stack</div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-32 text-sm font-600 text-slate-700 text-right">Cristian Becerra</div>
+            <div class="flex-1 bg-slate-100 rounded-full h-5 overflow-hidden"><div class="cbar h-5" style="width:24%;background:linear-gradient(90deg,var(--sv-secondary),#0a7d3b)"></div></div>
+            <div class="w-40 text-sm font-800 text-slate-600">8 tareas · Investigación &amp; Express</div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-32 text-sm font-600 text-slate-700 text-right">William Pavón</div>
+            <div class="flex-1 bg-slate-100 rounded-full h-5 overflow-hidden"><div class="cbar h-5" style="width:15%;background:linear-gradient(90deg,var(--sv-teal),#0a5750)"></div></div>
+            <div class="w-40 text-sm font-800 text-slate-600">5 tareas · Infra &amp; Portal soporte</div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-32 text-sm font-600 text-slate-700 text-right">Miguel Aguirre</div>
+            <div class="flex-1 bg-slate-100 rounded-full h-5 overflow-hidden"><div class="cbar h-5" style="width:12%;background:linear-gradient(90deg,var(--sv-accent),#7a9a2e)"></div></div>
+            <div class="w-40 text-sm font-800 text-slate-600">4 tareas · Bots &amp; Despacho</div>
+          </div>
+        </div>
+        <div class="text-xs text-slate-400 mt-2">* Los commits del repositorio moderno se concentran en la cuenta de Jeferson por convención actual del equipo — la asignación real de trabajo por persona se toma de Jira, no solo del historial de git.</div>
+      </div>
+
+      <div style="background:#f8faf6;border:1px solid #e4e9dd;border-radius:12px;padding:14px 18px;">
+        <div class="flex items-center justify-between mb-3">
+          <div class="text-xs font-700 text-slate-500 uppercase tracking-wide">Cambios de código por semana del mes</div>
+          <div class="text-xs text-slate-400">422 cambios · backend + frontend</div>
+        </div>
+        <div style="height:200px;position:relative">
+          <canvas id="chart-cambios-semana"></canvas>
+        </div>
+        <div style="margin-top:6px;font-size:10px;color:#94a89a;text-align:center">
+          ⚡ Semana más activa: 22–28 jun — 113 cambios (calibración de Abastecimiento + cierre de Cashback/Premios)
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 10 — ROADMAP JULIO
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-lime">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-5">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="pill pill-month">Julio 2026</span>
+            <span class="tag tag-roadmap">→ En marcha</span>
+          </div>
+          <span class="pill pill-lime mb-3 inline-block">🚀 Lo que sigue</span>
+          <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
+            Julio ya arrancó con la Polla<br>y el chatbot agéntico en curso
+          </h2>
+        </div>
+        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-accent)">09</div>
+      </div>
+
+      <div class="space-y-2">
+        <div class="feat-row" style="background:color-mix(in srgb, var(--sv-primary) 5%, white);border-color:color-mix(in srgb, var(--sv-primary) 20%, white)">
+          <div class="feat-ico" style="background:var(--sv-primary)"><i class="fas fa-futbol" style="color:#fff"></i></div>
+          <div style="flex:1"><div class="text-sm font-700 text-slate-800">Polla Servimax — quiniela parametrizable</div><div class="text-xs text-slate-500">Motor de pronósticos y recompensa en Serviplata — arrancó el 2 de julio, backend con liquidación automática</div></div>
+          <span class="tag tag-progress" style="flex-shrink:0">Iniciado</span>
+        </div>
+        <div class="feat-row" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border-color:color-mix(in srgb, var(--sv-teal) 20%, white)">
+          <div class="feat-ico" style="background:var(--sv-teal)"><i class="fas fa-comments" style="color:#fff"></i></div>
+          <div style="flex:1"><div class="text-sm font-700 text-slate-800">Chatbot Agéntico RAG — Segmento Refrigerados</div><div class="text-xs text-slate-500">SRV-136 (William, en curso) · SRV-178 compra inmediata y llamada por voz (siguiente)</div></div>
+          <span class="tag tag-progress" style="flex-shrink:0">En curso</span>
+        </div>
+        <div class="feat-row" style="background:color-mix(in srgb, var(--sv-secondary) 5%, white);border-color:color-mix(in srgb, var(--sv-secondary) 20%, white)">
+          <div class="feat-ico" style="background:var(--sv-secondary)"><i class="fas fa-map-location-dot" style="color:#fff"></i></div>
+          <div style="flex:1"><div class="text-sm font-700 text-slate-800">Dashboard en tiempo real de asesores</div><div class="text-xs text-slate-500">SRV-153 (Cristian) · líderes ven ubicación y pedidos del asesor en vivo</div></div>
+          <span class="tag tag-progress" style="flex-shrink:0">En curso</span>
+        </div>
+        <div class="feat-row" style="background:color-mix(in srgb, var(--sv-accent) 12%, white);border-color:color-mix(in srgb, var(--sv-accent) 30%, white)">
+          <div class="feat-ico" style="background:var(--sv-accent)"><i class="fas fa-boxes-stacked" style="color:#2b3a13"></i></div>
+          <div style="flex:1"><div class="text-sm font-700 text-slate-800">Modelo de picking de despachos (legacy)</div><div class="text-xs text-slate-500">SRV-140 (Jeferson) · modelo relacional para consumo en otra plataforma</div></div>
+          <span class="tag tag-progress" style="flex-shrink:0">Code Review</span>
+        </div>
+        <div class="feat-row" style="background:#f8faf6;border-color:#e4e9dd">
+          <div class="feat-ico" style="background:#c9d4c4"><i class="fas fa-bell" style="color:#5b7362"></i></div>
+          <div style="flex:1"><div class="text-sm font-700 text-slate-800">Mensajería masiva Meta y notificaciones push</div><div class="text-xs text-slate-500">Planillas parametrizables — priorizado para próximo sprint</div></div>
+          <span class="tag tag-roadmap" style="flex-shrink:0">Priorizado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 11 — CIERRE JUNIO 2026
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
+    <div class="h-1.5 w-full" style="background:linear-gradient(90deg,var(--sv-primary),var(--sv-secondary),var(--sv-accent),var(--sv-teal))"></div>
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-6">
+        <div>
+          <span class="pill pill-month mb-3 inline-block">Junio 2026 en Números</span>
+          <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
+            Motores parametrizables, cobertura real<br>y una nube consolidada
+          </h2>
+        </div>
+        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-primary)">10</div>
+      </div>
+
+      <div class="grid grid-cols-5 gap-3 mb-7">
+        <div class="text-center"><div class="kpi-sm" style="color:var(--sv-primary)">422</div><div class="text-xs text-slate-600 font-600 mt-1">Cambios al código</div><div class="text-xs text-slate-400">225 BE · 197 FE</div></div>
+        <div class="text-center"><div class="kpi-sm" style="color:var(--sv-secondary)">33</div><div class="text-xs text-slate-600 font-600 mt-1">Tareas Jira del mes</div><div class="text-xs text-slate-400">Historias + bugs</div></div>
+        <div class="text-center"><div class="kpi-sm" style="color:var(--sv-teal)">3</div><div class="text-xs text-slate-600 font-600 mt-1">Frentes grandes</div><div class="text-xs text-slate-400">Entregados o en QA</div></div>
+        <div class="text-center"><div class="kpi-sm" style="color:#4c6b1f">4</div><div class="text-xs text-slate-600 font-600 mt-1">Contribuidores</div><div class="text-xs text-slate-400">Activos</div></div>
+        <div class="text-center"><div class="kpi-sm" style="color:var(--sv-primary)">−$160</div><div class="text-xs text-slate-600 font-600 mt-1">USD/mes en infra</div><div class="text-xs text-slate-400">Migración cloud</div></div>
+      </div>
+
+      <div class="flex items-center gap-6 mb-5">
+        <div class="text-xs text-slate-500 font-700 uppercase">Estado:</div>
+        <div class="flex items-center gap-2"><span class="tag tag-prod">✓ Producción</span><span class="text-xs text-slate-500">En master</span></div>
+        <div class="flex items-center gap-2"><span class="tag tag-progress">🔵 En curso / QA</span><span class="text-xs text-slate-500">Code review, QA o en desarrollo</span></div>
+        <div class="flex items-center gap-2"><span class="tag tag-roadmap">→ Roadmap</span><span class="text-xs text-slate-500">Planeado Julio</span></div>
+      </div>
+
+      <div class="rounded-2xl p-5" style="background:linear-gradient(135deg,color-mix(in srgb, var(--sv-accent) 16%, white),color-mix(in srgb, var(--sv-secondary) 10%, white));border:1px solid color-mix(in srgb, var(--sv-secondary) 25%, white)">
+        <p class="text-slate-800 text-base font-500 leading-relaxed">
+          <span class="font-800" style="color:var(--sv-secondary)">"</span>
+          En junio Cashback y Premios empezaron a correr con datos reales de punta a punta, Pedidos Express aprendió la forma real del territorio, y Abastecimiento dejó de pedir a ojo. Todo esto sobre una nube que ahora es una sola, más simple y más barata.
+          <span class="font-800" style="color:var(--sv-secondary)">"</span>
+        </p>
+        <div class="flex items-center gap-2 mt-3">
+          <div class="text-sm font-700" style="color:#0a5c2c">Servimax</div>
+          <div class="text-sm" style="color:#3f8558">· Equipo de Ingeniería · Junio 2026</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Auto-inject footer into every slide + initialize charts -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.slide').forEach(function (slide) {
+    var card = slide.children[0];
+    if (!card) return;
+    var content = null;
+    var kids = card.children;
+    for (var i = kids.length - 1; i >= 0; i--) {
+      if (kids[i].tagName === 'DIV') { content = kids[i]; break; }
+    }
+    if (!content) return;
+    var bar = document.createElement('div');
+    bar.className = 'slide-logo-bar';
+    bar.innerHTML = '<span class="brand-mark" style="color:inherit;opacity:.55">SERVIMAX<span class="dot">.</span></span>';
+    content.appendChild(bar);
+  });
+
+  var chartCanvas = document.getElementById('chart-cambios-semana');
+  if (chartCanvas && typeof Chart !== 'undefined') {
+    new Chart(chartCanvas, {
+      type: 'bar',
+      data: {
+        labels: ['Sem 1 · Jun 1-7', 'Sem 2 · Jun 8-14', 'Sem 3 · Jun 15-21', 'Sem 4 · Jun 22-28', 'Sem 5 · Jun 29-30'],
+        datasets: [{
+          label: 'Cambios al código',
+          data: [105, 99, 95, 113, 10],
+          backgroundColor: ['#f0a9c0', '#e06a95', '#d82053', '#a3123f', '#7a0d30'],
+          borderRadius: 10,
+          borderWidth: 0,
+          barPercentage: 0.55,
+          categoryPercentage: 0.7
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: 800 },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: '#1e2a24',
+            padding: 12,
+            cornerRadius: 8,
+            titleFont: { weight: '700', size: 12 },
+            bodyFont: { weight: '500', size: 12 },
+            callbacks: {
+              label: function (ctx) { return '  ' + ctx.parsed.y + ' cambios al código'; }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            grid: { color: '#e4e9dd' },
+            ticks: { color: '#8a9a89', font: { size: 11 }, stepSize: 20 }
+          },
+          x: {
+            grid: { display: false },
+            ticks: { color: '#5b7362', font: { weight: '700', size: 11 } }
+          }
+        }
+      }
+    });
+  }
+});
+</script>
+</body>
+</html>

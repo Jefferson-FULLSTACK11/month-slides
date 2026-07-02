@@ -1,0 +1,575 @@
+Resumen,Clave de incidencia,ID de la incidencia,Tipo de Incidencia,Estado,Clave del proyecto,Nombre del proyecto,Tipo de proyecto,Responsable del proyecto,ID del responsable del proyecto,Descripción del proyecto,Prioridad,Resolución,Persona asignada,ID de la persona asignada,Informador,ID del informador,Creador,ID del creador,Creada,Actualizada,Vista por Última Vez,Resuelta,Fecha de vencimiento,Votos,Etiquetas,Etiquetas,Etiquetas,Etiquetas,Etiquetas,Etiquetas,Descripción,Entorno,Interesados,Interesados,ID de los interesados,ID de los interesados,Estimación original,Trabajo restante estimado,Tiempo Trabajado,Relación de trabajo,Σ Estimación original,Σ Trabajo restante estimado,Σ Tiempo empleado,Nivel de Seguridad,Enlace a la incidencia interna (Blocks),Enlace a la incidencia interna (Blocks),Enlace a la incidencia interna (Blocks),Enlace de incidencia saliente (Blocks),Adjunto,Adjunto,Campo personalizado (Clasificación),Campo personalizado (Color de la incidencia),Campo personalizado (Fecha de inicio),Campo personalizado (Metas),Sprint,Sprint,Sprint,Campo personalizado (Story point estimate),Campo personalizado (Team),Campo personalizado (Vulnerabilidad),Campo personalizado (development),Comentario,Comentario,Comentario,Comentario,Categoría de estado,Categoría de estado cambiada,Principal,Clave principal,Parent summary
+Carga de maestras y información de configuración para bots,SD-22,10053,Tarea,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,07/abr/26 8:28 PM,21/abr/26 4:29 PM,,07/abr/26 8:28 PM,,0,,,,,,,,,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i0004z:,,,,Sprint 3,,,1.0,,,,,,,,Listo,07/abr/26 8:28 PM,,,
+Integración de bots con arquitectura escalable para nuevo grupo de segmento de refrigerados,SD-21,10052,Tarea,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,07/abr/26 8:27 PM,21/abr/26 4:29 PM,,21/abr/26 2:32 PM,,0,,,,,,,,,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i00053:,,,,Sprint 3,,,5.0,,,,,,,,Listo,21/abr/26 2:32 PM,,,
+"Módulo completo de devoluciones con sincronización automática a EForce, simulación previa y aprobación por producto",SD-23,10086,Tarea,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,21/abr/26 2:52 PM,21/abr/26 3:00 PM,,21/abr/26 3:00 PM,,0,,,,,,,,,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i0005b:,,,,Sprint 3,,,5.0,,,,,,,,Listo,21/abr/26 3:00 PM,,,
+"Seguimiento en vivo de conductores con mapa, galería de evidencias y listado lateral por fecha",SD-24,10087,Tarea,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,21/abr/26 2:55 PM,21/abr/26 3:01 PM,,21/abr/26 3:01 PM,,0,,,,,,,"Los despachadores ven en un mapa dónde está cada conductor, qué entregas ya hizo, cuáles están pendientes y las fotos de evidencia de cada entrega o devolución, sin tener que llamar al conductor. Al lado del mapa hay una lista de todos los conductores del día — con un clic cambian entre uno y otro. Las fotos se cargan rápido y son accesibles solo para usuarios autorizados (no quedan públicas en internet).",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i0005j:,,,,Sprint 3,,,5.0,,,,,,,,Listo,21/abr/26 3:01 PM,,,
+Sistema de nómina configurable por grupo/segmento con calculadora semanal en vivo y overrides por conductor,SD-25,10088,Tarea,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,21/abr/26 2:57 PM,21/abr/26 3:01 PM,,21/abr/26 3:01 PM,,0,,,,,,,"El contador/admin/gerente configura las tarifas base, bonos, auxilio de transporte e inspección desde una pantalla — ya no pide cambios al programador. Si un conductor puntual tiene un acuerdo diferente, ajusta solo su tarifa con un editor dentro del reporte mensual. La calculadora muestra la liquidación semanal con los datos del ERP al día de hoy, no hay que esperar al cierre mensual. Los waybills que son ajustes de inventario (muy pocos bills) se excluyen automáticamente del incentivo — el conductor ya no cobra bono por movimientos internos.",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i0005r:,,,,Sprint 3,,,2.0,,,,,,,,Listo,21/abr/26 3:01 PM,,,
+Análisis de ruta con detección automática de pedidos duplicados por valor y productos,SD-26,10089,Tarea,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,21/abr/26 2:58 PM,21/abr/26 3:01 PM,,21/abr/26 3:01 PM,,0,,,,,,,"Cuando el supervisor revisa una ruta, el sistema marca con un ícono los pedidos que parecen repetidos (mismo cliente, mismo valor, mismos productos). Así se detectan antes de liquidar errores humanos de doble captura o intentos de cobrar dos veces por el mismo pedido. El dashboard muestra cuántos duplicados hay en el día y permite filtrar para verlos directamente.",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i0005z:,,,,Sprint 3,,,2.0,,,,,,,,Listo,21/abr/26 3:01 PM,,,
+Gestión de fotos y firmas de conductores con actualización automática en registros duplicados,SD-27,10090,Tarea,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,21/abr/26 2:59 PM,21/abr/26 3:01 PM,,21/abr/26 3:01 PM,,0,,,,,,,"Cuando un empleado tiene varios registros en el sistema (por cambios de cédula, reingresos, etc.), eliminar la foto desde uno borra la foto en todos los demás automáticamente. Si un registro no tiene foto, el sistema muestra la de un registro hermano del mismo empleado. Si la carga falla, RRHH ve el error real y no un mensaje genérico.",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i00067:,,,,Sprint 3,,,5.0,,,,,,,,Listo,21/abr/26 3:01 PM,,,
+"[SRV-005] Reparar Customer.lat/lng del ""mock point"" en la maestra",SD-33,10128,Historia,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,26/may/26 10:42 AM,01/jul/26 8:15 AM,03/jun/26 12:55 PM,03/jun/26 12:55 PM,,0,customer-master,devoluciones,roadmap-2026,sprint-01,tech-debt,track-product,"h2. Como *asesor/admin que mira el mapa de calor* quiero que mis ~4.800 clientes ""geocodificados"" en el mock point (4,575931… / -74,116205) se pinten en sus coordenadas reales, para que el mapa muestre la ruta verdadera y no un punto gigante en una calle aleatoria.
+
+h3. Contexto
+
+Diagnosticado el 2026-05-23: ~33% de los clientes G1 tienen {{lat/lng}} igual al {{KNOWN_MOCK_POINT}} que el pipeline de compilados estampó por error. La coordenada real está en {{Customer.coordinates_raw}}. Esto también afecta la validación geográfica de entregas (compilados marca REVIEW por distancias contra el mock).
+
+h3. Tareas
+
+* ☐ {{apps/customers/management/commands/repair_customer_geo.py}}
+
+      con {{--dry-run}} y {{--limit N}}.
+
+* ☐ Para cada Customer con {{lat ≈ MOCK ± 1e-6}}: re-derivar
+
+      {{lat/lng/geo_quality}} desde {{coordinates_raw}} via       {{parse_coordinates_raw}}.
+
+* ☐ Validar contra bounding box Colombia (-4.3 ≤ lat ≤ 13.5,
+
+      -79.1 ≤ lng ≤ -66.8); fuera → {{geo_quality=INVALID}}.
+
+* ☐ Investigar qué proceso estampó el mock originalmente (revisar
+
+      {{geo_last_verified_at}} cluster). Fix preventivo.
+
+* ☐ Correr en dry-run en prod, reportar contadores, luego en real.
+
+h3. Criterios de aceptación
+
+* ☐ Tras correrlo: 0 customers con {{lat == MOCK_LAT}} Y
+
+      {{geo_quality == VALID}}.
+
+* ☐ El advisor map ({{/advisor/me/dashboard}}) muestra más puntos
+
+      distintos para los asesores afectados (verificar 10520, 10514,       10513).
+
+* ☐ El proceso que causaba la corrupción está identificado y
+
+      mitigado.
+
+h3. Notas técnicas
+
+* Ver {{apps/regional_sync/delivery_compilations/services/customer_geo_service.py:27}}
+
+  para {{KNOWN_MOCK_POINT}}.
+
+* Reutilizar {{apps/customers/services/geo_normalization.parse_coordinates_raw}}.
+* El advisor view ya tiene un workaround (lee {{coordinates_raw}}
+
+  directamente), pero los compilados siguen rotos.",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i0007j:,,,,Sprint 2 Gestión operativa AUT,Sprint 1 · Estabilización,Sprint 2,5.0,,,,,,,,Listo,03/jun/26 12:55 PM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-072] Obsidian inicial — estructura + 6 carpetas + plantillas,SD-100,10195,Historia,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,Miguel Aguirre,712020:21313d0b-8fc1-47f7-a84d-cb21970b5a46,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,26/may/26 10:44 AM,01/jul/26 8:15 AM,11/jun/26 11:28 AM,12/jun/26 7:48 AM,,0,cultura,engram,roadmap-2026,sprint-01,track-platform,,"h2. Como *cualquier persona del equipo* quiero una bóveda de conocimiento centralizada (Engram) con estructura clara para arquitectura, runbooks, onboarding, negocio, incidentes y roadmap, para encontrar respuesta a casi cualquier pregunta sin tener que escribirle al lead por Slack.
+
+h3. Contexto
+
+Hito 5 del Foco Servimax Online + Acción inmediata #4 del deck (Slide 35). Engram es donde viven los catálogos de servicios (SRV-057), los runbooks (SRV-065), los ADRs (SRV-067), el onboarding de nuevos devs. Sin esto, todas las demás historias de ""documentar"" no tienen dónde aterrizar.
+
+h3. Tareas
+
+* ☐ Decidir herramienta: Obsidian self-hosted, Notion, GitHub
+
+      Wiki, MkDocs, Engram propio.
+
+* ☐ Crear estructura inicial de 6 carpetas:
+
+      {{arquitectura/}} {{runbooks/}} {{onboarding/}} {{negocio/}}       {{incidentes/}} {{roadmap/}}.
+
+* ☐ Plantilla para cada tipo de página.
+* ☐ Onboarding doc de cómo usarlo.
+* ☐ Compartir con todo el equipo.
+
+h3. Criterios de aceptación
+
+* ☐ Engram existe y es accesible para el equipo.
+* ☐ Cada carpeta tiene al menos 1 doc de muestra.
+
+h3. Notas técnicas
+
+* Costo cero ideal — MkDocs en GCS o GitHub Wiki es buena salida.",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,12/jun/26 7:47 AM;ug:5bb3e9ab-399f-4113-a556-c070c9c45366;Documentación de Obsidian.odt;https://servimax-team.atlassian.net/rest/api/3/attachment/content/10101,11/jun/26 4:03 PM;ug:5bb3e9ab-399f-4113-a556-c070c9c45366;Servimax Test Obsidian.zip;https://servimax-team.atlassian.net/rest/api/3/attachment/content/10066,0|i000mf:,,,,Sprint 2 Gestión operativa AUT,Sprint 1 · Estabilización,Sprint 2,3.0,,,,,,,,Listo,12/jun/26 7:48 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+Plantilla para priorizar tareas Admin,SD-181,10791,Historia,Tareas por hacer,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,30/jun/26 11:55 AM,01/jul/26 8:25 AM,02/jul/26 7:17 AM,,,0,,,,,,,"Como GG quiero capturar, clasificar, priorizar y delegar tareas con deadline, verlas por día/hora, sincronizarlas con Google Calendar y registrar su cumplimiento, para gestionar mi trabajo y el de mis jefaturas sin perder el norte.
+
+*Criterios de aceptación:* captura libre en Caja → clasificación (Entrante/Mes/Inmediato/Proceso/Delegar) + prioridad + deadline → tablero propio con semáforo de vencimiento → delegación a Fronts por departamento (jefe edita lo suyo, no lo asignado) → vista semanal día×hora → botón para agendar en Google Calendar (por área) → registro automático de fecha de cierre y cumplimiento a tiempo/tarde.[^Tablero_Gerencia_y_Delegacion.xlsx] ",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,30/jun/26 3:17 PM;2450776d-4786-4c8e-b80c-0d51bbfbc77d;Tablero_Gerencia_y_Delegacion.xlsx;https://servimax-team.atlassian.net/rest/api/3/attachment/content/10234,,0|i000nl:,,,,Sprint 4 · Asesores (pg2),,,5.0,,,,,,,,Por hacer,30/jun/26 11:55 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+Parametrizar planillas de mensajes masivos Meta & Notificaciones push,SD-182,10824,Historia,Tareas por hacer,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,30/jun/26 12:42 PM,01/jul/26 8:25 AM,30/jun/26 12:47 PM,,,0,,,,,,,,,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i000nm:,,,,Sprint 4 · Asesores (pg2),,,,,,,,,,,Por hacer,30/jun/26 12:42 PM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+"Mensajes planos no se envian ""Archivo rechazado porque falló la validación"" Procter and Gamble",SD-183,10857,Historia,Tareas por hacer,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,,cristian_gaitan,712020:f058778d-a445-48b5-8da6-2d090ec2cdb9,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,30/jun/26 1:07 PM,01/jul/26 8:25 AM,30/jun/26 1:08 PM,,,0,,,,,,,,,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i000nm:i,,,,Sprint 4 · Asesores (pg2),,,,,,,,,,,Por hacer,30/jun/26 1:07 PM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+Creación de modulo de Polla pronosticos de partidos y recompensa de Serviplata,SD-184,10890,Historia,Tareas por hacer,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,30/jun/26 1:45 PM,01/jul/26 8:25 AM,30/jun/26 1:45 PM,,,0,,,,,,,,,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i000nm:r,,,,Sprint 4 · Asesores (pg2),,,,,,,,,,,Por hacer,30/jun/26 1:45 PM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-104] Estudio de Bot automatizado de facturación Tenderos / consumo general y refrigerados,SD-132,10259,Historia,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,26/may/26 1:45 PM,01/jul/26 8:25 AM,27/may/26 8:57 AM,30/jun/26 9:28 AM,,0,bot-facturacion,control-despacho,roadmap-2026,sprint-03,track-despacho-flow,,"h2. Como *lead de tecnología* quiero un bot dedicado para facturar pedidos de consumo general (que no tiene hoy un proceso robusto), análogo al bot de refrigerados, para eliminar la dependencia del proceso legacy actual.
+
+h3. Contexto
+
+El bot de facturación que mejoramos esta sesión solo cubre refrigerados. Para Tenderos/consumo general el proceso vive en legacy y procesa con prioridad inconsistente. Tener un bot Pegasus con la misma arquitectura (retry transitorios, alertas, métricas) resolvería el problema estructural.
+
+h3. Tareas
+
+* ☐ Análisis: ¿migración del proceso legacy o reescritura nativa?
+* ☐ Si reescritura: model + worker + endpoint de ""facturar pedido""
+
+      similar al de refrigerados.
+
+* ☐ Lógica FIFO por fecha_entrega + prioridad configurable.
+* ☐ Reutilizar {{_is_transient_browser_error}} y envoltura de
+
+      reintentos.
+
+* ☐ Métricas + alertas vía Sentry + Slack.
+* ☐ Plan de cutover: doble corrida con el legacy por 1 semana.
+
+h3. Criterios de aceptación
+
+* ☐ Bot procesa 1000 pedidos en ambiente staging sin error.
+* ☐ Métricas en panel admin (similar SRV-001).
+
+h3. Notas técnicas
+
+* Coordinar con SRV-099 — depende de entender el flujo primero.
+* Esto es el paso definitivo. Mientras tanto, los SRV-100 / 103
+
+  dan visibilidad sin tocar el legacy.",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,SD-127,,,0|i000nm:zzi,,,,Sprint 4 · Asesores (pg2),,,5.0,,,,,,,,Listo,30/jun/26 9:28 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-054] Clonar 6 repos huérfanos a core_develop/,SD-82,10177,Historia,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,26/may/26 10:44 AM,01/jul/26 8:25 AM,,30/jun/26 9:26 AM,,0,gobernanza,legacy,roadmap-2026,sprint-01,track-platform,,"h2. Como *lead de tecnología* quiero los 6 repos huérfanos (sales, logistic, transversal, user, liveops, servimaxia) clonados localmente bajo {{core_develop/}}, para que cualquier dev pueda leer su código, hacer fixes y entender qué hacen.
+
+h3. Contexto
+
+Hito 1 del Foco Gobernanza (Slide 31). Hoy estos servicios corren en producción en la VM legacy pero el código no está en ningún laptop del equipo. Riesgo de gobernanza claro.
+
+h3. Tareas
+
+* ☐ Identificar dónde vive cada repo (GitHub privado por defecto).
+* ☐ Acceso del lead a los 6 repos.
+* ☐ {{git clone}} cada uno a {{core_develop/{nombre}}}.
+* ☐ README mínimo en cada uno: stack, port, dueño,
+
+      dependencias conocidas.
+
+* ☐ Verificar que el código fuente corresponda a la imagen que
+
+      corre en prod (al menos un endpoint de cada uno).
+
+h3. Criterios de aceptación
+
+* ☐ Los 6 repos están bajo {{core_develop/}}.
+* ☐ Cada uno tiene README con stack + port + dueño.
+* ☐ Verificado que {{sales}} (al menos) compila y construye.
+
+h3. Notas técnicas
+
+* Acción inmediata #3 del deck (Slide 35).
+* Riesgo bloqueador: si los repos privados pertenecen a un ex-dev sin
+
+  permisos delegados, hay que pedirle acceso primero.",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,SD-84,SD-85,SD-91,,,,0|i000nm:zzv,,,,Sprint 4 · Asesores (pg2),,,3.0,,,,,,,,Listo,30/jun/26 9:26 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-099] Investigación profunda flujo Pedido → Factura → Planilla → Entrega (consumo general),SD-127,10254,Historia,Tareas por hacer,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,26/may/26 1:44 PM,01/jul/26 8:25 AM,,,,0,control-despacho,investigacion,roadmap-2026,sprint-01,tech-debt,track-despacho-flow,"h2. Como *lead de tecnología* quiero un documento exhaustivo del flujo Pedido → Factura → Planilla → Entrega para consumo general (Tenderos), para que cualquier dev pueda intervenir el flujo sin romperlo y para tener línea base antes de proponer cambios.
+
+h3. Contexto
+
+La investigación inicial del 2026-05-26 dejó preguntas abiertas:
+
+* ¿Qué servicio del legacy (sales / etlnode / delivers / etlback)
+
+  ejecuta efectivamente la facturación?
+
+* ¿Cuál es el criterio de priorización?
+* ¿Hay cron interno o se dispara por evento?
+* ¿Cómo se conecta con Abako (SQL Server)?
+
+h3. Tareas
+
+* ☐ Diagrama de secuencia: pedido en app → CONFIRMADO → … →
+
+      facturaGenerada llena → DESPACHADO.
+
+* ☐ Identificar dueño de la lógica de facturación (qué servicio,
+
+      qué endpoint, qué cron).
+
+* ☐ Documentar el criterio de prioridad (PRESENCIAL vs
+
+      FRECUENCIA, por fecha entrega, por sede).
+
+* ☐ Listar todas las tablas tocadas: {{TRANSACCION}}, {{PEDIDO}},
+
+      {{FACTURAS_ENTREGADAS}}, {{ESTADOS}}, {{ESTADO_PLANILLA}},       {{REGISTRO_TRANSACCIONES_DIGITALES}}.
+
+* ☐ Cross-verificar con código en {{core_develop/sales}},
+
+      {{etlnode}}, {{delivers}}.
+
+* ☐ Doc final en Engram bajo {{arquitectura/flujo-facturacion-consumo-general.md}}.
+
+h3. Criterios de aceptación
+
+* ☐ Diagrama publicado.
+* ☐ Cualquier dev puede leerlo y explicar qué pasa cuando un
+
+      pedido nuevo entra.
+
+h3. Notas técnicas
+
+* Tablas verificadas el 2026-05-26: BOG = 976k transacciones,
+
+  BOY = 386k transacciones, históricos.
+
+* En MERCADERIA.TRANSACCION: 4849 pedidos CONFIRMADO en últimos 7d,
+
+  de los cuales >500 sin factura para entregas próximas 48h.",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,SD-128,SD-129,SD-132,,,,0|i000nm:zzzz,,,,Sprint 4 · Asesores (pg2),,,5.0,,,,,,,,Por hacer,26/may/26 1:44 PM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-083] Alertas de presupuesto GCP con thresholds escalados,SD-111,10206,Historia,Tareas por hacer,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,26/may/26 11:05 AM,01/jul/26 8:25 AM,16/jun/26 6:59 AM,,,0,costos,devops,roadmap-2026,sprint-08,track-devops-sre,,"h2. Como *lead de tecnología* quiero alertas que escalen progresivamente (50% / 80% / 100% / 120% del presupuesto mensual), para reaccionar antes de que el costo se dispare en una semana.
+
+h3. Contexto
+
+Sin presupuesto definido y alertas, una query mal hecha en BQ o un loop infinito que crea VMs puede generar facturas miles de USD por descuido.
+
+h3. Tareas
+
+* ☐ Definir presupuesto mensual por proyecto (dirección).
+* ☐ GCP Budgets con alertas 50/80/100/120% → Slack + email.
+* ☐ Política: si llega al 100% se pausan recursos no-core
+
+      (procesos batch, BQ pesado).
+
+* ☐ Runbook documentado.
+
+h3. Criterios de aceptación
+
+* ☐ 4 alertas configuradas por proyecto.
+* ☐ Recipient list verificada.
+
+h3. Notas técnicas
+
+* Pregunta de dirección: cuánto es el presupuesto mensual aceptable.",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,SD-110,,,0|i000nm:zzzzzv,,,,Sprint 4 · Asesores (pg2),,,3.0,,,,,,,,Por hacer,26/may/26 11:05 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-139] Nuevo look and feel del portal de despacho en react jsx,SD-139,10394,Historia,Tareas por hacer,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,,Miguel Aguirre,712020:21313d0b-8fc1-47f7-a84d-cb21970b5a46,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,01/jun/26 1:14 PM,01/jul/26 8:25 AM,30/jun/26 9:24 AM,,,0,,,,,,,"Se desea que en el front de refrigerados, podamos expandir una nueva view de segmento de consumo general, para poder tener gestión de lo despachado, alistado y como un tablero de control al respecto.
+
+Nuevas features respecto al portal de angular actual
+1. Capturar tiempos de operación de alistamiento
+2. Crear modulo de tablero de control con metricas de gestión, segmentado por rol y grupo
+3. Nuevo estilo de de cards y proceso de check, mas intuitivo.",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,11/jun/26 10:09 AM;ug:5bb3e9ab-399f-4113-a556-c070c9c45366;diagrama de supervisor y ayudante de bodega.odt;https://servimax-team.atlassian.net/rest/api/3/attachment/content/10033,,0|i000nm:zzzzzx,,,,Sprint 4 · Asesores (pg2),,,8.0,,,,,,,,Por hacer,30/jun/26 9:24 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-147] Activar pedidos EXPRESS y segmentar por localidades PARAMETRIZABLE,SD-148,10499,Tarea,QA - Develop/QA,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,,cristian_gaitan,712020:f058778d-a445-48b5-8da6-2d090ec2cdb9,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,11/jun/26 10:09 AM,01/jul/26 8:26 AM,23/jun/26 6:08 PM,,,0,,,,,,,"Como administrador logístico/comercial,
+quiero parametrizar rutas comerciales, cobertura y disponibilidad de entregas 24H,
+para garantizar que únicamente los tenderos pertenecientes a rutas operativas habilitadas puedan acceder al beneficio de entrega express.
+
+----
+
+h2. Contexto
+
+La cobertura no debe definirse por localidades o zonas generales, sino a partir de ruteros comerciales reales establecidos por los asesores de venta.
+
+Cada ruta representa:
+
+* cobertura validada,
+* clientes atendidos,
+* capacidad logística disponible,
+* frecuencia operativa real.
+
+La disponibilidad de entregas 24H dependerá de:
+
+* la ruta asociada al tendero,
+* capacidad operativa,
+* reglas de disponibilidad configuradas.
+
+----
+
+h2. Alcance
+
+El sistema deberá permitir:
+
+* parametrizar rutas comerciales,
+* asociar clientes a rutas,
+* habilitar/deshabilitar entregas 24H por ruta,
+* configurar capacidad y reglas operativas,
+* bloquear disponibilidad por saturación.
+
+El frontend administrativo deberá incluir:
+
+* visualización de rutas,
+* configuración de reglas,
+* capacidad operativa por ruta,
+* panel de recomendaciones basado en comportamiento histórico y demanda.
+
+----
+
+h2. Criterios de Aceptación
+
+* La cobertura se define únicamente mediante ruteros comerciales.
+* El tendero solo visualiza entrega 24H si pertenece a una ruta habilitada.
+* La disponibilidad depende de capacidad operativa real.
+* El administrador puede parametrizar reglas desde el frontend.
+* El sistema puede generar recomendaciones inteligentes de operación.
+
+----
+
+h2. Anotaciones Futuras
+
+Como mejora futura:
+
+* permitir selección de horarios/ventanas de entrega desde la app del tendero,
+* mostrar slots dinámicos según capacidad y ruta.",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i000nm:zzzzzzzzx,,,,Sprint 3,,,5.0,,,,,,,,En curso,11/jun/26 10:10 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-152] Prueba de concepto de pedidos en vivo de consumo general - Monitoreo de rutas por parte de lideres comerciales.,SD-153,10600,Historia,QA - Develop/QA,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,22/jun/26 8:52 AM,01/jul/26 8:26 AM,30/jun/26 1:46 PM,,,0,,,,,,,,,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i000nm:zzzzzzzzy,,,,Sprint 3,,,3.0,,,,,,,,En curso,30/jun/26 9:54 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-146]  Migración BOT de ABONOS para temporada JUL-DIC - REFRIGERADOS,SD-147,10466,Historia,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,Miguel Aguirre,712020:21313d0b-8fc1-47f7-a84d-cb21970b5a46,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,11/jun/26 9:04 AM,01/jul/26 11:34 AM,02/jul/26 10:44 AM,01/jul/26 11:34 AM,,0,,,,,,,"Como líder de operaciones, deseo realizar el proceso de abonos semi automático, básicamente, generar abonos, y planillas de abono en la nueva plataforma de refrigerados “servimax-frontend” y con ubicación a los otros bots actuales.    
+
+1. Clonar repositorio de frontend y backend de la arquitectura nueva. 
+2. Clonar proyecto legacy donde esta la lógica de abonos. (rpa bot servimax) 
+3. Crear plan de acción de migración para la nueva plataforma.
+4. Realizar migración de lógica teniendo en cuenta framework y estructuras actuales, cómo las clases de las tablas y posibles migraciones en Django Rest Framework.
+
+Nota: Abonos es un proceso que se hace normalmente para el segmento refrigerados  en temporadas de JUL hasta DIC. Y la operación se expande a crear abonos (el cliente dentro de un portafolio de productos como cenas familiares, abona para ese producto, y se le entrega y factura hasta DIC), y planilla los recaudos para que el conductor pase y reclame eso.  ",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,13/jun/26 11:05 AM;ug:5bb3e9ab-399f-4113-a556-c070c9c45366;Plan De Acción Para Migración De Bot De Abonos.odt;https://servimax-team.atlassian.net/rest/api/3/attachment/content/10134,,0|i000nn:,,,,Sprint 3,,,5.0,,,,"30/jun/26 9:34 AM;637f8d9e77acd224b33e8acc;Hay avance alto para {{2026-06-30}} dejar PR y Code Review de cambios.
+
+Resumen:
+Ya se encuentran las funciones core de abonos migradas al nuevo proyecto, se hizo testing con ecom para simular abonos existentes y tambien set de datos de planilla de abonos. Falta depuración de funciones de impresión (descarga de abonos y planillas de abonos)",,,,Listo,01/jul/26 11:34 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-153] Implementación donde lider con un dashboard vea en tiempo real la ubicacion de Asesor y los pedidos que ha hecho,SD-154,10633,Historia,En curso,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,,cristian_gaitan,712020:f058778d-a445-48b5-8da6-2d090ec2cdb9,cristian_gaitan,712020:f058778d-a445-48b5-8da6-2d090ec2cdb9,cristian_gaitan,712020:f058778d-a445-48b5-8da6-2d090ec2cdb9,24/jun/26 9:36 AM,02/jul/26 7:12 AM,30/jun/26 9:35 AM,,01/jul/26 12:00 AM,0,devops,investigacion,roadmap-2026,,,,,,cristian_gaitan,,712020:f058778d-a445-48b5-8da6-2d090ec2cdb9,,,,,,,,,,,,,,,,0|i000np:,,,,Sprint 3,,,5.0,,,,,,,,En curso,02/jul/26 7:12 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-136]  HU-CHATBOT-001: Chatbot Agéntico RAG para Segmento Refrigerados,SD-155,10666,Historia,En curso,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,,WILSON PABON,712020:a3e7bd23-6099-4003-811a-f0aaf2beea5d,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,25/jun/26 9:49 AM,01/jul/26 8:21 AM,30/jun/26 12:44 PM,,,0,,,,,,,"Como operador del segmento refrigerados de Servimax, quiero un chatbot inteligente por WhatsApp que atienda a mis clientes (tenderos) y a mi equipo administrativo con información precisa basada en documentos de conocimiento configurables, para que los clientes resuelvan dudas de forma autónoma (estado de pedido, PQR, info de entregas) y el equipo admin tenga un asistente con acceso a herramientas internas.
+
+
+
+Criterios de Aceptación
+
+
+
+CA-01 — Selección de segmento: Al primer contacto, el bot pregunta el segmento del comercio (Consumo General  Refrigerados). Si elige Consumo General, se redirige al bot legacy. Si elige Refrigerados, el nuevo agente toma control.
+
+
+
+CA-02 — Agente Cliente funcional: El agente de cliente responde preguntas usando la base de conocimiento vectorizada. Las respuestas son rápidas (<5s) y relevantes al contexto refrigerados.
+
+
+
+CA-03 — Agente Admin funcional: Los números registrados como admin reciben un agente con herramientas y conocimiento diferente al de clientes. El agente reconoce automáticamente al admin por su número de teléfono.
+
+
+
+CA-04 — Panel de configuración: Desde el frontend React, un admin puede: Editar el prompt y personalidad de cada agente (cliente y admin); Subir fuentes de conocimiento (PDF/DOCX/TXT) con scope y audiencia; Ver el estado de vectorización de cada fuente; Crear/editar/eliminar tools (servicios) con su schema de parámetros; Registrar teléfonos como admin (individual y bulk CSV); Ver historial de conversaciones; Chatear directamente con el agente admin desde el panel.
+
+
+
+CA-05 — RAG agéntico: El bot puede: (a) responder desde conocimiento vectorizado, (b) ejecutar tools (consultar pedido, crear PQR), (c) escalar a humano, (d) pedir clarificación. Máximo 3 ejecuciones de tool por mensaje.
+
+
+
+CA-06 — Persistencia de estado: Las conversaciones se persisten en Firestore (colección CHATBOT_STATES), siguiendo el patrón del bot legacy (dataInitial). Historial completo en Postgres (ConversationLog).
+
+
+
+CA-07 — Seguridad: Los chunks de conocimiento para “admin” no son accesibles al agente cliente. Las tools de admin no están disponibles para el agente cliente. Los teléfonos admin se verifican contra la tabla PhoneRegistration.
+
+
+
+Notas para el pasante
+
+
+
+# El código base ya está escrito (subtareas #1–#6). Tu trabajo empieza en la subtarea #7.
+# 
+## Subtarea #7 — Flujo init: revisar agent_orchestrator.py → _handle_segment_init(). Asegurar que funciona end-to-end con el bot legacy.
+## 
+### Subtarea #8 — Conectar stubs: los archivos en apps/chatbot/tools/ tienen # TODO marcando dónde conectar datos reales. Opciones documentadas en cada stub.
+### 
+#### Subtarea #9 — Tests: usar config.settings_test_sqlite. Mockear Gemini con unittest.mock.patch. Ver patrón en tests existentes de apps/supply.
+#### 
+##### Para Firestore: usar el singleton de apps/integrations/firestore_client.py. La colección es WHATSAPP_SRV/DATACLIENTES/CHATBOT_STATES/{phone}.
+##### 
+###### Tests: python manage.py test apps.chatbot --settings=config.settings_test_sqlite
+###### 
+####### NO correr migraciones contra producción sin autorización.
+####### 
+######## NO hardcodear API keys — todo via settings.py + .env.
+######## 
+######### La rama debe seguir la convención: SD-OP-DEV-XX (pedir número al líder).",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,25/jun/26 9:50 AM;2450776d-4786-4c8e-b80c-0d51bbfbc77d;PLAN_TECNICO_CHATBOT_RAG.md;https://servimax-team.atlassian.net/rest/api/3/attachment/content/10167,,0|i000nq:,,,,Sprint 3,,,8.0,,,,,,,,En curso,30/jun/26 8:32 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+"[SRV-177] Feature modulo de pedidos Express, activación de estrategía dinamica por zonas/localidades/barrios/clientes",SD-177,10755,Historia,CODE REVIEW,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,30/jun/26 9:43 AM,01/jul/26 8:21 AM,30/jun/26 9:59 AM,,,0,,,,,,,,,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i000nq:i,,,,Sprint 3,,,8.0,,,,,,,,En curso,30/jun/26 9:44 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+"[SRV-140] Crear un modelo relacional basado en el legacy, que nos ayude a gestionar picking de despachos para consumo en otra plataforma.",SD-140,10395,Historia,CODE REVIEW,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,01/jun/26 1:17 PM,01/jul/26 8:22 AM,30/jun/26 9:22 AM,,,0,,,,,,,"Basicamente se debe crear una estructura de modelo de Django Rest Framework, donde especifique cuales con las clases y propiedades del nuevo modelo, basandonos en la necesidad de tener información de Picking general, reutlizar legacy y estructura de refrigerados.
+
+Información de productos
+Información general de conductores
+Información de tiempos de gestion
+Información de control de roles sobre los auxiliares o lideres de alistamiento
+ ",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i000nq:r,,,,Sprint 3,,,3.0,,,,30/jun/26 9:18 AM;637f8d9e77acd224b33e8acc;Con base a los cambios de [~accountid:712020:21313d0b-8fc1-47f7-a84d-cb21970b5a46] se procede a refactorizar por motivos de arquitectura de datos no legible ni clara para desarrollo base de backend. [~accountid:637f8d9e77acd224b33e8acc] toma desarrollo para un upgrade,,,,En curso,30/jun/26 8:48 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-150] Feature modulo de abastecimiento - Calculo de Stock de seguridad y tiempos de entregas.,SD-151,10534,Historia,CODE REVIEW,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,16/jun/26 7:32 AM,01/jul/26 8:28 AM,30/jun/26 8:59 AM,,,0,,,,,,,,,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i000nq:v,,,,Sprint 3,,,3.0,,,,,,,,En curso,30/jun/26 9:09 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-082] Dashboard de costos GCP — desglose por servicio + proyecto + mes,SD-110,10205,Historia,Tareas por hacer,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,26/may/26 11:05 AM,01/jul/26 8:25 AM,12/jun/26 10:30 AM,,,0,costos,devops,observabilidad,roadmap-2026,sprint-08,track-devops-sre,"h2. Como *director financiero* quiero un dashboard que me muestre el costo mensual de GCP desglosado por servicio (Compute, Cloud SQL, BigQuery, GCS, Egress) y por proyecto (Pegasus, isa-servimax), para detectar gastos sorpresa y oportunidades de ahorro.
+
+h3. Contexto
+
+Hoy nadie mira los costos hasta que llega la factura. Con la exposición B2C esto puede crecer rápido — necesitamos visibilidad temprana.
+
+h3. Tareas
+
+* ☐ Habilitar exportación de Billing a BigQuery (gratis).
+* ☐ Tablas en BQ: {{billing_export.*}}.
+* ☐ Dashboard Grafana o Looker Studio con:
+* Costo total último mes
+* Top 10 servicios por costo
+* Tendencia mes a mes 12 meses
+* Costo por proyecto desglosado
+* Egress (suele ser el invisible)
+* ☐ Métricas derivadas: costo por factura procesada, costo por
+
+      cliente activo.
+
+h3. Criterios de aceptación
+
+* ☐ Director financiero recibe el link mensual.
+* ☐ La cifra cuadra con la factura recibida ± 1%.
+
+h3. Notas técnicas
+
+* Billing export es retroactivo desde el día que se habilita —
+
+  habilitar ASAP aunque el dashboard tarde.",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,SD-111,,,SD-108,,,0|i000nq:zzzzzzzzyzzzzzy,,,,Sprint 3,,,5.0,,,,,,,,Por hacer,26/may/26 11:05 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-075] Estudio Terraform — fundamentos + provider GCP,SD-103,10198,Historia,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,WILSON PABON,712020:a3e7bd23-6099-4003-811a-f0aaf2beea5d,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,26/may/26 11:05 AM,01/jul/26 8:15 AM,04/jun/26 9:06 AM,05/jun/26 11:28 AM,,0,devops,formacion,iac,roadmap-2026,sprint-02,track-devops-sre,"h2. Como *futuro DevOps de Servimax* quiero entender Terraform a nivel fundamentos + provider GCP, para poder codificar la infraestructura actual y futura sin depender de gcloud-imperative.
+
+h3. Contexto
+
+Hoy toda la infra de Pegasus está como artefacto manual (gcloud commands ad-hoc). Esto es deuda — si la VM se daña, no hay forma declarativa de recrear. Terraform es el estándar.
+
+h3. Tareas
+
+* ☐ Curso HashiCorp Terraform fundamentals (~4 horas).
+* ☐ Tutorial específico GCP provider.
+* ☐ State management: local vs remote backend (GCS).
+* ☐ Documento Engram: glosario + diagrama básico del flujo.
+
+h3. Criterios de aceptación
+
+* ☐ Persona explica plan / apply / destroy / state / modules.
+* ☐ Documento en Engram.
+
+h3. Notas técnicas
+
+* https://learn.hashicorp.com/collections/terraform/gcp-get-started",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,SD-105,,,,,,0|i000sj:,,,,Sprint 2 Gestión operativa AUT,Sprint 1 · Estabilización,Sprint 2,3.0,,,,,,,,Listo,05/jun/26 11:28 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-074] Estudio Grafana — fundamentos + integración Cloud Monitoring,SD-102,10197,Historia,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,cristian_gaitan,712020:f058778d-a445-48b5-8da6-2d090ec2cdb9,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,26/may/26 11:05 AM,01/jul/26 8:15 AM,16/jun/26 2:24 PM,10/jun/26 1:38 PM,,0,devops,formacion,observabilidad,roadmap-2026,sprint-02,track-devops-sre,"h2. Como *futuro DevOps de Servimax* quiero hacer una primera inmersión en Grafana (1-2 días self-paced), para tener el contexto necesario antes de configurarlo en producción y para no perder tiempo en POCs sin entender qué hago.
+
+h3. Contexto
+
+Grafana es el motor de visualización elegido para reemplazar la ""ceguera operativa"" del deck (Slide 17). Antes de instalarlo en producción, la persona dedicada al track debe entender datasources, dashboards as code, alertmanager.
+
+h3. Tareas
+
+* ☐ Curso oficial Grafana ""Get started"" (~3-4 horas).
+* ☐ Tutorial Cloud Monitoring as Grafana datasource.
+* ☐ Crear cuenta gratuita Grafana Cloud para experimentar.
+* ☐ Documento corto en Engram: ""Lo que aprendí + dudas"".
+
+h3. Criterios de aceptación
+
+* ☐ Persona puede explicar la diferencia entre dashboard, panel,
+
+      datasource, alertrule.
+
+* ☐ Documento de aprendizaje subido a Engram.
+
+h3. Notas técnicas
+
+* Material oficial: https://grafana.com/tutorials/grafana-fundamentals/",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,SD-104,,,,,,0|i000sm:i,,,,Sprint 2 Gestión operativa AUT,Sprint 1 · Estabilización,Sprint 2,3.0,,,,,,,,Listo,10/jun/26 1:38 PM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-143] Documentar proceso chatbot para alimentarlo a notebook google,SD-144,10431,Historia,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,WILSON PABON,712020:a3e7bd23-6099-4003-811a-f0aaf2beea5d,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,01/jun/26 2:56 PM,01/jul/26 8:15 AM,16/jun/26 2:43 PM,03/jun/26 3:26 PM,,0,,,,,,,"Necesito como lider tecnologico, poder documentar todas las funcionalidades del bot hasta la fecha, para que podamos establecer nuevas funciones y ademas, comenzar estructura de RAGs.
+
+Documentar APIs, y conexiones de backend live operation
+
+Como levantar? 
+
+Como usa el servicio de Twilio o Meta Facebook? Cual es el estandar de crear una plantilla?
+
+etc. Todo lo que se pueda documentar.",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i000w7:,,,,Sprint 2 Gestión operativa AUT,Sprint 1 · Estabilización,Sprint 2,8.0,,,,,,,,Listo,03/jun/26 3:26 PM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+"[SRV-145] Dejar MVP para al menos 3 proveedores, automatizado de Abastecimiento",SD-146,10433,Historia,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,01/jun/26 3:25 PM,01/jul/26 8:15 AM,16/jun/26 3:05 PM,11/jun/26 8:55 AM,,0,,,,,,,"Como lider de abastecimiento, quiero generar procesos automatizados de matrices donde me de el sugerido, rotación etc, respecto al area de abastecimiento. Validar que sea coherente cifras de inventario sincronizado con Abako o Mercaderia.",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i000wn:,,,,Sprint 2 Gestión operativa AUT,Sprint 1 · Estabilización,Sprint 2,8.0,,,,,,,,Listo,11/jun/26 8:55 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-099] Gestión de tiempos de carga de trabajo tardes equipo de operaciones,SD-133,10292,Historia,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,27/may/26 9:27 AM,01/jul/26 8:15 AM,30/jun/26 11:57 AM,30/jun/26 9:03 AM,,0,devops,roadmap-2026,track-devops-sre,,,,"Resumen alimentado por Lauren & Nataly
+*Reporte de Operaciones (4:30 p. m. - 6:30 p. m.)*
+
+# *Validación y Facturación Inicial (4:30 p. m. - 4:47 p. m.)*
+
+* *4:30 p. m.:* Validación de inventario y confirmación de la cantidad de pedidos.
+* *4:38 p. m. - 4:47 p. m.:* Inicio del proceso de facturación automatizada mediante el bot, realizando la gestión en dos cortes (comenzando con un primer bloque de 5 carros).
+
+# *Planillado y Contingencia (5:00 p. m. - 5:05 p. m.)*
+
+* *5:00 p. m.:* Proceso de planillado y separación a cargo de Edilson. Se reporta una *falla en el bot*.
+* *5:02 p. m.:* Impresión manual de las planillas.
+* *5:05 p. m.:* Envío de cadena y generación de los archivos PDF necesarios para la impresión de facturas.
+
+# *Gestión de Despacho y Devoluciones (5:40 p. m. - 5:50 p. m.)*
+
+* *5:40 p. m.:* Ejecución del bot de compilados.
+* *5:45 p. m.:* Inicio de la impresión de facturas.
+* *5:47 p. m.:* Ejecución del _picking_ de despacho.
+* *5:50 p. m.:* Generación del reporte de devoluciones.
+
+# *Cierre y Notificaciones (6:20 p. m. - 6:30 p. m.)*
+
+* *6:20 p. m.:* Finalización total del proceso de impresión de facturas.
+* *6:30 p. m.:* Envío de correos electrónicos con la información de los productos refrigerados y de consumo.",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i000xz:,,,,Sprint 2 Gestión operativa AUT,Sprint 2,,2.0,,,,30/jun/26 9:08 AM;637f8d9e77acd224b33e8acc;Queda a disposición de analisís por salida de Nataly del equipo y la carga actual de Lauren.,30/jun/26 12:02 PM;637f8d9e77acd224b33e8acc;Lógica de Polar proceso operativo,,,Listo,30/jun/26 9:03 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-101] Investigacion sobre un problema en el modulo de Users que cierra las conexiones y afecta a los otros servicios.,SD-135,10326,Error,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,cristian_gaitan,712020:f058778d-a445-48b5-8da6-2d090ec2cdb9,cristian_gaitan,712020:f058778d-a445-48b5-8da6-2d090ec2cdb9,cristian_gaitan,712020:f058778d-a445-48b5-8da6-2d090ec2cdb9,29/may/26 8:51 AM,02/jul/26 7:24 AM,30/jun/26 12:02 PM,30/jun/26 9:02 AM,,0,devops,investigacion,roadmap-2026,,,,Final de la historia se tiene que encontrar una mejor optimización y lograr resolver que no se cierre las conexiones y afecte a los otros servicios. ,,cristian_gaitan,Jeferson David Camero Garcia,712020:f058778d-a445-48b5-8da6-2d090ec2cdb9,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,0|i000y7:,,,,Sprint 2 Gestión operativa AUT,Sprint 2,,5.0,,,,"24/jun/26 9:24 AM;712020:f058778d-a445-48b5-8da6-2d090ec2cdb9;se realizo la semana pasada el fix de la libreria {{utilsbacklibrary.git}} 
+a una clase que cuando recibia datos null empezaba a cerrar la conexion de igual forma se debe estar pendiente por que se observo unos logs en la console de GCP",30/jun/26 9:02 AM;637f8d9e77acd224b33e8acc;[~accountid:712020:f058778d-a445-48b5-8da6-2d090ec2cdb9] Se evidencia que las conexiones ya no se cierran o abren inesperadamente ni de forma descontrolada. Seguir monitoreando,"02/jul/26 7:24 AM;712020:f058778d-a445-48b5-8da6-2d090ec2cdb9; Esta semana se presentó una incidencia en la que, tras realizar un despliegue, los logs de GCP comenzaron a registrar el cierre de conexiones.",,Listo,30/jun/26 9:02 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-100] Nuevo look and feel portal web administradores Fase 1,SD-134,10293,Historia,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,WILSON PABON,712020:a3e7bd23-6099-4003-811a-f0aaf2beea5d,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,27/may/26 9:39 AM,01/jul/26 8:15 AM,30/jun/26 12:44 PM,17/jun/26 8:55 AM,,0,cultura,customer-master,roadmap-2026,track-devops-sre,UI-UX,,"Como líder tecnológico, quiero que el portal admin tenga una interfaz más intuitiva y responsive, con prioridad en flujos como “Chatbot y soporte”. Entendiendo que no solamente es un cambio a nivel de UI, si no también de UX, viendo la necesidad de que los lideres del área comercial, y otros roles internos, puedan tener una guía de usuario de donde y como interactuar con las opciones de gestión.
+
+
+
+# Avanzar con un wireframe por roles y navegación de screens más comunes y útiles del portal.  
+# Validar que el branding e insumos establecidos sea lo necesario o debemos realizar fixes.",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i000zj:,,,,Sprint 2 Gestión operativa AUT,Sprint 2,,8.0,,,,,,,,Listo,17/jun/26 8:55 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-137] BUG - Solucionar creación de comercios por data normalizada y el dato de GEO por rechazo,SD-137,10392,Error,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,cristian_gaitan,712020:f058778d-a445-48b5-8da6-2d090ec2cdb9,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,01/jun/26 1:07 PM,01/jul/26 8:15 AM,30/jun/26 12:52 PM,24/jun/26 9:29 AM,,0,,,,,,,Yo como lider de operaciones quisiera no tener que ajustar aprobación de Geos y tambien problemas por caracteres desconocidos a nivel de nombre de comercio que generan problema de creación.,,cristian_gaitan,Jeferson David Camero Garcia,712020:f058778d-a445-48b5-8da6-2d090ec2cdb9,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,0|i000zr:,,,,Sprint 2 Gestión operativa AUT,Sprint 2,,5.0,,,,24/jun/26 9:29 AM;712020:f058778d-a445-48b5-8da6-2d090ec2cdb9;se realizo una inspeccion del  flujo de creacion del cliente sucede es que cuando el asesor se sale de su zona y crea un cliente puede caer el cliente en rechazo por geolocalizacion,,,,Listo,24/jun/26 9:29 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+"[SRV-138] BUG - Planificar horas de corte para facturación, dejando como estrategia 2 planillas APP. Pedidos Express",SD-138,10393,Error,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,cristian_gaitan,712020:f058778d-a445-48b5-8da6-2d090ec2cdb9,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,01/jun/26 1:09 PM,01/jul/26 8:15 AM,30/jun/26 12:57 PM,24/jun/26 9:29 AM,,0,,,,,,,"Debido a los tiempos de alistamiento, se tiene el problema de que el equipo logistico se esta sobrecargando sin tener eficiencia a la hora de alistar pedidos de app. Es necesario refactorizar el proceso dejando nuevos cortes de facturación y planillado para que hayan 3 tipos de planillas y que se pueda tener un turno de gestion de alistamiento.
+1. Presencial
+2. App 1
+3. App 2
+Teniendo esto en cuenta, se espera que no hayan pedidos pendientes por facturar de días anteriores, y tambien generar menos carga de trabajo de logistica. ",,cristian_gaitan,Jeferson David Camero Garcia,712020:f058778d-a445-48b5-8da6-2d090ec2cdb9,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,0|i000zz:,,,,Sprint 2 Gestión operativa AUT,Sprint 2,,3.0,,,,"02/jun/26 9:40 AM;712020:f058778d-a445-48b5-8da6-2d090ec2cdb9;Durante la implementación del cambio en los horarios de facturación, se identificó que programar los cortes en horarios muy tempranos puede generar una menor cantidad de pedidos facturados. Por esta razón, se recomienda establecer los horarios de facturación en franjas más tardías, preferiblemente entre la 1:00 p. m. y las 2:00 p. m., ya que para ese momento se dispone de un mayor volumen de pedidos, permitiendo una facturación más eficiente y una mejor consolidación de cada planilla.","02/jun/26 2:41 PM;712020:f058778d-a445-48b5-8da6-2d090ec2cdb9;Se modificó el endpoint {{GET /approveAppOrders}} en {{autoRouter.routes.ts}} para corregir el cálculo de la fecha de entrega cuando se usa el parámetro {{moveDate}}.
+*Cambios realizados:*
+
+* Se eliminó el IF que sumaba {{moveDateNumber}} nuevamente cuando la fecha caía en domingo (causaba saltos incorrectos de fecha)
+
+* Se agregó validación para el caso en que hoy es sábado y la fecha calculada cae en lunes (se mueve un día más para evitar entregas incorrectas)
+
+* Se actualizó el parámetro {{moveDate}} en Cloud Scheduler de {{1}} a {{2}} para que la facturación de las 6 PM cubra pedidos de pasado mañana
+*Archivos modificados:*
+* {{src/routes/autoRouter.routes.ts}}
+
+*GCP:*
+{{aprobacion_app}}: URL actualizada de {{?moveDate=1}} a {{?moveDate=2}}",30/jun/26 12:58 PM;637f8d9e77acd224b33e8acc;[~accountid:712020:f058778d-a445-48b5-8da6-2d090ec2cdb9] aprobado,30/jun/26 1:00 PM;637f8d9e77acd224b33e8acc;[~accountid:712020:f058778d-a445-48b5-8da6-2d090ec2cdb9] Dejemos en el dashboard un grafico de histograma de frecuencia de pedidos para saber a que horas es mas efectivo activar lógica,Listo,24/jun/26 9:29 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-144] Levantar nuevo proyecto low cost de refrigerados sin tener que gastar más de lo que cuesta actualmente!,SD-145,10432,Historia,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,01/jun/26 3:02 PM,01/jul/26 8:15 AM,30/jun/26 1:09 PM,30/jun/26 8:45 AM,,0,,,,,,,"Bajo el monitoreo de costos, necesito que se reduzcan valor de VM Pegasus (segmento de refrigerados) para que no haya un cobro excesivo.
+
+Nota: Ya esta creado el proceso solo hace falta validar cambio de DNS y buen funcionamiento con los recursos actuales.",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i0010f:,,,,Sprint 2 Gestión operativa AUT,Sprint 2,,5.0,,,,,,,,Listo,30/jun/26 8:45 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-155] Feature modulo de cashback & premios y misiones,SD-156,10699,Historia,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,30/jun/26 8:37 AM,01/jul/26 8:15 AM,30/jun/26 1:33 PM,30/jun/26 8:45 AM,,0,,,,,,,"Como *coordinador comercial / líder de operaciones*, necesito un sistema de fidelización que permita crear campañas con misiones (retos de compra por producto), calcular cashback parametrizable por programa, y gestionar la redención desde la billetera del tendero, para incentivar la recompra y medir el cumplimiento por cliente.
+
+h2. Alcance funcional
+
+h3. Premios y Misiones (Portal admin + App tenderos)
+
+* *Wizard de creación de campañas*: nombre, fechas, sede, cobertura (departamento / casa comercial / libre), misiones (retos) con metas por referencia de producto y premio configurable.
+* *Panel de liquidación (beneficiarios)*: vista por reto con conteo de pedidos por cliente, tracking de estado de entrega (Confirmado → Facturado → Entregado / Devuelto / Anulado), pills de filtro por estado, búsqueda por cédula o nombre de comercio, y detalle lazy-load de pedidos al hacer click.
+* *Banner en app*: header del premio global en modo LIBRE (texto + ícono trofeo) visible al completar todos los retos de la campaña.
+
+h3. Cashback (Motor + Billetera app)
+
+* *Motor parametrizable*: programas de cashback con reglas de acumulación (% o valor fijo), restricción de redención por scope (producto, marca, casa comercial, categoría, anywhere), y expansión automática de códigos ERP.
+* *Billetera por cajitas*: sub-saldos derivados del BONO legacy (cajita restringida por programa + cajita general), con logo y descripción por restricción.
+* *Redención en app*: la tarjeta de billetera (WalletCashbackCard) se muestra siempre que el cliente tenga saldo > 0, permitiendo redención incluso con cashback de acumulación desactivado globalmente. Validación de restricción contra el carrito al momento del checkout.
+
+h3. Operativo / DevOps
+
+* *Circuit breaker eForce* parametrizable por grupo (G1/G2) con toggle {{enforce_login_breaker}} en el portal de configuración Ecom.
+* *Job de compilados*: pipeline de subida de planillas a Firestore con tracking de órdenes.
+
+h2. Criterios de aceptación
+
+* sin completarEl coordinador puede crear una campaña con N retos, cada uno con productos target y meta.
+* sin completarEl panel de liquidación muestra el tracking real de entrega cruzando MERCADERIA (no solo estado de pedido).
+* sin completarEl tendero ve su billetera y puede redimir saldo existente aunque {{switchCashBack}} esté apagado.
+* sin completarLa restricción de redención se valida contra el carrito (scope + códigos expandidos).
+* sin completarEl banner de premio global aparece en la app cuando la campaña es LIBRE y tiene {{grand_reward_text}}.
+
+h2. Repos y ramas
+
+* *Backend Django*: {{servimax-backend}} → {{master}} (tracking, premios) / {{develop}} (abastecimiento)
+* *Frontend React*: {{servimax-frontend}} → {{master}}
+* *App React Native*: {{servimaxApp}} → {{feature/cashback-app}} (billetera + banner premio)",,Jeferson David Camero Garcia,John Arévalo,637f8d9e77acd224b33e8acc,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,,,,,,,,,,,,,,0|i0010l:,,,,Sprint 2 Gestión operativa AUT,Sprint 2,,13.0,,,,"30/jun/26 1:33 PM;637f8d9e77acd224b33e8acc;* Evaluar fecha de entrega de pedido, si al dia siguiente no hay nota crédito, que se liquide cashback.
+Jugadas maliciosas","30/jun/26 2:13 PM;712020:fa2cab61-84d5-4706-9655-e8307b63b5bb;Jugada maliciosa: Los asesores pueden usar usuarios de tiendas que ya no existen, hacer pedidos y ganar misiones o cashback con serviplata. Pueden decirle al conductor que venda la mercancia en otro lado y el usuario a traves del cual hicieron el pedido se gana el cash back. De tal forma QUE EL ASESOR PODRIA QUEDARSE CON EL CASHBACK GANADO DE CADA CAMPAÑA Y QUEDARSE CON UN PEDIDO COMPLETO Y DESVIAR EL INCENTIVO. ",,,Listo,30/jun/26 8:45 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-156] Reutilizar funciones backend para implementación frontend de notificaciones push en feature de Cashback / Premios y misiones,SD-157,10700,Historia,Finalizada,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,Listo,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,30/jun/26 8:41 AM,01/jul/26 8:15 AM,30/jun/26 1:46 PM,30/jun/26 8:41 AM,,0,,,,,,,,,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i0010m:,,,,Sprint 2 Gestión operativa AUT,Sprint 2,,3.0,,,,30/jun/26 1:25 PM;637f8d9e77acd224b33e8acc;Encuesta de satisfacción trigger para liquidar cashback o premios y misiones.,"30/jun/26 1:31 PM;637f8d9e77acd224b33e8acc;Evaluar fecha de entrega de pedido, si al dia siguiente no hay nota crédito, que se liquide cashback.
+
+Jugadas maliciosas ",,,Listo,30/jun/26 8:41 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-151] BUG Solucionar permanencia de img de productos,SD-152,10567,Error,En curso,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,,Miguel Aguirre,712020:21313d0b-8fc1-47f7-a84d-cb21970b5a46,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,16/jun/26 7:48 AM,01/jul/26 11:45 AM,01/jul/26 10:03 AM,,,0,,,,,,,"Pérdida de referencia o eliminación temporal de imágenes al editar productos.
+
+* *Descripción del problema:* Se ha detectado un comportamiento inestable en la plataforma al realizar cambios en las imágenes de los productos. Una vez que se ejecuta la actualización de la imagen, esta desaparece temporalmente de la vista del usuario o el sistema pierde su ruta de referencia (URL) por un error aún no identificado.
+* *Comportamiento esperado:* Al actualizar la imagen de un producto, la nueva visual debe guardarse, persistir en el sistema y renderizarse correctamente en el frontend de forma inmediata.
+* *Comportamiento actual:* Las imágenes modificadas parecen eliminarse o desvincularse del producto justo después de aplicar el cambio, rompiendo la visualización.
+
+
+
+[~accountid:712020:21313d0b-8fc1-47f7-a84d-cb21970b5a46] Por favor estudiar la logica, contextualizar algo si no se entiende con Valentina de rol visual. ",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,30/jun/26 10:26 AM;2450776d-4786-4c8e-b80c-0d51bbfbc77d;image-20260630-152603.png;https://servimax-team.atlassian.net/rest/api/3/attachment/content/10201,,0|i00123:,,,,Sprint 3,,,5.0,,,,,,,,En curso,01/jul/26 11:45 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+"[SRV-157] Feature crear en Admin Servimax, componente visual para modificar splash de inicio en app tenderos.",SD-158,10733,Historia,Tareas por hacer,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,,cristian_gaitan,712020:f058778d-a445-48b5-8da6-2d090ec2cdb9,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,30/jun/26 9:12 AM,01/jul/26 8:21 AM,30/jun/26 9:43 AM,,,0,roadmap-2026,UI-UX,,,,,,,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i00127:,,,,Sprint 3,,,5.0,,,,,,,,Por hacer,30/jun/26 9:12 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-178] Chatbot Servimax con funcionalidades de compra inmediata y llamada por voz,SD-178,10756,Historia,Tareas por hacer,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,,WILSON PABON,712020:a3e7bd23-6099-4003-811a-f0aaf2beea5d,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,30/jun/26 9:55 AM,01/jul/26 8:22 AM,30/jun/26 12:43 PM,,,0,,,,,,,"Analizar la integración vigente con los servicios de [http://elevenlabs.io|http://elevenlabs.io|smart-link]  dentro del repositorio {{servimaxLiveOperation}} (donde reside la lógica del bot). El objetivo es determinar el impacto y los requerimientos para realizar un upgrade que habilite la creación transversal de pedidos a través del canal de llamadas.
+
+
+
+*Criterios de Aceptación:*
+
+* [ ] Diagnóstico técnico del estado actual de la integración en {{servimaxLiveOperation}}.
+* [ ] Identificación de los insumos y cambios necesarios en ElevenLabs para soportar el flujo de pedidos.
+* [ ] Propuesta técnica o viabilidad para el upgrade en el canal de llamadas.",,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,,,0|i0016f:,,,,Sprint 3,,,8.0,,,,,,,,Por hacer,30/jun/26 9:55 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
+[SRV-179] Solucionar intermitencias de proceso de sincronización de liquidación en APP conductores segmento refrigerados,SD-179,10757,Error,Tareas por hacer,SD,Servimax-Desarrollo,software,John Arévalo,712020:fa2cab61-84d5-4706-9655-e8307b63b5bb,,Medium,,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,Jeferson David Camero Garcia,637f8d9e77acd224b33e8acc,30/jun/26 10:14 AM,01/jul/26 8:22 AM,30/jun/26 10:14 AM,,,0,,,,,,,Leer manual de implementación que incluye optimizar el massive bill done en el request y posibles problemas de arquitectura por request https,,Jeferson David Camero Garcia,,637f8d9e77acd224b33e8acc,,,,,,,,,,,,,,30/jun/26 10:14 AM;2450776d-4786-4c8e-b80c-0d51bbfbc77d;BUG_SETTLEMENT_LIQUIDACION.md;https://servimax-team.atlassian.net/rest/api/3/attachment/content/10200,,0|i0016n:,,,,Sprint 3,,,3.0,,,,,,,,Por hacer,30/jun/26 10:14 AM,10123,SD-28,[ROADMAP-2026] Hoja de ruta tecnológica 2026
