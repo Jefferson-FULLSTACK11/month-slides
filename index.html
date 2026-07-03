@@ -874,6 +874,80 @@
   </div>
 </div>
 
+<!-- ═══════════════════════════════════════════
+     SLIDE 12 — PROYECCIÓN DE COSTOS JULIO 2026
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto rounded-3xl shadow-xl overflow-hidden"
+       style="background:linear-gradient(135deg,#0f1f16 0%,#0d2a1c 50%,#0f1f16 100%)">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-5">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="pill pill-month">Julio 2026 · Forecast</span>
+            <span class="tag" style="background:color-mix(in srgb, var(--sv-accent) 20%, transparent);color:var(--sv-accent);border:1px solid color-mix(in srgb, var(--sv-accent) 40%, transparent)">💵 Costos de Plataforma</span>
+          </div>
+          <h2 class="text-3xl font-black leading-tight" style="color:#f4f9f4">
+            Lo que va a costar operar<br>la plataforma en julio
+          </h2>
+          <p class="mt-2" style="color:#a9c2ac">Proyección de nube (1–31 jul) · Twilio y ElevenLabs entran como nuevas líneas para el piloto del Chatbot con voz</p>
+        </div>
+        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-accent)">11</div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4 mb-5">
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:14px">
+          <div class="flex items-center gap-2 mb-2">
+            <div style="width:28px;height:28px;border-radius:7px;background:color-mix(in srgb, var(--sv-secondary) 30%, transparent);display:flex;align-items:center;justify-content:center"><i class="fas fa-cloud" style="color:var(--sv-secondary);font-size:12px"></i></div>
+            <div class="text-xs font-800" style="color:#cfe0d1">Google Cloud Platform</div>
+          </div>
+          <div class="text-2xl font-black" style="color:var(--sv-accent)">$477.327</div>
+          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">COP · forecast 1–31 jul</div>
+          <div class="text-xs" style="color:#7c9683">Cifra exacta del forecast de facturación GCP — <code style="color:#a9c2ac">servimax-isa-497719</code>, único proyecto activo post-migración</div>
+        </div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:14px">
+          <div class="flex items-center gap-2 mb-2">
+            <div style="width:28px;height:28px;border-radius:7px;background:color-mix(in srgb, var(--sv-teal) 30%, transparent);display:flex;align-items:center;justify-content:center"><i class="fas fa-phone-volume" style="color:var(--sv-teal);font-size:12px"></i></div>
+            <div class="text-xs font-800" style="color:#cfe0d1">Twilio</div>
+          </div>
+          <div class="text-2xl font-black" style="color:var(--sv-accent)">≈ $160.000</div>
+          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">COP · estimado piloto</div>
+          <div class="text-xs" style="color:#7c9683">SMS + llamadas de voz para el Chatbot Agéntico Refrigerados (SRV-178) — sin uso registrado aún, estimado sobre tarifa estándar publicada</div>
+        </div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:14px">
+          <div class="flex items-center gap-2 mb-2">
+            <div style="width:28px;height:28px;border-radius:7px;background:color-mix(in srgb, var(--sv-primary) 30%, transparent);display:flex;align-items:center;justify-content:center"><i class="fas fa-waveform-lines" style="color:var(--sv-primary);font-size:12px"></i></div>
+            <div class="text-xs font-800" style="color:#cfe0d1">ElevenLabs</div>
+          </div>
+          <div class="text-2xl font-black" style="color:var(--sv-accent)">≈ $92.000</div>
+          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">COP · estimado piloto</div>
+          <div class="text-xs" style="color:#7c9683">Voz sintética para la respuesta hablada del bot — plan de entrada (Creator), asumiendo un mes de uso piloto</div>
+        </div>
+      </div>
+
+      <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:10px;padding:12px 16px;margin-bottom:16px">
+        <div class="flex items-center justify-between">
+          <div class="text-sm font-700" style="color:#e5f2e7">Total estimado de plataforma — julio 2026</div>
+          <div class="text-xl font-black" style="color:var(--sv-accent)">≈ $729.327 COP</div>
+        </div>
+        <div class="text-xs mt-1" style="color:#7c9683">GCP es cifra real de forecast; Twilio y ElevenLabs son estimados de arranque (USD → COP a tasa referencial ~4.100) porque julio aún no registra consumo — se ajustan con el primer corte de facturación real.</div>
+      </div>
+
+      <div class="rounded-xl p-4" style="background:linear-gradient(135deg,#7c3aed00,#15ba591a);border:1px solid color-mix(in srgb, var(--sv-secondary) 35%, transparent)">
+        <div class="flex items-start gap-2">
+          <span class="text-lg" style="line-height:1.2">📌</span>
+          <div>
+            <div class="text-xs font-700 uppercase tracking-wide mb-1" style="color:var(--sv-accent)">Nota de alcance</div>
+            <p class="text-xs leading-relaxed" style="color:#cbd5e1">
+              Twilio y ElevenLabs son <strong style="color:#e2e8f0">líneas nuevas</strong> del presupuesto — hoy no hay integración ni consumo registrado en el código; el estimado asume que el piloto del Chatbot con voz (SRV-136/SRV-178) arranca en julio. GCP sí es forecast real de facturación sobre el proyecto único post-migración.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Auto-inject footer into every slide + initialize charts -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
