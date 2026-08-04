@@ -919,7 +919,119 @@
 </div>
 
 <!-- ═══════════════════════════════════════════
-     SLIDE 12 — CIERRE JULIO 2026
+     SLIDE 12 — COSTOS DE PLATAFORMA JULIO 2026
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto rounded-3xl shadow-xl overflow-hidden"
+       style="background:linear-gradient(135deg,#0f1f16 0%,#0d2a1c 50%,#0f1f16 100%)">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-5">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="pill pill-month">Julio 2026 · Real</span>
+            <span class="tag" style="background:color-mix(in srgb, var(--sv-secondary) 20%, transparent);color:var(--sv-secondary);border:1px solid color-mix(in srgb, var(--sv-secondary) 40%, transparent)">↓ 49% vs junio</span>
+          </div>
+          <h2 class="text-3xl font-black leading-tight" style="color:#f4f9f4">
+            $704K COP para operar la plataforma<br>— la mitad que el mes anterior
+          </h2>
+          <p class="mt-2" style="color:#a9c2ac">Eliminación de Pegasus ahorró $448K en Compute Engine · BigQuery es el próximo foco de optimización</p>
+        </div>
+        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-accent)">11</div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4 mb-5">
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:14px">
+          <div class="flex items-center gap-2 mb-2">
+            <div style="width:28px;height:28px;border-radius:7px;background:color-mix(in srgb, var(--sv-secondary) 30%, transparent);display:flex;align-items:center;justify-content:center"><i class="fas fa-cloud" style="color:var(--sv-secondary);font-size:12px"></i></div>
+            <div class="text-xs font-800" style="color:#cfe0d1">Total plataforma</div>
+          </div>
+          <div class="text-2xl font-black" style="color:var(--sv-accent)">$704,146</div>
+          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">COP · 1–31 julio 2026</div>
+          <div class="text-xs" style="color:#7c9683">Incluye −$7,673 en ahorros automáticos</div>
+        </div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:14px">
+          <div class="flex items-center gap-2 mb-2">
+            <div style="width:28px;height:28px;border-radius:7px;background:color-mix(in srgb, var(--sv-accent) 30%, transparent);display:flex;align-items:center;justify-content:center"><i class="fas fa-arrow-trend-down" style="color:var(--sv-accent);font-size:12px"></i></div>
+            <div class="text-xs font-800" style="color:#cfe0d1">Ahorro vs junio</div>
+          </div>
+          <div class="text-2xl font-black" style="color:var(--sv-accent)">−$670,690</div>
+          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">COP · −49% mes a mes</div>
+          <div class="text-xs" style="color:#7c9683">Pegasus eliminado: −$408K solo en Compute Engine</div>
+        </div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:14px">
+          <div class="flex items-center gap-2 mb-2">
+            <div style="width:28px;height:28px;border-radius:7px;background:color-mix(in srgb, var(--sv-primary) 30%, transparent);display:flex;align-items:center;justify-content:center"><i class="fas fa-magnifying-glass-dollar" style="color:var(--sv-primary);font-size:12px"></i></div>
+            <div class="text-xs font-800" style="color:#cfe0d1">Próximo foco</div>
+          </div>
+          <div class="text-2xl font-black" style="color:var(--sv-primary)">BigQuery</div>
+          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">$223,669 COP · 32% del total</div>
+          <div class="text-xs" style="color:#7c9683">Revisar queries y datasets para reducir consumo</div>
+        </div>
+      </div>
+
+      <!-- Gráfica de costos por servicio -->
+      <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:14px 18px;margin-bottom:16px">
+        <div class="flex items-center justify-between mb-3">
+          <div class="text-xs font-700 uppercase tracking-wide" style="color:#a9c2ac">Desglose por servicio GCP — Julio 2026</div>
+          <div class="text-xs" style="color:#7c9683">$704,146 COP total</div>
+        </div>
+        <div style="height:220px;position:relative">
+          <canvas id="chart-costos-servicio"></canvas>
+        </div>
+      </div>
+
+      <!-- Tabla de detalle -->
+      <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:10px;overflow:hidden">
+        <div style="display:grid;grid-template-columns:1fr 100px 70px;gap:0;font-size:11px">
+          <div style="padding:8px 12px;font-weight:800;color:#a9c2ac;border-bottom:1px solid #2c3e30">Servicio</div>
+          <div style="padding:8px 12px;font-weight:800;color:#a9c2ac;border-bottom:1px solid #2c3e30;text-align:right">Costo COP</div>
+          <div style="padding:8px 12px;font-weight:800;color:#a9c2ac;border-bottom:1px solid #2c3e30;text-align:right">vs Jun</div>
+
+          <div style="padding:6px 12px;color:#e5f2e7;border-bottom:1px solid #1c2b20"><i class="fas fa-server" style="color:#4d9eff;margin-right:6px;font-size:10px"></i>Compute Engine</div>
+          <div style="padding:6px 12px;color:#cfe0d1;border-bottom:1px solid #1c2b20;text-align:right;font-weight:700">$406,543</div>
+          <div style="padding:6px 12px;border-bottom:1px solid #1c2b20;text-align:right;font-weight:700;color:var(--sv-secondary)">↓ 52%</div>
+
+          <div style="padding:6px 12px;color:#e5f2e7;border-bottom:1px solid #1c2b20"><i class="fas fa-database" style="color:#ff6b6b;margin-right:6px;font-size:10px"></i>BigQuery</div>
+          <div style="padding:6px 12px;color:#cfe0d1;border-bottom:1px solid #1c2b20;text-align:right;font-weight:700">$223,669</div>
+          <div style="padding:6px 12px;border-bottom:1px solid #1c2b20;text-align:right;font-weight:700;color:var(--sv-primary)">↑ 79%</div>
+
+          <div style="padding:6px 12px;color:#e5f2e7;border-bottom:1px solid #1c2b20"><i class="fas fa-hard-drive" style="color:#ffa94d;margin-right:6px;font-size:10px"></i>Cloud Storage</div>
+          <div style="padding:6px 12px;color:#cfe0d1;border-bottom:1px solid #1c2b20;text-align:right;font-weight:700">$21,472</div>
+          <div style="padding:6px 12px;border-bottom:1px solid #1c2b20;text-align:right;font-weight:700;color:var(--sv-secondary)">↓ 33%</div>
+
+          <div style="padding:6px 12px;color:#e5f2e7;border-bottom:1px solid #1c2b20"><i class="fas fa-brain" style="color:#cc5de8;margin-right:6px;font-size:10px"></i>Gemini API</div>
+          <div style="padding:6px 12px;color:#cfe0d1;border-bottom:1px solid #1c2b20;text-align:right;font-weight:700">$17,411</div>
+          <div style="padding:6px 12px;border-bottom:1px solid #1c2b20;text-align:right;font-weight:700;color:var(--sv-primary)">↑ 85%</div>
+
+          <div style="padding:6px 12px;color:#e5f2e7;border-bottom:1px solid #1c2b20"><i class="fas fa-key" style="color:#69db7c;margin-right:6px;font-size:10px"></i>Secret Manager</div>
+          <div style="padding:6px 12px;color:#cfe0d1;border-bottom:1px solid #1c2b20;text-align:right;font-weight:700">$15,776</div>
+          <div style="padding:6px 12px;border-bottom:1px solid #1c2b20;text-align:right;font-weight:700;color:var(--sv-secondary)">↓ 5%</div>
+
+          <div style="padding:6px 12px;color:#e5f2e7">
+            <i class="fas fa-ellipsis" style="color:#7c9683;margin-right:6px;font-size:10px"></i>Otros (5 servicios)
+          </div>
+          <div style="padding:6px 12px;color:#cfe0d1;text-align:right;font-weight:700">$19,275</div>
+          <div style="padding:6px 12px;text-align:right;font-weight:700;color:#7c9683">—</div>
+        </div>
+      </div>
+
+      <div class="rounded-xl p-4 mt-4" style="background:linear-gradient(135deg,#7c3aed00,#15ba591a);border:1px solid color-mix(in srgb, var(--sv-secondary) 35%, transparent)">
+        <div class="flex items-start gap-2">
+          <span class="text-lg" style="line-height:1.2">📌</span>
+          <div>
+            <div class="text-xs font-700 uppercase tracking-wide mb-1" style="color:var(--sv-accent)">Acción para agosto</div>
+            <p class="text-xs leading-relaxed" style="color:#cbd5e1">
+              <strong style="color:#e2e8f0">BigQuery subió 79%</strong> y ya representa el 32% del gasto total. Revisar queries costosos, datasets sin uso y particionamiento de tablas puede generar el siguiente salto de ahorro — similar al impacto que tuvo eliminar Pegasus en Compute Engine.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 13 — CIERRE JULIO 2026
 ═══════════════════════════════════════════════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
@@ -932,7 +1044,7 @@
             Escalamiento comercial, IA generativa<br>y la primera factura electrónica
           </h2>
         </div>
-        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-primary)">11</div>
+        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-primary)">12</div>
       </div>
 
       <div class="grid grid-cols-5 gap-3 mb-7">
@@ -1026,6 +1138,62 @@ document.addEventListener('DOMContentLoaded', function () {
           x: {
             grid: { display: false },
             ticks: { color: '#5b7362', font: { weight: '700', size: 11 } }
+          }
+        }
+      }
+    });
+  }
+
+  var costCanvas = document.getElementById('chart-costos-servicio');
+  if (costCanvas && typeof Chart !== 'undefined') {
+    new Chart(costCanvas, {
+      type: 'bar',
+      data: {
+        labels: ['Compute Engine', 'BigQuery', 'Cloud Storage', 'Gemini API', 'Secret Manager', 'Cloud Scheduler', 'App Engine', 'Artifact Registry', 'Cloud DNS', 'Dataplex'],
+        datasets: [{
+          label: 'Costo COP',
+          data: [406543, 223669, 21472, 17411, 15776, 7563, 3938, 3833, 2659, 1282],
+          backgroundColor: [
+            '#4d9eff', '#ff6b6b', '#ffa94d', '#cc5de8', '#69db7c',
+            '#ffd43b', '#20c997', '#748ffc', '#868e96', '#e599f7'
+          ],
+          borderRadius: 6,
+          borderWidth: 0,
+          barPercentage: 0.7,
+          categoryPercentage: 0.85
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: 800 },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: '#1e2a24',
+            padding: 12,
+            cornerRadius: 8,
+            titleFont: { weight: '700', size: 12 },
+            bodyFont: { weight: '500', size: 12 },
+            callbacks: {
+              label: function (ctx) { return '  $' + ctx.parsed.x.toLocaleString('es-CO') + ' COP'; }
+            }
+          }
+        },
+        scales: {
+          x: {
+            beginAtZero: true,
+            grid: { color: '#2c3e30' },
+            ticks: {
+              color: '#7c9683',
+              font: { size: 10 },
+              callback: function (v) { return '$' + (v / 1000).toFixed(0) + 'K'; }
+            }
+          },
+          y: {
+            grid: { display: false },
+            ticks: { color: '#a9c2ac', font: { weight: '600', size: 10 } }
           }
         }
       }
