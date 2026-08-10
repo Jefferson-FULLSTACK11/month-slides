@@ -767,7 +767,83 @@
 </div>
 
 <!-- ═══════════════════════════════════════════
-     SLIDE 10 — EL MES EN NÚMEROS
+     SLIDE 10 — MIGUEL AGUIRRE: SPRINT JULIO
+═══════════════════════════════════════════════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-teal">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-5">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="pill pill-month">Julio 2026</span>
+            <span class="tag tag-prod">✓ Producción</span>
+            <span class="tag tag-progress">🔵 Code Review</span>
+          </div>
+          <span class="pill pill-teal mb-3 inline-block">🛠️ Miguel Aguirre — Sprint Julio</span>
+          <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
+            Bugs resueltos, investigación E-com<br>y herramientas de monitoreo
+          </h2>
+          <p class="text-slate-500 mt-2">5 tareas · Bug-fixing + Investigación + Pre-integración E-commerce + Macros Excel</p>
+        </div>
+        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-teal)">09</div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 mb-5">
+        <div class="rounded-2xl p-4" style="background:#f8faf6;border:1px solid #e4e9dd">
+          <div class="flex items-center gap-2 mb-2">
+            <div style="width:28px;height:28px;border-radius:8px;background:var(--sv-primary);display:flex;align-items:center;justify-content:center"><i class="fas fa-bug" style="color:#fff;font-size:11px"></i></div>
+            <div class="text-xs font-800 text-slate-800">SRV-151 · Bug</div>
+          </div>
+          <div class="text-sm font-700 text-slate-800 mb-1">Permanencia de imágenes</div>
+          <div class="text-xs text-slate-600 leading-relaxed">Imágenes de productos y banners se perdían o intercambiaban al editar. Corregida la persistencia; el cambio aleatorio se redujo significativamente.</div>
+        </div>
+        <div class="rounded-2xl p-4" style="background:#f8faf6;border:1px solid #e4e9dd">
+          <div class="flex items-center gap-2 mb-2">
+            <div style="width:28px;height:28px;border-radius:8px;background:var(--sv-primary);display:flex;align-items:center;justify-content:center"><i class="fas fa-image" style="color:#fff;font-size:11px"></i></div>
+            <div class="text-xs font-800 text-slate-800">SRV-190 · Bug</div>
+          </div>
+          <div class="text-sm font-700 text-slate-800 mb-1">Info de banners al actualizar</div>
+          <div class="text-xs text-slate-600 leading-relaxed">Fechas se intercambiaban y links no se podían borrar al editar banners. Bug corregido — en Code Review.</div>
+        </div>
+        <div class="rounded-2xl p-4" style="background:#f8faf6;border:1px solid #e4e9dd">
+          <div class="flex items-center gap-2 mb-2">
+            <div style="width:28px;height:28px;border-radius:8px;background:var(--sv-secondary);display:flex;align-items:center;justify-content:center"><i class="fas fa-cart-shopping" style="color:#fff;font-size:11px"></i></div>
+            <div class="text-xs font-800 text-slate-800">SRV-189 · Investigación</div>
+          </div>
+          <div class="text-sm font-700 text-slate-800 mb-1">Pre-integración E-com pedidos</div>
+          <div class="text-xs text-slate-600 leading-relaxed">Captura del network completo de creación de pedidos + API propia para traer datos de inventario con filtros por fecha y producto.</div>
+        </div>
+        <div class="rounded-2xl p-4" style="background:#f8faf6;border:1px solid #e4e9dd">
+          <div class="flex items-center gap-2 mb-2">
+            <div style="width:28px;height:28px;border-radius:8px;background:var(--sv-secondary);display:flex;align-items:center;justify-content:center"><i class="fas fa-database" style="color:#fff;font-size:11px"></i></div>
+            <div class="text-xs font-800 text-slate-800">SRV-194 · Investigación</div>
+          </div>
+          <div class="text-sm font-700 text-slate-800 mb-1">E-com inventario transaccional</div>
+          <div class="text-xs text-slate-600 leading-relaxed">API de inventarios históricos con filtro obligatorio por fechas. En Code Review — pendiente exportación a formato alterno.</div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 mb-5">
+        <div class="feat-row">
+          <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-teal) 12%, white)"><i class="fas fa-magnifying-glass" style="color:var(--sv-teal)"></i></div>
+          <div><div class="text-sm font-700 text-slate-800">Clarity — evaluación técnica (SRV-185)</div><div class="text-xs text-slate-500">Investigó Microsoft Clarity: gratuito, grabaciones de sesión, mapas de calor. Base para la decisión de implementación.</div></div>
+        </div>
+        <div class="feat-row">
+          <div class="feat-ico" style="background:color-mix(in srgb, var(--sv-accent) 14%, white)"><i class="fas fa-table" style="color:#4c6b1f"></i></div>
+          <div><div class="text-sm font-700 text-slate-800">Macros Excel — automatización</div><div class="text-xs text-slate-500">Macro para llenado semi-automático de tabla operativa. Grupos listos, falta personal individual. En progreso.</div></div>
+        </div>
+      </div>
+
+      <div class="impact" style="border-left-color:var(--sv-teal);background:color-mix(in srgb, var(--sv-teal) 8%, white)">
+        <span class="font-800" style="color:var(--sv-teal)">🛠️ Impacto — </span>
+        <span class="text-sm" style="color:#0a4a42">Miguel atacó bugs que afectaban la operación diaria (imágenes y banners), abrió el camino para integrar E-commerce con APIs propias de inventario, y evaluó las herramientas de monitoreo que ahora están en producción.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 11 — EL MES EN NÚMEROS
 ═══════════════════════════════════════════════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-primary">
