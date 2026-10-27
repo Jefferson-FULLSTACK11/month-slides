@@ -44,10 +44,10 @@
     .pill-forest  { background:var(--sv-forest);color:#fff }
     .pill-month   { background:var(--sv-text);color:var(--sv-accent) }
 
-    .feat-row { display:flex;align-items:flex-start;gap:10px;padding:9px 12px;border-radius:10px;background:#f8faf6;border:1px solid #e4e9dd }
-    .feat-ico  { width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px }
+    .feat-row { display:flex;align-items:flex-start;gap:10px;padding:8px 12px;border-radius:10px;background:#f8faf6;border:1px solid #e4e9dd }
+    .feat-ico  { width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px }
 
-    .impact { padding:12px 16px;border-radius:12px;border-left:4px solid }
+    .impact { padding:10px 14px;border-radius:10px;border-left:4px solid;font-size:13px }
     .impact-primary { background:color-mix(in srgb, var(--sv-primary) 6%, white);border-color:var(--sv-primary) }
     .impact-green   { background:color-mix(in srgb, var(--sv-secondary) 8%, white);border-color:var(--sv-secondary) }
     .impact-teal    { background:color-mix(in srgb, var(--sv-teal) 8%, white);border-color:var(--sv-teal) }
@@ -59,7 +59,7 @@
 
     .cbar { height:8px;border-radius:4px }
 
-    .sec-lbl { font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#8a9a89;margin-bottom:10px;display:flex;align-items:center;gap:8px }
+    .sec-lbl { font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#8a9a89;margin-bottom:8px;display:flex;align-items:center;gap:8px }
     .sec-lbl::after { content:'';flex:1;height:1px;background:#e4e9dd }
 
     .brand-mark { font-weight:800; letter-spacing:-0.02em; }
@@ -67,163 +67,137 @@
 
     .slide-logo-bar {
       display:flex; align-items:center; justify-content:flex-end; gap:10px;
-      margin-top:14px; padding-top:10px; border-top:1px solid #eef1ea;
+      margin-top:12px; padding-top:8px; border-top:1px solid #eef1ea;
       font-size:11px; color:#9aa89a; font-weight:600;
-    }
-
-    .dev-link {
-      display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:99px;
-      text-decoration:none;font-size:10px;font-weight:700;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;
     }
   </style>
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════
-     SLIDE 0 — INTRODUCCIÓN
-═══════════════════════════════════════════════ -->
+<!-- ══════ SLIDE 0 — INTRO ══════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto rounded-3xl shadow-xl overflow-hidden"
-       style="background:linear-gradient(145deg,#0f1f16 0%,#16281c 60%,#0f1f16 100%)">
+       style="background:linear-gradient(145deg,#0f1f16,#16281c 60%,#0f1f16)">
     <div class="h-1.5 w-full" style="background:linear-gradient(90deg,var(--sv-primary),var(--sv-secondary),var(--sv-accent),var(--sv-teal))"></div>
     <div class="p-10">
-
-      <div class="flex items-center gap-3 mb-10">
+      <div class="flex items-center gap-3 mb-8">
         <span class="brand-mark text-white" style="font-size:22px">SERVIMAX<span class="dot">.</span></span>
         <div style="width:1px;height:24px;background:#334236"></div>
         <span style="color:#8fb99a;font-size:12px;font-weight:600;letter-spacing:.05em">Equipo de Ingeniería</span>
       </div>
 
-      <div class="mb-2">
-        <span class="pill pill-month" style="font-size:13px">Septiembre – Octubre 2026</span>
-      </div>
-      <h1 class="font-black leading-tight mb-4" style="font-size:2.8rem;color:#f4f9f4">
+      <span class="pill pill-month" style="font-size:13px">Septiembre – Octubre 2026</span>
+      <h1 class="font-black leading-tight mt-3 mb-4" style="font-size:2.8rem;color:#f4f9f4">
         Isa habla, vende y cobra<br>por <span style="color:var(--sv-accent)">WhatsApp</span>
       </h1>
-      <p style="color:#a9c2ac;font-size:1.05rem;max-width:620px;line-height:1.65" class="mb-10">
-        En dos meses, Isa pasó de agente interno a asistente de voz en tiempo real con Gemini Live, cerró el embudo transaccional completo en WhatsApp con pagos Wompi integrados, y Neider Peña se incorporó al equipo entregando 30 ítems en su primer bimestre (Expediente Digital, Halloween y Crédito). 2,079 cambios al código en 3 sprints.
-      </p>
 
-      <div class="grid grid-cols-2 gap-3">
-        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:12px 16px">
-          <div style="color:var(--sv-accent);font-size:11px;font-weight:800;letter-spacing:.05em;margin-bottom:8px">FRENTES DE DESARROLLO</div>
-          <div class="space-y-1.5">
-            <div style="color:#cfe0d1;font-size:12px">🎙️ Isa Live — voz en tiempo real con Gemini Live (30 HU)</div>
-            <div style="color:#cfe0d1;font-size:12px">🛒 Flujo transaccional WhatsApp + pagos Wompi (PSE/Bancolombia)</div>
-            <div style="color:#cfe0d1;font-size:12px">🤖 Infraestructura multi-agente — delegate_to_agent + RAG</div>
-            <div style="color:#cfe0d1;font-size:12px">📋 Expediente Digital + Halloween + Crédito — Neider Peña (nuevo)</div>
-            <div style="color:#cfe0d1;font-size:12px">🐛 Estabilidad apps — crashes, firmas, facturas PDF, Serviplata</div>
-            <div style="color:#cfe0d1;font-size:12px">🎄 Épica Temporada Navideña V6 — 17 historias planeadas</div>
-          </div>
+      <div class="grid grid-cols-4 gap-3 mb-8">
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:16px;text-align:center">
+          <div class="text-3xl font-black" style="color:var(--sv-accent)">2,079</div>
+          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">Cambios al código</div>
         </div>
-        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:12px 16px">
-          <div style="color:var(--sv-accent);font-size:11px;font-weight:800;letter-spacing:.05em;margin-bottom:8px">MÁS EN ESTA SESIÓN</div>
-          <div class="space-y-1.5">
-            <div style="color:#cfe0d1;font-size:12px">📊 El bimestre en números — 2,079 cambios al código</div>
-            <div style="color:#cfe0d1;font-size:12px">👥 Equipo ampliado — 5 contribuidores principales</div>
-            <div style="color:#cfe0d1;font-size:12px">🚀 Roadmap Noviembre — Sprint 11 y Navidad</div>
-          </div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:16px;text-align:center">
+          <div class="text-3xl font-black" style="color:var(--sv-accent)">81+</div>
+          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">Tareas cerradas</div>
+        </div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:16px;text-align:center">
+          <div class="text-3xl font-black" style="color:var(--sv-accent)">3</div>
+          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">Sprints</div>
+        </div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:16px;text-align:center">
+          <div class="text-3xl font-black" style="color:var(--sv-accent)">5</div>
+          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">Contribuidores</div>
         </div>
       </div>
 
-      <div style="margin-top:32px;padding-top:16px;border-top:1px solid #1c2b20;display:flex;align-items:center;justify-content:space-between">
-        <div style="color:#5b7362;font-size:11px">Equipo de Ingeniería · Servimax</div>
-        <div style="color:#5b7362;font-size:11px">Sprints 8 · 9 · 10 — Sep/Oct 2026</div>
+      <div class="grid grid-cols-3 gap-2" style="font-size:11px;color:#cfe0d1">
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 10px">🎙️ Isa Live — voz Gemini + avatar 16 estados</div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 10px">🛒 Compra completa WhatsApp + Wompi</div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 10px">🤖 Infra multi-agente + RAG + costos</div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 10px">📋 Expediente Digital Cliente (24 HU)</div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 10px">🐛 Crashes, facturas PDF, Serviplata</div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 10px">🎄 Épica Navideña V6 — 17 US planeadas</div>
       </div>
 
+      <div style="margin-top:24px;padding-top:12px;border-top:1px solid #1c2b20;display:flex;justify-content:space-between;color:#5b7362;font-size:11px">
+        <span>Sprints 8 · 9 · 10</span>
+        <span>Equipo de Ingeniería · Servimax</span>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     SLIDE 1 — PORTADA RESUMEN
-═══════════════════════════════════════════════ -->
+<!-- ══════ SLIDE 1 — PORTADA RESUMEN ══════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
     <div class="h-1.5 w-full" style="background:linear-gradient(90deg,var(--sv-primary),var(--sv-secondary),var(--sv-accent),var(--sv-teal))"></div>
-    <div class="p-10">
-      <div class="flex items-center gap-3 mb-6">
+    <div class="p-8">
+      <div class="flex items-center gap-3 mb-4">
         <span class="pill pill-month">Sep – Oct · 2026</span>
-        <span class="text-sm text-slate-400 font-medium">Sprints 8, 9 y 10 · Equipo de Ingeniería</span>
+        <span class="text-sm text-slate-400 font-medium">Sprints 8, 9 y 10</span>
       </div>
-      <h1 class="text-5xl font-black leading-tight mb-3" style="color:var(--sv-text)">
-        Resumen de <span style="color:var(--sv-primary)">Desarrollo</span><br>Septiembre – Octubre 2026
+      <h1 class="text-4xl font-black leading-tight mb-6" style="color:var(--sv-text)">
+        Resumen de <span style="color:var(--sv-primary)">Desarrollo</span>
       </h1>
-      <p class="text-slate-500 text-lg mb-10 max-w-2xl">
-        Wilson completó 44 de 46 ítems: Isa Live con voz Gemini, avatar dinámico y el flujo de compra completo en WhatsApp con pagos Wompi. Neider Peña entregó 30 ítems en su primer bimestre: el Expediente Digital del Cliente completo, dos retos de Halloween y el diseño de crédito. Cristian estabilizó las apps móviles y lanzó Serviplata.
-      </p>
 
-      <div class="grid grid-cols-2 gap-5 mb-8">
-        <div class="rounded-2xl p-5 accent-primary" style="background:color-mix(in srgb, var(--sv-primary) 6%, white)">
+      <div class="grid grid-cols-4 gap-4 mb-6">
+        <div class="rounded-2xl p-4 text-center accent-primary" style="background:color-mix(in srgb, var(--sv-primary) 6%, white)">
           <div class="kpi-num" style="color:var(--sv-primary)">2,079</div>
-          <div class="text-sm font-600 text-slate-600 mt-1">Cambios al código</div>
-          <div class="text-xs text-slate-400">1,031 BE · 830 FE · 218 legacy · 11 repos</div>
+          <div class="text-xs font-600 text-slate-600 mt-1">Commits</div>
         </div>
-        <div class="rounded-2xl p-5 accent-green" style="background:color-mix(in srgb, var(--sv-secondary) 8%, white)">
+        <div class="rounded-2xl p-4 text-center accent-green" style="background:color-mix(in srgb, var(--sv-secondary) 8%, white)">
           <div class="kpi-num" style="color:var(--sv-secondary)">81+</div>
-          <div class="text-sm font-600 text-slate-600 mt-1">Tareas cerradas</div>
-          <div class="text-xs text-slate-400">44 Wilson + 30 Neider + 7 Cristian</div>
+          <div class="text-xs font-600 text-slate-600 mt-1">Tareas cerradas</div>
+        </div>
+        <div class="rounded-2xl p-4 text-center accent-teal" style="background:color-mix(in srgb, var(--sv-teal) 8%, white)">
+          <div class="kpi-num" style="color:var(--sv-teal)">11</div>
+          <div class="text-xs font-600 text-slate-600 mt-1">Repos activos</div>
+        </div>
+        <div class="rounded-2xl p-4 text-center accent-lime" style="background:color-mix(in srgb, var(--sv-accent) 14%, white)">
+          <div class="kpi-num" style="color:#4c6b1f">5</div>
+          <div class="text-xs font-600 text-slate-600 mt-1">Contribuidores</div>
         </div>
       </div>
 
-      <div class="mb-8">
-        <div class="sec-lbl">Hitos del bimestre — qué cambió en Sep/Oct</div>
-        <div class="grid grid-cols-3 gap-4">
-          <div class="rounded-2xl p-4" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border:2px solid color-mix(in srgb, var(--sv-teal) 20%, white)">
-            <div class="flex items-center gap-2 mb-3"><span class="pill pill-teal text-xs">Isa Live & WhatsApp</span></div>
-            <div class="text-xs text-slate-600 space-y-1">
-              <div>🎙️ Voz en tiempo real con Gemini Live</div>
-              <div>🧑‍💻 Avatar dinámico 16 estados reactivo</div>
-              <div>🛒 Pedidos completos por WhatsApp</div>
-              <div>💳 Pagos Wompi (PSE + Bancolombia)</div>
-            </div>
-          </div>
-          <div class="rounded-2xl p-4" style="background:color-mix(in srgb, var(--sv-primary) 5%, white);border:2px solid color-mix(in srgb, var(--sv-primary) 20%, white)">
-            <div class="flex items-center gap-2 mb-3"><span class="pill pill-primary text-xs">Estabilidad & Serviplata</span></div>
-            <div class="text-xs text-slate-600 space-y-1">
-              <div>🐛 2 crashes críticos resueltos (firmas + inicio)</div>
-              <div>📄 Direcciones en facturas PDF corregidas</div>
-              <div>💰 Serviplata contabilidad en producción</div>
-              <div>📅 Bug fechas UTC en banners resuelto</div>
-            </div>
-          </div>
-          <div class="rounded-2xl p-4" style="background:color-mix(in srgb, var(--sv-secondary) 6%, white);border:2px solid color-mix(in srgb, var(--sv-secondary) 22%, white)">
-            <div class="flex items-center gap-2 mb-3"><span class="pill pill-green text-xs">Crédito & Navidad</span></div>
-            <div class="text-xs text-slate-600 space-y-1">
-              <div>📋 Expediente Digital del Cliente — 24 HU (Neider)</div>
-              <div>🎃 Halloween "Sala de Sustos" — 4 retos gamificados</div>
-              <div>🎄 Épica Navideña V6 — 17 US planificadas</div>
-              <div>📊 Trazabilidad pedidos abastecimiento (diseño)</div>
-            </div>
-          </div>
+      <div class="grid grid-cols-3 gap-3 mb-6">
+        <div class="rounded-xl p-3" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 18%, white)">
+          <div class="text-xs font-800" style="color:var(--sv-teal)">ISA LIVE & WHATSAPP</div>
+          <div class="text-xs text-slate-500 mt-1">Voz Gemini · Avatar · Pedidos · Pagos Wompi</div>
+        </div>
+        <div class="rounded-xl p-3" style="background:color-mix(in srgb, var(--sv-primary) 5%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 18%, white)">
+          <div class="text-xs font-800" style="color:var(--sv-primary)">ESTABILIDAD & SERVIPLATA</div>
+          <div class="text-xs text-slate-500 mt-1">2 crashes · PDFs · Banners · Contabilidad</div>
+        </div>
+        <div class="rounded-xl p-3" style="background:color-mix(in srgb, var(--sv-secondary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-secondary) 20%, white)">
+          <div class="text-xs font-800" style="color:#0a7d3b">EXPEDIENTE & NAVIDAD</div>
+          <div class="text-xs text-slate-500 mt-1">24 HU expediente · Halloween · 17 US navideñas</div>
         </div>
       </div>
 
-      <div class="sec-lbl">Equipo de Ingeniería</div>
-      <div class="grid grid-cols-5 gap-4">
+      <div class="grid grid-cols-5 gap-3">
         <div class="text-center">
-          <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold text-lg" style="background:var(--sv-primary)">JC</div>
-          <div class="text-sm font-700 text-slate-800">Jeferson Camero</div>
-          <div class="text-xs text-slate-400">Lead Full-stack</div>
+          <div class="w-11 h-11 rounded-full flex items-center justify-center mx-auto mb-1 text-white font-bold" style="background:var(--sv-primary)">JC</div>
+          <div class="text-xs font-700">Jeferson Camero</div>
+          <div class="text-xs text-slate-400">Lead</div>
         </div>
         <div class="text-center">
-          <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold text-lg" style="background:var(--sv-teal)">WP</div>
-          <div class="text-sm font-700 text-slate-800">Wilson Pabon</div>
-          <div class="text-xs text-slate-400">Isa Live & WhatsApp</div>
+          <div class="w-11 h-11 rounded-full flex items-center justify-center mx-auto mb-1 text-white font-bold" style="background:var(--sv-teal)">WP</div>
+          <div class="text-xs font-700">Wilson Pabon</div>
+          <div class="text-xs text-slate-400">Isa Live</div>
         </div>
         <div class="text-center">
-          <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold text-lg" style="background:var(--sv-secondary)">CB</div>
-          <div class="text-sm font-700 text-slate-800">Cristian Becerra</div>
-          <div class="text-xs text-slate-400">Apps & Estabilidad</div>
+          <div class="w-11 h-11 rounded-full flex items-center justify-center mx-auto mb-1 text-white font-bold" style="background:var(--sv-secondary)">CB</div>
+          <div class="text-xs font-700">Cristian Becerra</div>
+          <div class="text-xs text-slate-400">Apps</div>
         </div>
         <div class="text-center">
-          <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2 font-bold text-lg" style="background:var(--sv-accent);color:#2b3a13">NP</div>
-          <div class="text-sm font-700 text-slate-800">Neider Peña</div>
-          <div class="text-xs text-slate-400">Expediente & Portal <span class="tag tag-green" style="font-size:9px;padding:1px 6px">Nuevo</span></div>
+          <div class="w-11 h-11 rounded-full flex items-center justify-center mx-auto mb-1 font-bold" style="background:var(--sv-accent);color:#2b3a13">NP</div>
+          <div class="text-xs font-700">Neider Peña</div>
+          <div class="text-xs text-slate-400">Expediente <span class="tag tag-green" style="font-size:8px;padding:0 5px">Nuevo</span></div>
         </div>
         <div class="text-center">
-          <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2 font-bold text-lg" style="background:#c9d4c4;color:#5b7362">MA</div>
-          <div class="text-sm font-700 text-slate-800">Miguel Aguirre</div>
+          <div class="w-11 h-11 rounded-full flex items-center justify-center mx-auto mb-1 font-bold" style="background:#c9d4c4;color:#5b7362">MA</div>
+          <div class="text-xs font-700">Miguel Aguirre</div>
           <div class="text-xs text-slate-400">Backend</div>
         </div>
       </div>
@@ -231,265 +205,213 @@
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     SLIDE 2 — ISA LIVE: VOZ EN TIEMPO REAL
-═══════════════════════════════════════════════ -->
+<!-- ══════ SLIDE 2 — ISA LIVE ══════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto rounded-3xl shadow-xl overflow-hidden"
-       style="background:linear-gradient(135deg,#0f1f16 0%,#0d2a1c 50%,#0f1f16 100%)">
+       style="background:linear-gradient(135deg,#0f1f16,#0d2a1c 50%,#0f1f16)">
     <div class="p-8">
-      <div class="flex items-start justify-between mb-5">
+      <div class="flex items-start justify-between mb-4">
         <div>
-          <div class="flex items-center gap-2 mb-3">
+          <div class="flex items-center gap-2 mb-2">
             <span class="pill pill-month">Sprint 9</span>
-            <span class="tag" style="background:color-mix(in srgb, var(--sv-accent) 20%, transparent);color:var(--sv-accent);border:1px solid color-mix(in srgb, var(--sv-accent) 40%, transparent)">🎙️ 30 historias · 100% completado</span>
+            <span class="tag" style="background:color-mix(in srgb, var(--sv-accent) 20%, transparent);color:var(--sv-accent);border:1px solid color-mix(in srgb, var(--sv-accent) 40%, transparent)">30 HU · 100%</span>
           </div>
           <h2 class="text-3xl font-black leading-tight" style="color:#f4f9f4">
-            Isa Live: la asistente habla,<br>ve productos y navega la web
+            Isa Live: voz en tiempo real
           </h2>
-          <p class="mt-2" style="color:#a9c2ac">Wilson Pabon · Gemini Live WebSocket · Avatar 16 estados · WhatsApp voz + catálogos</p>
+          <p class="mt-1 text-sm" style="color:#a9c2ac">Wilson Pabon · Gemini Live · WebSocket · Avatar 16 estados</p>
         </div>
-        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-accent)">01</div>
+        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-accent)">01</div>
       </div>
 
       <div class="grid grid-cols-4 gap-3 mb-5">
-        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:14px;text-align:center">
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:12px;text-align:center">
           <div class="text-2xl font-black" style="color:var(--sv-accent)">30</div>
-          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">Historias cerradas</div>
+          <div class="text-xs font-700" style="color:#cfe0d1">HU cerradas</div>
         </div>
-        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:14px;text-align:center">
-          <div class="text-2xl font-black" style="color:var(--sv-accent)">100%</div>
-          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">Sprint completado</div>
-        </div>
-        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:14px;text-align:center">
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:12px;text-align:center">
           <div class="text-2xl font-black" style="color:var(--sv-accent)">16</div>
-          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">Estados del avatar</div>
+          <div class="text-xs font-700" style="color:#cfe0d1">Estados avatar</div>
         </div>
-        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:14px;text-align:center">
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:12px;text-align:center">
           <div class="text-2xl font-black" style="color:var(--sv-accent)">20m</div>
-          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">Sesión voz máx.</div>
+          <div class="text-xs font-700" style="color:#cfe0d1">Sesión máx.</div>
+        </div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:12px;text-align:center">
+          <div class="text-2xl font-black" style="color:var(--sv-accent)">100%</div>
+          <div class="text-xs font-700" style="color:#cfe0d1">Sprint completo</div>
         </div>
       </div>
 
-      <div class="grid grid-cols-2 gap-4 mb-5">
-        <div>
-          <div class="text-xs font-800 mb-2" style="color:var(--sv-accent)">VOZ EN TIEMPO REAL</div>
-          <div class="space-y-1.5">
-            <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 10px" class="text-xs flex items-center gap-2"><i class="fas fa-microphone" style="color:var(--sv-accent)"></i><span style="color:#cfe0d1">WebSocket baja latencia /ws/houston/voice/ con Gemini Live</span></div>
-            <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 10px" class="text-xs flex items-center gap-2"><i class="fas fa-volume-high" style="color:var(--sv-accent)"></i><span style="color:#cfe0d1">Detección de silencio/energía + interrupción natural (barge-in)</span></div>
-            <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 10px" class="text-xs flex items-center gap-2"><i class="fas fa-face-smile" style="color:var(--sv-accent)"></i><span style="color:#cfe0d1">Avatar reactivo 16 poses WebP sincronizado con habla</span></div>
-            <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 10px" class="text-xs flex items-center gap-2"><i class="fas fa-clock" style="color:var(--sv-accent)"></i><span style="color:#cfe0d1">Sesiones de 20 min con saludos automatizados</span></div>
-          </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div class="space-y-1.5">
+          <div class="text-xs font-800 mb-1" style="color:var(--sv-accent)">VOZ EN TIEMPO REAL</div>
+          <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:7px 10px" class="text-xs flex items-center gap-2"><i class="fas fa-microphone" style="color:var(--sv-accent)"></i><span style="color:#cfe0d1">WebSocket /ws/houston/voice/ + Gemini Live</span></div>
+          <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:7px 10px" class="text-xs flex items-center gap-2"><i class="fas fa-volume-high" style="color:var(--sv-accent)"></i><span style="color:#cfe0d1">Detección silencio + barge-in natural</span></div>
+          <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:7px 10px" class="text-xs flex items-center gap-2"><i class="fas fa-face-smile" style="color:var(--sv-accent)"></i><span style="color:#cfe0d1">Avatar reactivo 16 poses WebP</span></div>
         </div>
-        <div>
-          <div class="text-xs font-800 mb-2" style="color:var(--sv-accent)">CAPACIDADES AUMENTADAS</div>
-          <div class="space-y-1.5">
-            <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 10px" class="text-xs flex items-center gap-2"><i class="fas fa-globe" style="color:var(--sv-accent)"></i><span style="color:#cfe0d1">Navegación web con citación de fuentes</span></div>
-            <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 10px" class="text-xs flex items-center gap-2"><i class="fas fa-boxes-stacked" style="color:var(--sv-accent)"></i><span style="color:#cfe0d1">Visualización de productos en conversación</span></div>
-            <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 10px" class="text-xs flex items-center gap-2"><i class="fab fa-whatsapp" style="color:var(--sv-accent)"></i><span style="color:#cfe0d1">WhatsApp: transcripción de audios + notas de voz</span></div>
-            <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 10px" class="text-xs flex items-center gap-2"><i class="fas fa-lightbulb" style="color:var(--sv-accent)"></i><span style="color:#cfe0d1">Prototipo activación por voz "Oye Isa"</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:10px;padding:10px 12px">
-        <div class="flex items-center gap-3">
-          <div style="width:32px;height:32px;border-radius:8px;background:color-mix(in srgb, var(--sv-accent) 30%, transparent);flex-shrink:0;display:flex;align-items:center;justify-content:center">
-            <i class="fas fa-robot" style="color:var(--sv-accent);font-size:13px"></i>
-          </div>
-          <div style="flex:1;min-width:0">
-            <div class="text-sm font-700" style="color:#e5f2e7">El sprint más grande de un solo desarrollador en la historia del equipo</div>
-            <div class="text-xs" style="color:#7c9683">30 historias cerradas en un sprint. Isa ahora habla en tiempo real, entiende audios de WhatsApp, muestra productos, navega la web y cita fuentes — todo construido sobre Gemini Live y WebSocket de baja latencia.</div>
-          </div>
+        <div class="space-y-1.5">
+          <div class="text-xs font-800 mb-1" style="color:var(--sv-accent)">CAPACIDADES</div>
+          <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:7px 10px" class="text-xs flex items-center gap-2"><i class="fas fa-globe" style="color:var(--sv-accent)"></i><span style="color:#cfe0d1">Navegación web con citación de fuentes</span></div>
+          <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:7px 10px" class="text-xs flex items-center gap-2"><i class="fab fa-whatsapp" style="color:var(--sv-accent)"></i><span style="color:#cfe0d1">WhatsApp: audios + notas de voz + catálogos</span></div>
+          <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:7px 10px" class="text-xs flex items-center gap-2"><i class="fas fa-lightbulb" style="color:var(--sv-accent)"></i><span style="color:#cfe0d1">Prototipo "Oye Isa" + visualización productos</span></div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     SLIDE 3 — FLUJO TRANSACCIONAL WHATSAPP + WOMPI
-═══════════════════════════════════════════════ -->
+<!-- ══════ SLIDE 3 — WHATSAPP TRANSACCIONAL + WOMPI ══════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-teal">
     <div class="p-8">
-      <div class="flex items-start justify-between mb-6">
+      <div class="flex items-start justify-between mb-4">
         <div>
-          <div class="flex items-center gap-2 mb-3">
+          <div class="flex items-center gap-2 mb-2">
             <span class="pill pill-month">Sprint 10</span>
-            <span class="tag tag-prod">✓ 10/12 cerradas (83%)</span>
+            <span class="tag tag-prod">✓ 10/12 (83%)</span>
           </div>
-          <span class="pill pill-teal mb-3 inline-block">🛒 Compra Completa en WhatsApp</span>
           <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
-            El cliente pide, paga con PSE<br>y confirma — todo dentro de WhatsApp
+            Compra completa en WhatsApp
           </h2>
-          <p class="text-slate-500 mt-2">Wilson Pabon · Pasarela Wompi · OTP · Validación inventario en tiempo real</p>
+          <p class="text-slate-500 text-sm mt-1">Wilson Pabon · Wompi PSE/Bancolombia · OTP · Inventario real-time</p>
         </div>
-        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-teal)">02</div>
+        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-teal)">02</div>
       </div>
 
-      <div class="grid grid-cols-3 gap-5 mb-5">
-        <div class="rounded-2xl p-5 space-y-3" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 18%, white)">
-          <div class="flex items-center gap-2 mb-1">
-            <div style="width:36px;height:36px;border-radius:9px;background:var(--sv-teal);display:flex;align-items:center;justify-content:center"><i class="fas fa-cart-shopping" style="color:#fff;font-size:14px"></i></div>
-            <div><div class="text-sm font-800 text-slate-800 leading-tight">Pedido completo</div><div class="text-xs text-slate-400 leading-tight">Reglas de negocio del portal</div></div>
+      <div class="grid grid-cols-3 gap-4 mb-4">
+        <div class="rounded-2xl p-4" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 18%, white)">
+          <div class="flex items-center gap-2 mb-2">
+            <div style="width:32px;height:32px;border-radius:8px;background:var(--sv-teal);display:flex;align-items:center;justify-content:center"><i class="fas fa-cart-shopping" style="color:#fff;font-size:13px"></i></div>
+            <div class="text-sm font-800 text-slate-800">Pedido completo</div>
           </div>
-          <div class="text-xs text-slate-600 leading-relaxed">
-            Direcciones, tipo de entrega, asesor asignado y <strong>validación de inventario en tiempo real</strong> sin falsos positivos — homologado con las reglas del portal web.
-          </div>
+          <div class="text-xs text-slate-600">Direcciones, tipo entrega, asesor + <strong>validación inventario real-time</strong></div>
         </div>
-        <div class="rounded-2xl p-5 space-y-3" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 18%, white)">
-          <div class="flex items-center gap-2 mb-1">
-            <div style="width:36px;height:36px;border-radius:9px;background:var(--sv-teal);display:flex;align-items:center;justify-content:center"><i class="fas fa-credit-card" style="color:#fff;font-size:14px"></i></div>
-            <div><div class="text-sm font-800 text-slate-800 leading-tight">Pagos Wompi</div><div class="text-xs text-slate-400 leading-tight">PSE + Bancolombia</div></div>
+        <div class="rounded-2xl p-4" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 18%, white)">
+          <div class="flex items-center gap-2 mb-2">
+            <div style="width:32px;height:32px;border-radius:8px;background:var(--sv-teal);display:flex;align-items:center;justify-content:center"><i class="fas fa-credit-card" style="color:#fff;font-size:13px"></i></div>
+            <div class="text-sm font-800 text-slate-800">Pagos Wompi</div>
           </div>
-          <div class="text-xs text-slate-600 leading-relaxed">
-            Compras <strong>&gt; $40.000</strong> pasan por Wompi con enlace dinámico. Botón <strong>"Ya pagué"</strong> valida el estado de forma desatendida — sin intervención manual.
-          </div>
+          <div class="text-xs text-slate-600">PSE + Bancolombia para compras <strong>&gt;$40K</strong>. Botón "Ya pagué" verifica estado</div>
         </div>
-        <div class="rounded-2xl p-5 space-y-3" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 18%, white)">
-          <div class="flex items-center gap-2 mb-1">
-            <div style="width:36px;height:36px;border-radius:9px;background:var(--sv-teal);display:flex;align-items:center;justify-content:center"><i class="fas fa-shield-halved" style="color:#fff;font-size:14px"></i></div>
-            <div><div class="text-sm font-800 text-slate-800 leading-tight">Seguridad OTP</div><div class="text-xs text-slate-400 leading-tight">Autenticación + registro</div></div>
+        <div class="rounded-2xl p-4" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 18%, white)">
+          <div class="flex items-center gap-2 mb-2">
+            <div style="width:32px;height:32px;border-radius:8px;background:var(--sv-teal);display:flex;align-items:center;justify-content:center"><i class="fas fa-shield-halved" style="color:#fff;font-size:13px"></i></div>
+            <div class="text-sm font-800 text-slate-800">OTP + Registro</div>
           </div>
-          <div class="text-xs text-slate-600 leading-relaxed">
-            Mecanismo de <strong>autenticación OTP</strong> (correo/WhatsApp), derivación inteligente a soporte humano en contingencia y enrolamiento de clientes nuevos.
-          </div>
+          <div class="text-xs text-slate-600">Autenticación email/WhatsApp, derivación a soporte, enrolamiento nuevos clientes</div>
         </div>
       </div>
 
       <div class="impact impact-teal">
-        <span class="font-800" style="color:var(--sv-teal)">🛒 Impacto — </span>
-        <span class="text-sm" style="color:#0a5750">Servimax ahora tiene un canal de venta conversacional completo en WhatsApp: el cliente elige productos, confirma dirección, paga con PSE/Bancolombia y recibe confirmación — sin salir de la app. Dependencias de producción: plantilla OTP en Meta Business Manager y prueba de compra real con Wompi.</span>
+        <strong style="color:var(--sv-teal)">Canal de venta conversacional completo.</strong>
+        <span class="text-slate-600"> Pendiente: plantilla OTP en Meta Business Manager + prueba compra real con Wompi.</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     SLIDE 4 — INFRAESTRUCTURA MULTI-AGENTE (Sprint 8)
-═══════════════════════════════════════════════ -->
+<!-- ══════ SLIDE 4 — MULTI-AGENTE (Sprint 8) ══════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-lime">
     <div class="p-8">
-      <div class="flex items-start justify-between mb-6">
+      <div class="flex items-start justify-between mb-4">
         <div>
-          <div class="flex items-center gap-2 mb-3">
+          <div class="flex items-center gap-2 mb-2">
             <span class="pill pill-month">Sprint 8</span>
-            <span class="tag tag-prod">✓ 4/4 completado</span>
+            <span class="tag tag-prod">✓ 4/4 · 100%</span>
           </div>
-          <span class="pill pill-lime mb-3 inline-block">🤖 Infraestructura Multi-Agente</span>
           <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
-            Los agentes ISA ahora colaboran,<br>recuerdan y controlan costos
+            Infraestructura Multi-Agente
           </h2>
-          <p class="text-slate-500 mt-2">Wilson Pabon · delegate_to_agent · RAG en aprendizajes · Gobernanza de consumo</p>
+          <p class="text-slate-500 text-sm mt-1">Wilson Pabon · delegate_to_agent · RAG · Gobernanza de costos</p>
         </div>
-        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-accent)">03</div>
+        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-accent)">03</div>
       </div>
 
-      <div class="grid grid-cols-3 gap-4 mb-5">
-        <div class="feat-row" style="flex-direction:column;gap:6px">
-          <div class="flex items-center gap-2"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-accent) 22%, white)"><i class="fas fa-arrows-split-up-and-left" style="color:#4c6b1f"></i></div><div class="text-sm font-700 text-slate-800">Delegación asíncrona</div></div>
-          <div class="text-xs text-slate-600 leading-relaxed">Protocolo <code>delegate_to_agent</code>: un agente de Ventas puede delegar a Facturación sin bloquear su flujo.</div>
+      <div class="grid grid-cols-3 gap-4 mb-4">
+        <div class="rounded-2xl p-4 text-center" style="background:color-mix(in srgb, var(--sv-accent) 10%, white);border:1px solid color-mix(in srgb, var(--sv-accent) 25%, white)">
+          <div style="width:40px;height:40px;border-radius:10px;background:color-mix(in srgb, var(--sv-accent) 22%, white);margin:0 auto 8px;display:flex;align-items:center;justify-content:center"><i class="fas fa-arrows-split-up-and-left" style="color:#4c6b1f"></i></div>
+          <div class="text-sm font-800 text-slate-800">Delegación asíncrona</div>
+          <div class="text-xs text-slate-500 mt-1">Ventas delega a Facturación sin bloquearse</div>
         </div>
-        <div class="feat-row" style="flex-direction:column;gap:6px">
-          <div class="flex items-center gap-2"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-teal) 12%, white)"><i class="fas fa-brain" style="color:var(--sv-teal)"></i></div><div class="text-sm font-700 text-slate-800">RAG en aprendizajes</div></div>
-          <div class="text-xs text-slate-600 leading-relaxed">Búsqueda semántica sobre <code>AgentLearning</code> para inyectar solo lo relevante y evitar sobrecostos de tokens.</div>
+        <div class="rounded-2xl p-4 text-center" style="background:color-mix(in srgb, var(--sv-teal) 8%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 22%, white)">
+          <div style="width:40px;height:40px;border-radius:10px;background:color-mix(in srgb, var(--sv-teal) 15%, white);margin:0 auto 8px;display:flex;align-items:center;justify-content:center"><i class="fas fa-brain" style="color:var(--sv-teal)"></i></div>
+          <div class="text-sm font-800 text-slate-800">RAG en aprendizajes</div>
+          <div class="text-xs text-slate-500 mt-1">Búsqueda semántica en AgentLearning</div>
         </div>
-        <div class="feat-row" style="flex-direction:column;gap:6px">
-          <div class="flex items-center gap-2"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-gauge-high" style="color:var(--sv-primary)"></i></div><div class="text-sm font-700 text-slate-800">Gobernanza de costos</div></div>
-          <div class="text-xs text-slate-600 leading-relaxed">Topes de consumo por agente, límites de frecuencia y notificaciones proactivas tras rutinas automáticas.</div>
+        <div class="rounded-2xl p-4 text-center" style="background:color-mix(in srgb, var(--sv-primary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 18%, white)">
+          <div style="width:40px;height:40px;border-radius:10px;background:color-mix(in srgb, var(--sv-primary) 12%, white);margin:0 auto 8px;display:flex;align-items:center;justify-content:center"><i class="fas fa-gauge-high" style="color:var(--sv-primary)"></i></div>
+          <div class="text-sm font-800 text-slate-800">Gobernanza de costos</div>
+          <div class="text-xs text-slate-500 mt-1">Topes por agente + alertas proactivas</div>
         </div>
       </div>
 
       <div class="impact impact-lime">
-        <span class="font-800" style="color:#4c6b1f">🤖 Impacto — </span>
-        <span class="text-sm" style="color:#3a5417">La plataforma de agentes dejó de ser un monolito: ahora los agentes pueden cooperar entre áreas, recordar inteligentemente (sin quemar tokens) y operar con topes de costo. Es la base que hizo posible Isa Live en Sprint 9.</span>
+        <strong style="color:#4c6b1f">Base para Isa Live.</strong>
+        <span class="text-slate-600"> Los agentes cooperan entre áreas, recuerdan sin quemar tokens y operan con topes de costo.</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     SLIDE 5 — CRISTIAN BECERRA: ESTABILIDAD & SERVIPLATA
-═══════════════════════════════════════════════ -->
+<!-- ══════ SLIDE 5 — CRISTIAN BECERRA ══════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-primary">
     <div class="p-8">
-      <div class="flex items-start justify-between mb-6">
+      <div class="flex items-start justify-between mb-4">
         <div>
-          <div class="flex items-center gap-2 mb-3">
-            <span class="pill pill-month">Sep – Oct 2026</span>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill pill-month">Sep – Oct</span>
             <span class="tag tag-prod">7 entregables</span>
           </div>
-          <span class="pill pill-primary mb-3 inline-block">🐛 Cristian Becerra — Estabilidad & Serviplata</span>
           <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
-            Dos crashes críticos resueltos,<br>facturas corregidas y Serviplata
+            Cristian Becerra — Estabilidad
           </h2>
+          <p class="text-slate-500 text-sm mt-1">Serviplata · Crashes resueltos · Facturas PDF · Abastecimiento</p>
         </div>
-        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-primary)">04</div>
+        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-primary)">04</div>
       </div>
 
-      <div class="grid grid-cols-2 gap-4 mb-5">
-        <div class="rounded-2xl p-4" style="background:color-mix(in srgb, var(--sv-primary) 5%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 18%, white)">
-          <div class="flex items-center gap-2 mb-2"><span class="pill pill-primary text-xs">SD-195</span><span class="tag tag-prod">Producción</span></div>
-          <div class="text-sm font-700 text-slate-800 mb-1">Módulo Serviplata contabilidad</div>
-          <div class="text-xs text-slate-600 leading-relaxed">Módulo centralizado para consultar movimientos, entradas, salidas y saldos de billeteras. Detecta inconsistencias, duplicados y múltiples billeteras activas.</div>
+      <div class="grid grid-cols-2 gap-3 mb-3">
+        <div class="rounded-xl p-3" style="background:color-mix(in srgb, var(--sv-primary) 5%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 18%, white)">
+          <div class="flex items-center gap-2 mb-1"><span class="pill pill-primary text-xs">SD-195</span><span class="tag tag-prod" style="font-size:9px">Prod</span></div>
+          <div class="text-sm font-700 text-slate-800">Módulo Serviplata contabilidad</div>
+          <div class="text-xs text-slate-500">Movimientos, saldos, inconsistencias de billeteras</div>
         </div>
-        <div class="rounded-2xl p-4" style="background:color-mix(in srgb, var(--sv-secondary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-secondary) 22%, white)">
-          <div class="flex items-center gap-2 mb-2"><span class="pill pill-green text-xs">SD-273</span><span class="tag tag-prod">Producción</span></div>
-          <div class="text-sm font-700 text-slate-800 mb-1">Direcciones en facturas PDF</div>
-          <div class="text-xs text-slate-600 leading-relaxed">Facturas media carta y carta con QR no mostraban dirección/barrio. Se corrigió el cruce con tablas de comercios y la suma de pagos PSE. 58 facturas validadas.</div>
-        </div>
-        <div class="rounded-2xl p-4" style="background:#f8faf6;border:1px solid #e4e9dd">
-          <div class="flex items-center gap-2 mb-2">
-            <div style="width:24px;height:24px;border-radius:6px;background:var(--sv-primary);display:flex;align-items:center;justify-content:center"><i class="fas fa-mobile-screen" style="color:#fff;font-size:10px"></i></div>
-            <div class="text-xs font-800 text-slate-800">Crash al iniciar app</div>
-          </div>
-          <div class="text-xs text-slate-600">react-native-fs intentaba leer carpeta inexistente en RN 0.81 — error nativo fuera de JS.</div>
-        </div>
-        <div class="rounded-2xl p-4" style="background:#f8faf6;border:1px solid #e4e9dd">
-          <div class="flex items-center gap-2 mb-2">
-            <div style="width:24px;height:24px;border-radius:6px;background:var(--sv-primary);display:flex;align-items:center;justify-content:center"><i class="fas fa-signature" style="color:#fff;font-size:10px"></i></div>
-            <div class="text-xs font-800 text-slate-800">Crash al confirmar firmas</div>
-          </div>
-          <div class="text-xs text-slate-600">react-native-compressor tomaba Base64 como ruta. Conductores nuevos no podían completar entregas.</div>
+        <div class="rounded-xl p-3" style="background:color-mix(in srgb, var(--sv-secondary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-secondary) 20%, white)">
+          <div class="flex items-center gap-2 mb-1"><span class="pill pill-green text-xs">SD-273</span><span class="tag tag-prod" style="font-size:9px">Prod</span></div>
+          <div class="text-sm font-700 text-slate-800">Direcciones facturas PDF</div>
+          <div class="text-xs text-slate-500">Dirección/barrio + sumas PSE. 58 facturas validadas</div>
         </div>
       </div>
 
-      <div class="grid grid-cols-3 gap-3 mb-5">
-        <div class="feat-row"><div class="feat-ico" style="background:#fef3c7"><span style="font-size:13px">📅</span></div><div><div class="text-xs font-700 text-slate-800">Bug fechas banners</div><div class="text-xs text-slate-500">UTC + YYYY→yyyy</div></div></div>
-        <div class="feat-row"><div class="feat-ico" style="background:#fef3c7"><span style="font-size:13px">🔍</span></div><div><div class="text-xs font-700 text-slate-800">Auditoría Ama de Casa</div><div class="text-xs text-slate-500">Trazabilidad pagos</div></div></div>
-        <div class="feat-row"><div class="feat-ico" style="background:#fef3c7"><span style="font-size:13px">📦</span></div><div><div class="text-xs font-700 text-slate-800">Trazabilidad abastecimiento</div><div class="text-xs text-slate-500">Fase 1 — Diseño</div></div></div>
-      </div>
-
-      <div class="impact impact-primary">
-        <span class="font-800" style="color:var(--sv-primary)">🐛 Impacto — </span>
-        <span class="text-sm" style="color:#5c1030">Cristian resolvió los dos crashes que impedían a conductores completar entregas, corrigió las facturas PDF sin dirección (58 validadas), y entregó Serviplata para contabilidad. También arrancó la fase de diseño de trazabilidad documental de abastecimiento.</span>
+      <div class="grid grid-cols-4 gap-2">
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:var(--sv-primary);width:24px;height:24px"><i class="fas fa-mobile-screen" style="color:#fff;font-size:10px"></i></div><div><div class="text-xs font-700 text-slate-800">Crash inicio</div><div class="text-xs text-slate-400">RN-fs carpeta</div></div></div>
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:var(--sv-primary);width:24px;height:24px"><i class="fas fa-signature" style="color:#fff;font-size:10px"></i></div><div><div class="text-xs font-700 text-slate-800">Crash firmas</div><div class="text-xs text-slate-400">Compressor B64</div></div></div>
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:#fef3c7;width:24px;height:24px"><span style="font-size:11px">📅</span></div><div><div class="text-xs font-700 text-slate-800">Fechas banners</div><div class="text-xs text-slate-400">UTC+yyyy</div></div></div>
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:#fef3c7;width:24px;height:24px"><span style="font-size:11px">📦</span></div><div><div class="text-xs font-700 text-slate-800">Abastecimiento</div><div class="text-xs text-slate-400">Fase 1 diseño</div></div></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     SLIDE 6 — NEIDER PEÑA: EXPEDIENTE DIGITAL + HALLOWEEN + CRÉDITO
-═══════════════════════════════════════════════ -->
+<!-- ══════ SLIDE 6 — NEIDER PEÑA ══════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-green">
     <div class="p-8">
-      <div class="flex items-start justify-between mb-5">
+      <div class="flex items-start justify-between mb-4">
         <div>
-          <div class="flex items-center gap-2 mb-3">
-            <span class="pill pill-month">Sep – Oct 2026</span>
-            <span class="tag tag-green">👤 Nuevo contribuidor</span>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill pill-month">Sep – Oct</span>
+            <span class="tag tag-green">Nuevo · 30 ítems · 90 pts</span>
           </div>
-          <span class="pill pill-green mb-3 inline-block">📋 Neider Peña — 30 ítems · 90 pts</span>
           <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
-            Expediente Digital del Cliente,<br>Halloween y onboarding crediticio
+            Neider Peña — 3 proyectos
           </h2>
-          <p class="text-slate-500 mt-2">98 commits · 3 proyectos · 3 sprints del Expediente · Primer bimestre en el equipo</p>
+          <p class="text-slate-500 text-sm mt-1">98 commits · Expediente Digital · Halloween · Crédito tenderos</p>
         </div>
-        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-secondary)">05</div>
+        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-secondary)">05</div>
       </div>
 
       <div class="grid grid-cols-3 gap-3 mb-4">
@@ -510,314 +432,263 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-2 gap-4 mb-4">
+      <div class="grid grid-cols-2 gap-3 mb-3">
         <div class="space-y-1.5">
           <div class="sec-lbl">Expediente Digital — Billetera Refrigerados</div>
-          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-database" style="color:var(--sv-secondary)"></i></div><div><div class="text-xs font-700 text-slate-800">Sprint 0 – Definición (5 HU)</div><div class="text-xs text-slate-500">Alcance MVP, contrato API v1, matriz privacidad/acceso por rol</div></div></div>
-          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-server" style="color:var(--sv-secondary)"></i></div><div><div class="text-xs font-700 text-slate-800">Sprint 1 – Backend (6 HU)</div><div class="text-xs text-slate-500">App customer_profile, datos sintéticos, normalización, endpoint, auditoría, aislamiento por sede</div></div></div>
-          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-laptop-code" style="color:var(--sv-secondary)"></i></div><div><div class="text-xs font-700 text-slate-800">Sprint 2 – Interfaz (13 HU)</div><div class="text-xs text-slate-500">Bloques A/B/C, mapa Leaflet, persistencia de estado, selector 1-de-N, habeas data</div></div></div>
-          <div class="feat-row" style="background:color-mix(in srgb, var(--sv-primary) 5%, white);border-color:color-mix(in srgb, var(--sv-primary) 20%, white)"><div class="feat-ico" style="background:var(--sv-primary)"><i class="fas fa-shield-halved" style="color:#fff"></i></div><div><div class="text-xs font-700 text-slate-800">🐞 SD-397 · Bug de seguridad</div><div class="text-xs text-slate-500">Cédula expuesta en URL → ID aleatorio con expiración 8h + búsqueda por POST</div></div></div>
+          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-database" style="color:var(--sv-secondary)"></i></div><div><div class="text-xs font-700 text-slate-800">Sprint 0 — Definición (5 HU)</div><div class="text-xs text-slate-400">MVP, contrato API v1, matriz privacidad</div></div></div>
+          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-server" style="color:var(--sv-secondary)"></i></div><div><div class="text-xs font-700 text-slate-800">Sprint 1 — Backend (6 HU)</div><div class="text-xs text-slate-400">customer_profile, datos sintéticos, auditoría</div></div></div>
+          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-laptop-code" style="color:var(--sv-secondary)"></i></div><div><div class="text-xs font-700 text-slate-800">Sprint 2 — Interfaz (13 HU)</div><div class="text-xs text-slate-400">Bloques A/B/C, mapa Leaflet, selector tiendas</div></div></div>
         </div>
         <div class="space-y-1.5">
-          <div class="sec-lbl">Halloween "Sala de Sustos" 🎃</div>
-          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-cauldron" style="color:var(--sv-primary)"></i></div><div><div class="text-xs font-700 text-slate-800">HU-42/43 · Reto 2 — Caldero</div><div class="text-xs text-slate-500">Lógica de premio, pantalla app + configuración web · Backend, web y app</div></div></div>
-          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-camera" style="color:var(--sv-primary)"></i></div><div><div class="text-xs font-700 text-slate-800">HU-44/45 · Reto 3 — Foto aterradora</div><div class="text-xs text-slate-500">Tendero toma foto → envía → revisión → pago premio</div></div></div>
-          <div class="sec-lbl" style="margin-top:12px">Onboarding Crediticio <span class="tag" style="background:#fef3c7;color:#92400e;font-size:9px;padding:1px 6px">Pausado</span></div>
-          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-teal) 12%, white)"><i class="fas fa-clipboard-check" style="color:var(--sv-teal)"></i></div><div><div class="text-xs font-700 text-slate-800">HU-28/29 · Elegibilidad + máquina de estados</div><div class="text-xs text-slate-500">4 criterios automáticos (zona, antigüedad, crédito activo, comercio). Diseño de solicitud completo</div></div></div>
-          <div class="sec-lbl" style="margin-top:12px">Producción</div>
-          <div class="flex items-center gap-3">
-            <div class="w-28 text-xs font-600 text-slate-700 text-right">98 commits</div>
-            <div class="flex-1 bg-slate-100 rounded-full h-4 overflow-hidden"><div class="cbar h-4" style="width:100%;background:linear-gradient(90deg,var(--sv-secondary),#0a7d3b)"></div></div>
-            <div class="w-40 text-xs font-700 text-slate-500">40 BE · 57 FE · 1 legacy</div>
-          </div>
+          <div class="sec-lbl">Halloween + Crédito</div>
+          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-ghost" style="color:var(--sv-primary)"></i></div><div><div class="text-xs font-700 text-slate-800">Reto 2 — Caldero (HU-42/43)</div><div class="text-xs text-slate-400">Lógica premio + pantalla app + config web</div></div></div>
+          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-camera" style="color:var(--sv-primary)"></i></div><div><div class="text-xs font-700 text-slate-800">Reto 3 — Foto aterradora (HU-44/45)</div><div class="text-xs text-slate-400">Captura → revisión → pago premio</div></div></div>
+          <div class="feat-row" style="background:color-mix(in srgb, var(--sv-primary) 4%, white);border-color:color-mix(in srgb, var(--sv-primary) 15%, white)"><div class="feat-ico" style="background:var(--sv-primary)"><i class="fas fa-shield-halved" style="color:#fff"></i></div><div><div class="text-xs font-700 text-slate-800">🐞 SD-397 Bug seguridad</div><div class="text-xs text-slate-400">Cédula en URL → ID aleatorio 8h + POST</div></div></div>
         </div>
-      </div>
-
-      <div class="impact impact-green">
-        <span class="font-800" style="color:#0a7d3b">📋 Impacto — </span>
-        <span class="text-sm" style="color:#085c2c">En su primer bimestre, Neider entregó 30 ítems (90 pts) en 3 proyectos simultáneos: llevó el Expediente Digital del Cliente desde la definición hasta la interfaz completa con 3 sprints, desarrolló 2 retos completos de Halloween (back+web+app), corrigió un bug de seguridad en producción, y dejó diseñado el onboarding crediticio.</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     SLIDE 7 — TEMPORADA NAVIDEÑA V6
-═══════════════════════════════════════════════ -->
+<!-- ══════ SLIDE 7 — TEMPORADA NAVIDEÑA V6 ══════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-forest">
     <div class="p-8">
-      <div class="flex items-start justify-between mb-6">
+      <div class="flex items-start justify-between mb-4">
         <div>
-          <div class="flex items-center gap-2 mb-3">
+          <div class="flex items-center gap-2 mb-2">
             <span class="pill pill-month">Planificación</span>
-            <span class="tag tag-roadmap">→ Épica SD-176</span>
+            <span class="tag tag-roadmap">Épica SD-176</span>
           </div>
-          <span class="pill pill-forest mb-3 inline-block">🎄 Temporada Navideña Servimax V6</span>
           <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
-            17 historias de usuario planificadas<br>para el canal navideño B2B + B2C
+            Temporada Navideña V6 — 17 US
           </h2>
-          <p class="text-slate-500 mt-2">Jeferson Camero · 5 sub-épicas · Pago por cuotas · Servimax Online · Pasarela + ERP</p>
+          <p class="text-slate-500 text-sm mt-1">Cuotas · Canal B2B · Portal B2C · Pasarela · ERP</p>
         </div>
-        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-forest)">06</div>
+        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-forest)">06</div>
       </div>
 
-      <div class="grid grid-cols-5 gap-3 mb-5">
+      <div class="grid grid-cols-5 gap-2 mb-4">
         <div class="rounded-xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-primary) 5%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 18%, white)">
           <div class="text-lg font-800" style="color:var(--sv-primary)">3</div>
-          <div class="text-xs font-700 text-slate-600">Módulo Central</div>
-          <div class="text-xs text-slate-400">US-01 a 03</div>
+          <div class="text-xs font-700 text-slate-600">Central</div>
         </div>
         <div class="rounded-xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-secondary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-secondary) 20%, white)">
           <div class="text-lg font-800" style="color:var(--sv-secondary)">4</div>
-          <div class="text-xs font-700 text-slate-600">Canal B2B</div>
-          <div class="text-xs text-slate-400">US-04 a 07</div>
+          <div class="text-xs font-700 text-slate-600">B2B</div>
         </div>
         <div class="rounded-xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-teal) 6%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 20%, white)">
           <div class="text-lg font-800" style="color:var(--sv-teal)">6</div>
-          <div class="text-xs font-700 text-slate-600">Canal B2C</div>
-          <div class="text-xs text-slate-400">US-08 a 13</div>
+          <div class="text-xs font-700 text-slate-600">B2C</div>
         </div>
         <div class="rounded-xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-accent) 14%, white);border:1px solid color-mix(in srgb, var(--sv-accent) 30%, white)">
           <div class="text-lg font-800" style="color:#4c6b1f">2</div>
           <div class="text-xs font-700 text-slate-600">Pasarela</div>
-          <div class="text-xs text-slate-400">US-14 a 15</div>
         </div>
         <div class="rounded-xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-forest) 8%, white);border:1px solid color-mix(in srgb, var(--sv-forest) 22%, white)">
           <div class="text-lg font-800" style="color:var(--sv-forest)">2</div>
-          <div class="text-xs font-700 text-slate-600">ERP + Logística</div>
-          <div class="text-xs text-slate-400">US-16 a 17</div>
+          <div class="text-xs font-700 text-slate-600">ERP</div>
         </div>
       </div>
 
-      <div class="grid grid-cols-2 gap-4 mb-5">
-        <div class="space-y-1.5">
-          <div class="sec-lbl">Highlights clave</div>
-          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-calendar-days" style="color:var(--sv-primary)"></i></div><div><div class="text-xs font-700 text-slate-800">US-01: Plan de 6 cuotas automático</div><div class="text-xs text-slate-500">Pedido navideño → plan diferido jul-nov generado</div></div></div>
-          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-teal) 12%, white)"><i class="fas fa-store" style="color:var(--sv-teal)"></i></div><div><div class="text-xs font-700 text-slate-800">US-10: Portal B2C Servimax Online</div><div class="text-xs text-slate-500">Identidad naranja, registro express, OTP WhatsApp</div></div></div>
-          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-receipt" style="color:var(--sv-secondary)"></i></div><div><div class="text-xs font-700 text-slate-800">US-16: Código unificado "Servimax Online" en ecom</div><div class="text-xs text-slate-500">Consolidación de facturación multicanal</div></div></div>
-        </div>
-        <div class="space-y-1.5">
-          <div class="sec-lbl">Capacidades nuevas</div>
-          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-accent) 22%, white)"><i class="fas fa-link" style="color:#4c6b1f"></i></div><div><div class="text-xs font-700 text-slate-800">US-11: Links parametrizados por asesor</div><div class="text-xs text-slate-500">Compras B2C suman al presupuesto del vendedor</div></div></div>
-          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-forest) 10%, white)"><i class="fas fa-shield-halved" style="color:var(--sv-forest)"></i></div><div><div class="text-xs font-700 text-slate-800">US-12: Filtro antifraude B2C</div><div class="text-xs text-slate-500">Validar que no sea tendero existente</div></div></div>
-          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-percent" style="color:var(--sv-primary)"></i></div><div><div class="text-xs font-700 text-slate-800">US-15: Incentivo pronto pago digital</div><div class="text-xs text-slate-500">Descuento automático por pago 100% digital</div></div></div>
-        </div>
-      </div>
-
-      <div class="impact impact-forest">
-        <span class="font-800" style="color:var(--sv-forest)">🎄 Impacto — </span>
-        <span class="text-sm" style="color:#0a4227">La temporada navideña V6 es la épica más grande del año: 17 historias distribuidas en 5 sub-épicas que abarcan desde el plan de cuotas hasta un portal B2C nuevo con identidad propia. El desarrollo arranca formalmente en noviembre.</span>
+      <div class="grid grid-cols-3 gap-2">
+        <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-calendar-days" style="color:var(--sv-primary)"></i></div><div><div class="text-xs font-700 text-slate-800">Plan 6 cuotas automático</div><div class="text-xs text-slate-400">US-01 · Pedido → plan diferido</div></div></div>
+        <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-teal) 12%, white)"><i class="fas fa-store" style="color:var(--sv-teal)"></i></div><div><div class="text-xs font-700 text-slate-800">Portal B2C Servimax Online</div><div class="text-xs text-slate-400">US-10 · Identidad naranja, OTP</div></div></div>
+        <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-accent) 22%, white)"><i class="fas fa-link" style="color:#4c6b1f"></i></div><div><div class="text-xs font-700 text-slate-800">Links por asesor</div><div class="text-xs text-slate-400">US-11 · Compra B2C → presupuesto</div></div></div>
+        <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-forest) 10%, white)"><i class="fas fa-shield-halved" style="color:var(--sv-forest)"></i></div><div><div class="text-xs font-700 text-slate-800">Filtro antifraude B2C</div><div class="text-xs text-slate-400">US-12 · Detectar tendero existente</div></div></div>
+        <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-percent" style="color:var(--sv-secondary)"></i></div><div><div class="text-xs font-700 text-slate-800">Incentivo pronto pago</div><div class="text-xs text-slate-400">US-15 · Descuento automático</div></div></div>
+        <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-receipt" style="color:var(--sv-primary)"></i></div><div><div class="text-xs font-700 text-slate-800">Código unificado ecom</div><div class="text-xs text-slate-400">US-16 · Facturación multicanal</div></div></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     SLIDE 8 — EL BIMESTRE EN NÚMEROS
-═══════════════════════════════════════════════ -->
+<!-- ══════ SLIDE 8 — EL BIMESTRE EN NÚMEROS ══════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-primary">
     <div class="p-8">
-      <div class="flex items-start justify-between mb-5">
+      <div class="flex items-start justify-between mb-4">
         <div>
-          <div class="flex items-center gap-2 mb-3">
-            <span class="pill pill-month">Sep – Oct 2026</span>
-          </div>
-          <span class="pill pill-primary mb-3 inline-block">📊 El Bimestre en Números</span>
-          <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
-            2,079 cambios al código en 8 semanas<br>— 4× el volumen de agosto
+          <span class="pill pill-primary mb-2 inline-block">📊 El Bimestre en Números</span>
+          <h2 class="text-2xl font-black leading-tight" style="color:var(--sv-text)">
+            2,079 cambios · 8 semanas · 11 repos
           </h2>
         </div>
-        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-primary)">07</div>
+        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-primary)">07</div>
       </div>
 
-      <div class="grid grid-cols-4 gap-3 mb-6">
-        <div class="rounded-2xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-primary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 20%, white)">
-          <div class="text-2xl font-black" style="color:var(--sv-primary)">2,079</div>
-          <div class="text-xs font-700 text-slate-700 mt-0.5">Cambios al código</div>
-          <div class="text-xs text-slate-400">1,031 BE · 830 FE · 218 legacy</div>
-        </div>
-        <div class="rounded-2xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-secondary) 8%, white);border:1px solid color-mix(in srgb, var(--sv-secondary) 22%, white)">
-          <div class="text-2xl font-black" style="color:var(--sv-secondary)">81+</div>
-          <div class="text-xs font-700 text-slate-700 mt-0.5">Tareas cerradas</div>
-          <div class="text-xs text-slate-400">44 Wilson + 30 Neider + 7 Cristian</div>
-        </div>
-        <div class="rounded-2xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-teal) 8%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 22%, white)">
-          <div class="text-2xl font-black" style="color:var(--sv-teal)">11</div>
-          <div class="text-xs font-700 text-slate-700 mt-0.5">Repos activos</div>
-          <div class="text-xs text-slate-400">2 modern + 9 legacy</div>
-        </div>
-        <div class="rounded-2xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-accent) 18%, white);border:1px solid color-mix(in srgb, var(--sv-accent) 35%, white)">
-          <div class="text-2xl font-black" style="color:#4c6b1f">5</div>
-          <div class="text-xs font-700 text-slate-700 mt-0.5">Contribuidores</div>
-          <div class="text-xs text-slate-400">+1 nuevo (Neider)</div>
-        </div>
-      </div>
-
-      <div class="mb-6">
-        <div class="sec-lbl">Commits por persona — todos los repos y ramas (Sep–Oct)</div>
-        <div class="space-y-2">
+      <div class="mb-5">
+        <div class="sec-lbl">Commits por persona</div>
+        <div class="space-y-1.5">
           <div class="flex items-center gap-3">
-            <div class="w-32 text-sm font-600 text-slate-700 text-right">Jeferson Camero</div>
+            <div class="w-28 text-xs font-600 text-slate-700 text-right">Jeferson Camero</div>
             <div class="flex-1 bg-slate-100 rounded-full h-5 overflow-hidden"><div class="cbar h-5" style="width:73%;background:linear-gradient(90deg,var(--sv-primary),#a3123f)"></div></div>
-            <div class="w-40 text-sm font-800 text-slate-600">1,523 · Lead</div>
+            <div class="w-32 text-xs font-800 text-slate-600">1,523 · Lead</div>
           </div>
           <div class="flex items-center gap-3">
-            <div class="w-32 text-sm font-600 text-slate-700 text-right">Wilson Pabon</div>
+            <div class="w-28 text-xs font-600 text-slate-700 text-right">Wilson Pabon</div>
             <div class="flex-1 bg-slate-100 rounded-full h-5 overflow-hidden"><div class="cbar h-5" style="width:14.5%;background:linear-gradient(90deg,var(--sv-teal),#0a5750)"></div></div>
-            <div class="w-40 text-sm font-800 text-slate-600">302 · Isa Live</div>
+            <div class="w-32 text-xs font-800 text-slate-600">302 · Isa Live</div>
           </div>
           <div class="flex items-center gap-3">
-            <div class="w-32 text-sm font-600 text-slate-700 text-right">Neider Peña</div>
+            <div class="w-28 text-xs font-600 text-slate-700 text-right">Neider Peña</div>
             <div class="flex-1 bg-slate-100 rounded-full h-5 overflow-hidden"><div class="cbar h-5" style="width:4.7%;background:linear-gradient(90deg,var(--sv-accent),#7a9a2e);min-width:12px"></div></div>
-            <div class="w-40 text-sm font-800 text-slate-600">98 · Expediente <span class="tag tag-green" style="font-size:8px;padding:0 5px">Nuevo</span></div>
+            <div class="w-32 text-xs font-800 text-slate-600">98 <span class="tag tag-green" style="font-size:8px;padding:0 5px">Nuevo</span></div>
           </div>
           <div class="flex items-center gap-3">
-            <div class="w-32 text-sm font-600 text-slate-700 text-right">Cristian Becerra</div>
+            <div class="w-28 text-xs font-600 text-slate-700 text-right">Cristian Becerra</div>
             <div class="flex-1 bg-slate-100 rounded-full h-5 overflow-hidden"><div class="cbar h-5" style="width:4.3%;background:linear-gradient(90deg,var(--sv-secondary),#0a7d3b);min-width:12px"></div></div>
-            <div class="w-40 text-sm font-800 text-slate-600">90 · Apps</div>
+            <div class="w-32 text-xs font-800 text-slate-600">90 · Apps</div>
           </div>
         </div>
-        <div class="text-xs text-slate-400 mt-2">Incluye ramas feature de servimax-backend, servimax-frontend, y 9 repos legacy de ServimaxDevMain.</div>
       </div>
 
-      <div style="background:#f8faf6;border:1px solid #e4e9dd;border-radius:12px;padding:14px 18px;">
-        <div class="flex items-center justify-between mb-3">
-          <div class="text-xs font-700 text-slate-500 uppercase tracking-wide">Cambios por semana (8 semanas · Sep 1 – Oct 27)</div>
-          <div class="text-xs text-slate-400">2,079 cambios · 11 repos</div>
+      <div style="background:#f8faf6;border:1px solid #e4e9dd;border-radius:12px;padding:12px 16px;">
+        <div class="flex items-center justify-between mb-2">
+          <div class="text-xs font-700 text-slate-500 uppercase tracking-wide">Cambios por semana (Sep 1 – Oct 27)</div>
+          <div class="text-xs text-slate-400">Pico: Oct 20-27 → 393</div>
         </div>
-        <div style="height:200px;position:relative">
+        <div style="height:170px;position:relative">
           <canvas id="chart-cambios-semana"></canvas>
         </div>
-        <div style="margin-top:6px;font-size:10px;color:#94a89a;text-align:center">
-          ⚡ Semana más activa: Oct 20-27 — 393 cambios (cierre de Sprint 10, flujo transaccional Wompi)
-        </div>
       </div>
-
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     SLIDE 9 — ROADMAP NOVIEMBRE
-═══════════════════════════════════════════════ -->
+<!-- ══════ SLIDE 9 — COSTOS GCP ══════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-teal">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-4">
+        <div>
+          <span class="pill pill-teal mb-2 inline-block">☁️ Costos GCP — Octubre</span>
+          <h2 class="text-2xl font-black leading-tight" style="color:var(--sv-text)">
+            COP $1.07M actual · sin BQ: $749K
+          </h2>
+          <p class="text-slate-500 text-sm mt-1">Oct 1–27 · 1.51% ahorros · ▼ COP $16K vs septiembre</p>
+        </div>
+        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-teal)">08</div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-3 mb-5">
+        <div class="rounded-2xl p-4 text-center" style="background:color-mix(in srgb, var(--sv-teal) 6%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 20%, white)">
+          <div class="text-xs font-800 text-slate-500 mb-1">TOTAL ACTUAL</div>
+          <div class="kpi-sm" style="color:var(--sv-teal)">$1.07M</div>
+          <div class="text-xs text-slate-400 mt-1">COP · Oct 1–27</div>
+        </div>
+        <div class="rounded-2xl p-4 text-center" style="background:color-mix(in srgb, var(--sv-secondary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-secondary) 20%, white)">
+          <div class="text-xs font-800 text-slate-500 mb-1">SIN BIGQUERY</div>
+          <div class="kpi-sm" style="color:var(--sv-secondary)">$749K</div>
+          <div class="text-xs text-slate-400 mt-1">COP · infraestructura core</div>
+        </div>
+        <div class="rounded-2xl p-4 text-center" style="background:color-mix(in srgb, var(--sv-primary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 18%, white)">
+          <div class="text-xs font-800 text-slate-500 mb-1">BIGQUERY</div>
+          <div class="kpi-sm" style="color:var(--sv-primary)">$320K</div>
+          <div class="text-xs text-slate-400 mt-1">COP · ▲18% vs sep · uso elevado</div>
+        </div>
+      </div>
+
+      <div style="background:#f8faf6;border:1px solid #e4e9dd;border-radius:12px;padding:12px 16px;">
+        <div class="text-xs font-700 text-slate-500 uppercase tracking-wide mb-2">Costo por servicio (COP) — Oct 1-27</div>
+        <div style="height:200px;position:relative">
+          <canvas id="chart-costos-servicio"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ SLIDE 10 — ROADMAP ══════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-lime">
     <div class="p-8">
-      <div class="flex items-start justify-between mb-5">
+      <div class="flex items-start justify-between mb-4">
         <div>
-          <div class="flex items-center gap-2 mb-3">
-            <span class="pill pill-month">Noviembre 2026</span>
-            <span class="tag tag-roadmap">→ Sprint 11+</span>
-          </div>
-          <span class="pill pill-lime mb-3 inline-block">🚀 Lo que sigue</span>
-          <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
-            Producción de Isa WhatsApp, Navidad V6<br>y el bug de imágenes del portal
+          <span class="pill pill-lime mb-2 inline-block">🚀 Lo que sigue</span>
+          <h2 class="text-2xl font-black leading-tight" style="color:var(--sv-text)">
+            Noviembre: Isa a producción + Navidad V6
           </h2>
         </div>
-        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-accent)">08</div>
+        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-accent)">09</div>
       </div>
 
-      <div class="sec-lbl">Dependencias de producción — Isa WhatsApp</div>
-      <div class="space-y-2 mb-5">
-        <div class="feat-row" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border-color:color-mix(in srgb, var(--sv-teal) 20%, white)">
+      <div class="sec-lbl">Bloqueantes para producción</div>
+      <div class="space-y-1.5 mb-4">
+        <div class="feat-row" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border-color:color-mix(in srgb, var(--sv-teal) 18%, white)">
           <div class="feat-ico" style="background:var(--sv-teal)"><i class="fab fa-whatsapp" style="color:#fff"></i></div>
-          <div style="flex:1"><div class="text-sm font-700 text-slate-800">Plantilla OTP en Meta Business Manager</div><div class="text-xs text-slate-500">Crear/aprobar plantilla de autenticación OTP en entorno de producción de Meta</div></div>
-          <span class="tag tag-roadmap" style="flex-shrink:0">Bloqueante</span>
+          <div style="flex:1"><div class="text-xs font-700 text-slate-800">Plantilla OTP en Meta Business Manager</div></div>
+          <span class="tag tag-roadmap" style="flex-shrink:0;font-size:9px">Bloqueante</span>
         </div>
-        <div class="feat-row" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border-color:color-mix(in srgb, var(--sv-teal) 20%, white)">
+        <div class="feat-row" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border-color:color-mix(in srgb, var(--sv-teal) 18%, white)">
           <div class="feat-ico" style="background:var(--sv-teal)"><i class="fas fa-credit-card" style="color:#fff"></i></div>
-          <div style="flex:1"><div class="text-sm font-700 text-slate-800">Prueba de compra real con Wompi</div><div class="text-xs text-slate-500">Compra y pago en ambiente productivo + anulación coordinada con contabilidad</div></div>
-          <span class="tag tag-roadmap" style="flex-shrink:0">Bloqueante</span>
+          <div style="flex:1"><div class="text-xs font-700 text-slate-800">Prueba compra real Wompi + contabilidad</div></div>
+          <span class="tag tag-roadmap" style="flex-shrink:0;font-size:9px">Bloqueante</span>
         </div>
       </div>
 
-      <div class="sec-lbl">Tareas pendientes del bimestre</div>
-      <div class="space-y-2 mb-5">
-        <div class="feat-row" style="background:#f8faf6;border-color:#e4e9dd">
-          <div class="feat-ico" style="background:var(--sv-primary)"><i class="fas fa-image" style="color:#fff"></i></div>
-          <div style="flex:1"><div class="text-sm font-700 text-slate-800">SD-251 · Bug imágenes del portal</div><div class="text-xs text-slate-500">3 de 5 servicios aún con librería defectuosa (logisticBack, deliversBack, sokectsLiveOp) + daño histórico en buckets</div></div>
-          <span class="tag tag-progress" style="flex-shrink:0">Pendiente</span>
-        </div>
-        <div class="feat-row" style="background:#f8faf6;border-color:#e4e9dd">
-          <div class="feat-ico" style="background:#c9d4c4"><i class="fas fa-magnifying-glass" style="color:#5b7362"></i></div>
-          <div style="flex:1"><div class="text-sm font-700 text-slate-800">SD-121 · Estudio de competencia Rappi/Cornershop</div><div class="text-xs text-slate-500">Benchmark de 10 SKUs vs competidores B2C — input para pricing de Navidad</div></div>
-          <span class="tag tag-progress" style="flex-shrink:0">Pendiente</span>
-        </div>
+      <div class="sec-lbl">Pendientes del bimestre</div>
+      <div class="grid grid-cols-2 gap-1.5 mb-4">
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:var(--sv-primary);width:24px;height:24px"><i class="fas fa-image" style="color:#fff;font-size:10px"></i></div><div><div class="text-xs font-700 text-slate-800">SD-251 · Bug imágenes portal</div><div class="text-xs text-slate-400">3 servicios con librería defectuosa</div></div></div>
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:#c9d4c4;width:24px;height:24px"><i class="fas fa-magnifying-glass" style="color:#5b7362;font-size:10px"></i></div><div><div class="text-xs font-700 text-slate-800">SD-121 · Estudio competencia</div><div class="text-xs text-slate-400">Benchmark Rappi/Cornershop</div></div></div>
       </div>
 
       <div class="sec-lbl">Arranca en noviembre</div>
-      <div class="space-y-2">
-        <div class="feat-row" style="background:color-mix(in srgb, var(--sv-forest) 5%, white);border-color:color-mix(in srgb, var(--sv-forest) 20%, white)">
+      <div class="space-y-1.5">
+        <div class="feat-row" style="background:color-mix(in srgb, var(--sv-forest) 5%, white);border-color:color-mix(in srgb, var(--sv-forest) 18%, white)">
           <div class="feat-ico" style="background:var(--sv-forest)"><i class="fas fa-tree" style="color:#fff"></i></div>
-          <div style="flex:1"><div class="text-sm font-700 text-slate-800">Temporada Navideña V6</div><div class="text-xs text-slate-500">17 historias — Módulo Central, Canal B2B, Portal B2C, Pasarela, ERP</div></div>
-          <span class="tag tag-roadmap" style="flex-shrink:0">Por iniciar</span>
+          <div style="flex:1"><div class="text-xs font-700 text-slate-800">Temporada Navideña V6 — 17 historias</div></div>
+          <span class="tag tag-roadmap" style="flex-shrink:0;font-size:9px">Sprint 11</span>
         </div>
-        <div class="feat-row" style="background:color-mix(in srgb, var(--sv-secondary) 5%, white);border-color:color-mix(in srgb, var(--sv-secondary) 20%, white)">
+        <div class="feat-row" style="background:color-mix(in srgb, var(--sv-secondary) 5%, white);border-color:color-mix(in srgb, var(--sv-secondary) 18%, white)">
           <div class="feat-ico" style="background:var(--sv-secondary)"><i class="fas fa-phone" style="color:#fff"></i></div>
-          <div style="flex:1"><div class="text-sm font-700 text-slate-800">SD-322 · Bot llamadas telefónicas con Isa</div><div class="text-xs text-slate-500">Épica nueva — sokectsLiveOperationBack · Wilson Pabon</div></div>
-          <span class="tag tag-roadmap" style="flex-shrink:0">Épica nueva</span>
+          <div style="flex:1"><div class="text-xs font-700 text-slate-800">SD-322 · Bot llamadas telefónicas Isa</div></div>
+          <span class="tag tag-roadmap" style="flex-shrink:0;font-size:9px">Épica nueva</span>
         </div>
-        <div class="feat-row" style="background:#f8faf6;border-color:#e4e9dd">
+        <div class="feat-row">
           <div class="feat-ico" style="background:#c9d4c4"><i class="fas fa-file-lines" style="color:#5b7362"></i></div>
-          <div style="flex:1"><div class="text-sm font-700 text-slate-800">SD-293 · Automatización informes contabilidad</div><div class="text-xs text-slate-500">Informe mensual x negocio + PDF consolidado · Sprint 10 · Jeferson</div></div>
-          <span class="tag tag-roadmap" style="flex-shrink:0">Sprint 10</span>
+          <div style="flex:1"><div class="text-xs font-700 text-slate-800">SD-293 · Automatización informes contabilidad</div></div>
+          <span class="tag tag-progress" style="flex-shrink:0;font-size:9px">Sprint 10</span>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     SLIDE 10 — CIERRE
-═══════════════════════════════════════════════ -->
+<!-- ══════ SLIDE 11 — CIERRE ══════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
     <div class="h-1.5 w-full" style="background:linear-gradient(90deg,var(--sv-primary),var(--sv-secondary),var(--sv-accent),var(--sv-teal))"></div>
     <div class="p-8">
-      <div class="flex items-start justify-between mb-6">
-        <div>
-          <span class="pill pill-month mb-3 inline-block">Sep – Oct 2026 en Números</span>
-          <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
-            Isa habla, vende y cobra —<br>y el equipo creció
-          </h2>
-        </div>
-        <div class="text-6xl opacity-10 font-black leading-none select-none" style="color:var(--sv-primary)">09</div>
+      <h2 class="text-3xl font-black leading-tight mb-5" style="color:var(--sv-text)">
+        Isa habla, vende y cobra —<br>y el equipo creció
+      </h2>
+
+      <div class="grid grid-cols-5 gap-3 mb-5">
+        <div class="text-center"><div class="kpi-sm" style="color:var(--sv-primary)">2,079</div><div class="text-xs text-slate-600 font-600 mt-1">Commits</div></div>
+        <div class="text-center"><div class="kpi-sm" style="color:var(--sv-secondary)">81+</div><div class="text-xs text-slate-600 font-600 mt-1">Tareas</div></div>
+        <div class="text-center"><div class="kpi-sm" style="color:var(--sv-teal)">$1.07M</div><div class="text-xs text-slate-600 font-600 mt-1">GCP COP</div></div>
+        <div class="text-center"><div class="kpi-sm" style="color:#4c6b1f">5</div><div class="text-xs text-slate-600 font-600 mt-1">Contribuidores</div></div>
+        <div class="text-center"><div class="kpi-sm" style="color:var(--sv-primary)">95.7%</div><div class="text-xs text-slate-600 font-600 mt-1">Avance Wilson</div></div>
       </div>
 
-      <div class="grid grid-cols-5 gap-3 mb-7">
-        <div class="text-center"><div class="kpi-sm" style="color:var(--sv-primary)">2,079</div><div class="text-xs text-slate-600 font-600 mt-1">Cambios al código</div><div class="text-xs text-slate-400">4× agosto</div></div>
-        <div class="text-center"><div class="kpi-sm" style="color:var(--sv-secondary)">81+</div><div class="text-xs text-slate-600 font-600 mt-1">Tareas cerradas</div><div class="text-xs text-slate-400">3 sprints</div></div>
-        <div class="text-center"><div class="kpi-sm" style="color:var(--sv-teal)">11</div><div class="text-xs text-slate-600 font-600 mt-1">Repos activos</div><div class="text-xs text-slate-400">Legacy + moderno</div></div>
-        <div class="text-center"><div class="kpi-sm" style="color:#4c6b1f">5</div><div class="text-xs text-slate-600 font-600 mt-1">Contribuidores</div><div class="text-xs text-slate-400">+1 nuevo</div></div>
-        <div class="text-center"><div class="kpi-sm" style="color:var(--sv-primary)">95.7%</div><div class="text-xs text-slate-600 font-600 mt-1">Avance Wilson</div><div class="text-xs text-slate-400">44 de 46 ítems</div></div>
+      <div class="flex items-center gap-4 mb-5">
+        <div class="flex items-center gap-1.5"><span class="tag tag-prod">✓ S8</span><span class="text-xs text-slate-500">Multi-agente</span></div>
+        <div class="flex items-center gap-1.5"><span class="tag tag-prod">✓ S9</span><span class="text-xs text-slate-500">Isa Live 30/30</span></div>
+        <div class="flex items-center gap-1.5"><span class="tag tag-progress">S10</span><span class="text-xs text-slate-500">WhatsApp 10/12</span></div>
       </div>
 
-      <div class="flex items-center gap-6 mb-5">
-        <div class="text-xs text-slate-500 font-700 uppercase">Sprints:</div>
-        <div class="flex items-center gap-2"><span class="tag tag-prod">✓ Sprint 8</span><span class="text-xs text-slate-500">4/4 · Multi-agente</span></div>
-        <div class="flex items-center gap-2"><span class="tag tag-prod">✓ Sprint 9</span><span class="text-xs text-slate-500">30/30 · Isa Live</span></div>
-        <div class="flex items-center gap-2"><span class="tag tag-progress">Sprint 10</span><span class="text-xs text-slate-500">10/12 · WhatsApp</span></div>
-      </div>
-
-      <div class="rounded-2xl p-5" style="background:linear-gradient(135deg,color-mix(in srgb, var(--sv-accent) 16%, white),color-mix(in srgb, var(--sv-secondary) 10%, white));border:1px solid color-mix(in srgb, var(--sv-secondary) 25%, white)">
-        <p class="text-slate-800 text-base font-500 leading-relaxed">
-          <span class="font-800" style="color:var(--sv-secondary)">"</span>
-          En septiembre y octubre, Isa pasó de agente interno a asistente conversacional de voz con Gemini Live (30 HU en un sprint), cerró el flujo completo de compra por WhatsApp con pagos Wompi, y Neider Peña entregó 30 ítems en su primer bimestre incluyendo el Expediente Digital del Cliente completo. 2,079 cambios al código, 81+ tareas cerradas y 163 story points preparan el terreno para la temporada navideña.
-          <span class="font-800" style="color:var(--sv-secondary)">"</span>
+      <div class="rounded-xl p-4" style="background:linear-gradient(135deg,color-mix(in srgb, var(--sv-accent) 14%, white),color-mix(in srgb, var(--sv-secondary) 8%, white));border:1px solid color-mix(in srgb, var(--sv-secondary) 22%, white)">
+        <p class="text-slate-800 text-sm font-500 leading-relaxed">
+          Isa pasó de agente interno a asistente de voz con Gemini Live, cerró el embudo de compra en WhatsApp con Wompi, y Neider entregó el Expediente Digital completo en su primer bimestre. Siguiente parada: Temporada Navideña V6.
         </p>
-        <div class="flex items-center gap-2 mt-3">
-          <div class="text-sm font-700" style="color:#0a5c2c">Servimax</div>
-          <div class="text-sm" style="color:#3f8558">· Equipo de Ingeniería · Sprints 8, 9 y 10</div>
-        </div>
+        <div class="text-xs font-700 mt-2" style="color:#0a5c2c">Servimax · Ingeniería · Sprints 8, 9 y 10</div>
       </div>
-
     </div>
   </div>
 </div>
 
-<!-- Auto-inject footer into every slide + initialize charts -->
+<!-- Charts + Footer injection -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.slide').forEach(function (slide) {
@@ -835,50 +706,44 @@ document.addEventListener('DOMContentLoaded', function () {
     content.appendChild(bar);
   });
 
-  var chartCanvas = document.getElementById('chart-cambios-semana');
-  if (chartCanvas && typeof Chart !== 'undefined') {
-    new Chart(chartCanvas, {
+  // Weekly commits chart
+  var c1 = document.getElementById('chart-cambios-semana');
+  if (c1 && typeof Chart !== 'undefined') {
+    new Chart(c1, {
       type: 'bar',
       data: {
-        labels: ['Sep 1-7', 'Sep 8-14', 'Sep 15-21', 'Sep 22-28', 'Sep 29–Oct 5', 'Oct 6-12', 'Oct 13-19', 'Oct 20-27'],
+        labels: ['Sep 1-7','Sep 8-14','Sep 15-21','Sep 22-28','Sep 29–Oct 5','Oct 6-12','Oct 13-19','Oct 20-27'],
         datasets: [{
-          label: 'Cambios al código',
-          data: [314, 240, 152, 146, 287, 121, 208, 393],
+          data: [314,240,152,146,287,121,208,393],
           backgroundColor: ['#f0a9c0','#e8849f','#e06a95','#d82053','#c41848','#a3123f','#8a0e35','#6e0a2a'],
-          borderRadius: 10,
-          borderWidth: 0,
-          barPercentage: 0.55,
-          categoryPercentage: 0.7
+          borderRadius: 8, borderWidth: 0, barPercentage: 0.55, categoryPercentage: 0.7
         }]
       },
       options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        animation: { duration: 800 },
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            backgroundColor: '#1e2a24',
-            padding: 12,
-            cornerRadius: 8,
-            titleFont: { weight: '700', size: 12 },
-            bodyFont: { weight: '500', size: 12 },
-            callbacks: {
-              label: function (ctx) { return '  ' + ctx.parsed.y + ' cambios al código'; }
-            }
-          }
-        },
-        scales: {
-          y: {
-            beginAtZero: true,
-            grid: { color: '#e4e9dd' },
-            ticks: { color: '#8a9a89', font: { size: 11 }, stepSize: 50 }
-          },
-          x: {
-            grid: { display: false },
-            ticks: { color: '#5b7362', font: { weight: '700', size: 10 } }
-          }
-        }
+        responsive: true, maintainAspectRatio: false, animation: { duration: 600 },
+        plugins: { legend: { display: false }, tooltip: { backgroundColor:'#1e2a24', padding:10, cornerRadius:8, titleFont:{weight:'700',size:11}, bodyFont:{size:11}, callbacks:{label:function(c){return '  '+c.parsed.y+' commits'}} } },
+        scales: { y:{beginAtZero:true,grid:{color:'#e4e9dd'},ticks:{color:'#8a9a89',font:{size:10},stepSize:100}}, x:{grid:{display:false},ticks:{color:'#5b7362',font:{weight:'700',size:9}}} }
+      }
+    });
+  }
+
+  // GCP costs chart
+  var c2 = document.getElementById('chart-costos-servicio');
+  if (c2 && typeof Chart !== 'undefined') {
+    new Chart(c2, {
+      type: 'bar',
+      data: {
+        labels: ['Compute Engine','BigQuery','Gemini API','Cloud SQL','Secret Mgr','Artifact Reg','Cloud Storage','Scheduler','DNS','App Engine'],
+        datasets: [{
+          data: [370570,320066,203247,121201,15804,14295,10527,6269,3405,3072],
+          backgroundColor: ['#0e9488','#d82053','#9ace43','#0b6e3d','#8a9a89','#8a9a89','#8a9a89','#8a9a89','#8a9a89','#8a9a89'],
+          borderRadius: 6, borderWidth: 0, barPercentage: 0.6, categoryPercentage: 0.75
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false, animation: { duration: 600 },
+        plugins: { legend: { display: false }, tooltip: { backgroundColor:'#1e2a24', padding:10, cornerRadius:8, bodyFont:{size:11}, callbacks:{label:function(c){return '  COP $'+c.parsed.x.toLocaleString('es-CO')}} } },
+        scales: { x:{beginAtZero:true,grid:{color:'#e4e9dd'},ticks:{color:'#8a9a89',font:{size:9},callback:function(v){return '$'+Math.round(v/1000)+'K'}}}, y:{grid:{display:false},ticks:{color:'#1e2a24',font:{weight:'700',size:10}}} }
       }
     });
   }
