@@ -45,7 +45,7 @@
     .pill-month   { background:var(--sv-text);color:var(--sv-accent) }
 
     .feat-row { display:flex;align-items:flex-start;gap:10px;padding:8px 12px;border-radius:10px;background:#f8faf6;border:1px solid #e4e9dd }
-    .feat-ico  { width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px }
+    .feat-ico  { width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px }
 
     .impact { padding:10px 14px;border-radius:10px;border-left:4px solid;font-size:13px }
     .impact-primary { background:color-mix(in srgb, var(--sv-primary) 6%, white);border-color:var(--sv-primary) }
@@ -70,6 +70,15 @@
       margin-top:12px; padding-top:8px; border-top:1px solid #eef1ea;
       font-size:11px; color:#9aa89a; font-weight:600;
     }
+
+    .kw { font-weight:800; }
+    .kw-primary { color:var(--sv-primary); font-weight:800; }
+    .kw-green   { color:var(--sv-secondary); font-weight:800; }
+    .kw-teal    { color:var(--sv-teal); font-weight:800; }
+    .kw-accent  { color:#4c6b1f; font-weight:800; }
+    .kw-forest  { color:var(--sv-forest); font-weight:800; }
+
+    .ico-lg { width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px }
   </style>
 </head>
 <body>
@@ -88,35 +97,65 @@
 
       <span class="pill pill-month" style="font-size:13px">Septiembre – Octubre 2026</span>
       <h1 class="font-black leading-tight mt-3 mb-4" style="font-size:2.8rem;color:#f4f9f4">
-        6 frentes, 3 sprints,<br><span style="color:var(--sv-accent)">2,079</span> cambios al código
+        <span style="color:var(--sv-accent)">10+</span> frentes, <span style="color:var(--sv-accent)">3</span> sprints,<br><span style="color:var(--sv-accent)">2,079</span> cambios al código
       </h1>
 
       <div class="grid grid-cols-4 gap-3 mb-8">
         <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:16px;text-align:center">
+          <div style="width:40px;height:40px;border-radius:10px;background:color-mix(in srgb, var(--sv-accent) 15%, transparent);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><i class="fas fa-code-commit" style="color:var(--sv-accent);font-size:18px"></i></div>
           <div class="text-3xl font-black" style="color:var(--sv-accent)">2,079</div>
-          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">Cambios al código</div>
+          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">Commits</div>
         </div>
         <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:16px;text-align:center">
-          <div class="text-3xl font-black" style="color:var(--sv-accent)">81+</div>
+          <div style="width:40px;height:40px;border-radius:10px;background:color-mix(in srgb, var(--sv-accent) 15%, transparent);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><i class="fas fa-check-double" style="color:var(--sv-accent);font-size:18px"></i></div>
+          <div class="text-3xl font-black" style="color:var(--sv-accent)">100+</div>
           <div class="text-xs font-700 mt-1" style="color:#cfe0d1">Tareas cerradas</div>
         </div>
         <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:16px;text-align:center">
-          <div class="text-3xl font-black" style="color:var(--sv-accent)">3</div>
-          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">Sprints</div>
+          <div style="width:40px;height:40px;border-radius:10px;background:color-mix(in srgb, var(--sv-accent) 15%, transparent);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><i class="fab fa-github" style="color:var(--sv-accent);font-size:18px"></i></div>
+          <div class="text-3xl font-black" style="color:var(--sv-accent)">18</div>
+          <div class="text-xs font-700 mt-1" style="color:#cfe0d1">Repos activos</div>
         </div>
         <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:16px;text-align:center">
+          <div style="width:40px;height:40px;border-radius:10px;background:color-mix(in srgb, var(--sv-accent) 15%, transparent);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><i class="fas fa-users" style="color:var(--sv-accent);font-size:18px"></i></div>
           <div class="text-3xl font-black" style="color:var(--sv-accent)">5</div>
           <div class="text-xs font-700 mt-1" style="color:#cfe0d1">Contribuidores</div>
         </div>
       </div>
 
-      <div class="grid grid-cols-3 gap-2" style="font-size:11px;color:#cfe0d1">
-        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 10px">🎙️ Isa Live — voz Gemini + avatar 16 estados</div>
-        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 10px">🛒 Compra completa WhatsApp + Wompi</div>
-        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 10px">🤖 Infra multi-agente + RAG + costos</div>
-        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 10px">📋 Expediente Digital Cliente (24 HU)</div>
-        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 10px">🐛 Crashes, facturas PDF, Serviplata</div>
-        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 10px">🏪 Servimax Club — 17 US planeadas</div>
+      <div class="grid grid-cols-4 gap-2" style="font-size:11px;color:#cfe0d1">
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:10px">
+          <div style="width:30px;height:30px;border-radius:8px;background:color-mix(in srgb, var(--sv-teal) 20%, transparent);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fas fa-microphone" style="color:var(--sv-teal);font-size:13px"></i></div>
+          <span><strong style="color:var(--sv-accent)">Isa Live</strong> + WhatsApp transaccional</span>
+        </div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:10px">
+          <div style="width:30px;height:30px;border-radius:8px;background:color-mix(in srgb, var(--sv-forest) 25%, transparent);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fas fa-store" style="color:#5cbf80;font-size:13px"></i></div>
+          <span><strong style="color:var(--sv-accent)">Servimax Club</strong> portal aliado</span>
+        </div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:10px">
+          <div style="width:30px;height:30px;border-radius:8px;background:color-mix(in srgb, var(--sv-accent) 20%, transparent);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fas fa-gift" style="color:var(--sv-accent);font-size:13px"></i></div>
+          <span><strong style="color:var(--sv-accent)">Temporadas</strong> cashback + Halloween</span>
+        </div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:10px">
+          <div style="width:30px;height:30px;border-radius:8px;background:color-mix(in srgb, var(--sv-secondary) 20%, transparent);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fas fa-file-invoice-dollar" style="color:var(--sv-secondary);font-size:13px"></i></div>
+          <span><strong style="color:var(--sv-accent)">Contabilidad</strong> comprobantes + DIAN</span>
+        </div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:10px">
+          <div style="width:30px;height:30px;border-radius:8px;background:color-mix(in srgb, var(--sv-primary) 20%, transparent);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fas fa-truck" style="color:var(--sv-primary);font-size:13px"></i></div>
+          <span><strong style="color:var(--sv-accent)">Mi Pago</strong> fletes conductor</span>
+        </div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:10px">
+          <div style="width:30px;height:30px;border-radius:8px;background:color-mix(in srgb, var(--sv-primary) 15%, transparent);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fas fa-basket-shopping" style="color:#f0a9c0;font-size:13px"></i></div>
+          <span><strong style="color:var(--sv-accent)">Minimercados</strong> lista precios Boyacá</span>
+        </div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:10px">
+          <div style="width:30px;height:30px;border-radius:8px;background:color-mix(in srgb, var(--sv-accent) 20%, transparent);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fas fa-folder-open" style="color:var(--sv-accent);font-size:13px"></i></div>
+          <span><strong style="color:var(--sv-accent)">Expediente</strong> Digital + Halloween</span>
+        </div>
+        <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:10px">
+          <div style="width:30px;height:30px;border-radius:8px;background:color-mix(in srgb, var(--sv-primary) 15%, transparent);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fas fa-bug-slash" style="color:#f0a9c0;font-size:13px"></i></div>
+          <span>Crashes, <strong style="color:var(--sv-accent)">PDFs</strong>, deploy fix</span>
+        </div>
       </div>
 
       <div style="margin-top:24px;padding-top:12px;border-top:1px solid #1c2b20;display:flex;justify-content:space-between;color:#5b7362;font-size:11px">
@@ -141,62 +180,70 @@
       </h1>
 
       <div class="grid grid-cols-4 gap-4 mb-6">
-        <div class="rounded-2xl p-4 text-center accent-primary" style="background:color-mix(in srgb, var(--sv-primary) 6%, white)">
+        <div class="rounded-2xl p-4 text-center" style="background:color-mix(in srgb, var(--sv-primary) 6%, white)">
+          <div style="width:38px;height:38px;border-radius:10px;background:var(--sv-primary);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><i class="fas fa-code-branch" style="color:#fff;font-size:16px"></i></div>
           <div class="kpi-num" style="color:var(--sv-primary)">2,079</div>
           <div class="text-xs font-600 text-slate-600 mt-1">Commits</div>
         </div>
-        <div class="rounded-2xl p-4 text-center accent-green" style="background:color-mix(in srgb, var(--sv-secondary) 8%, white)">
-          <div class="kpi-num" style="color:var(--sv-secondary)">81+</div>
+        <div class="rounded-2xl p-4 text-center" style="background:color-mix(in srgb, var(--sv-secondary) 8%, white)">
+          <div style="width:38px;height:38px;border-radius:10px;background:var(--sv-secondary);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><i class="fas fa-clipboard-check" style="color:#fff;font-size:16px"></i></div>
+          <div class="kpi-num" style="color:var(--sv-secondary)">100+</div>
           <div class="text-xs font-600 text-slate-600 mt-1">Tareas cerradas</div>
         </div>
-        <div class="rounded-2xl p-4 text-center accent-teal" style="background:color-mix(in srgb, var(--sv-teal) 8%, white)">
-          <div class="kpi-num" style="color:var(--sv-teal)">11</div>
+        <div class="rounded-2xl p-4 text-center" style="background:color-mix(in srgb, var(--sv-teal) 8%, white)">
+          <div style="width:38px;height:38px;border-radius:10px;background:var(--sv-teal);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><i class="fab fa-github" style="color:#fff;font-size:16px"></i></div>
+          <div class="kpi-num" style="color:var(--sv-teal)">18</div>
           <div class="text-xs font-600 text-slate-600 mt-1">Repos activos</div>
         </div>
-        <div class="rounded-2xl p-4 text-center accent-lime" style="background:color-mix(in srgb, var(--sv-accent) 14%, white)">
+        <div class="rounded-2xl p-4 text-center" style="background:color-mix(in srgb, var(--sv-accent) 14%, white)">
+          <div style="width:38px;height:38px;border-radius:10px;background:var(--sv-accent);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><i class="fas fa-user-group" style="color:#2b3a13;font-size:14px"></i></div>
           <div class="kpi-num" style="color:#4c6b1f">5</div>
           <div class="text-xs font-600 text-slate-600 mt-1">Contribuidores</div>
         </div>
       </div>
 
-      <div class="grid grid-cols-3 gap-3 mb-6">
-        <div class="rounded-xl p-3" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 18%, white)">
-          <div class="text-xs font-800" style="color:var(--sv-teal)">ISA LIVE & WHATSAPP</div>
-          <div class="text-xs text-slate-500 mt-1">Voz Gemini · Avatar · Pedidos · Pagos Wompi</div>
+      <div class="grid grid-cols-4 gap-2 mb-6">
+        <div class="rounded-xl p-2.5" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 18%, white)">
+          <div class="text-xs font-800" style="color:var(--sv-teal)"><i class="fas fa-microphone-lines mr-1"></i>ISA & WHATSAPP</div>
+          <div class="text-xs text-slate-500 mt-1">Voz <span class="kw-teal">Gemini</span> · Pedidos · <span class="kw-teal">Wompi</span></div>
         </div>
-        <div class="rounded-xl p-3" style="background:color-mix(in srgb, var(--sv-primary) 5%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 18%, white)">
-          <div class="text-xs font-800" style="color:var(--sv-primary)">ESTABILIDAD & SERVIPLATA</div>
-          <div class="text-xs text-slate-500 mt-1">2 crashes · PDFs · Banners · Contabilidad</div>
+        <div class="rounded-xl p-2.5" style="background:color-mix(in srgb, var(--sv-forest) 5%, white);border:1px solid color-mix(in srgb, var(--sv-forest) 18%, white)">
+          <div class="text-xs font-800" style="color:var(--sv-forest)"><i class="fas fa-store mr-1"></i>SERVIMAX CLUB</div>
+          <div class="text-xs text-slate-500 mt-1">Portal aliado · pagos · <span class="kw-forest">B2C</span></div>
         </div>
-        <div class="rounded-xl p-3" style="background:color-mix(in srgb, var(--sv-secondary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-secondary) 20%, white)">
-          <div class="text-xs font-800" style="color:#0a7d3b">EXPEDIENTE & NAVIDAD</div>
-          <div class="text-xs text-slate-500 mt-1">24 HU expediente · Halloween · 17 US navideñas</div>
+        <div class="rounded-xl p-2.5" style="background:color-mix(in srgb, var(--sv-accent) 10%, white);border:1px solid color-mix(in srgb, var(--sv-accent) 25%, white)">
+          <div class="text-xs font-800" style="color:#4c6b1f"><i class="fas fa-gift mr-1"></i>TEMPORADAS</div>
+          <div class="text-xs text-slate-500 mt-1">Cashback · <span class="kw-accent">Halloween</span> · Salas</div>
+        </div>
+        <div class="rounded-xl p-2.5" style="background:color-mix(in srgb, var(--sv-primary) 5%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 18%, white)">
+          <div class="text-xs font-800" style="color:var(--sv-primary)"><i class="fas fa-file-invoice-dollar mr-1"></i>CONTABILIDAD</div>
+          <div class="text-xs text-slate-500 mt-1">Comprobantes · <span class="kw-primary">DIAN</span> · Siigo</div>
         </div>
       </div>
 
       <div class="grid grid-cols-5 gap-3">
         <div class="text-center">
-          <div class="w-11 h-11 rounded-full flex items-center justify-center mx-auto mb-1 text-white font-bold" style="background:var(--sv-primary)">JC</div>
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-1 text-white font-bold text-sm" style="background:var(--sv-primary)">JC</div>
           <div class="text-xs font-700">Jeferson Camero</div>
           <div class="text-xs text-slate-400">Lead</div>
         </div>
         <div class="text-center">
-          <div class="w-11 h-11 rounded-full flex items-center justify-center mx-auto mb-1 text-white font-bold" style="background:var(--sv-teal)">WP</div>
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-1 text-white font-bold text-sm" style="background:var(--sv-teal)">WP</div>
           <div class="text-xs font-700">Wilson Pabon</div>
           <div class="text-xs text-slate-400">Isa Live</div>
         </div>
         <div class="text-center">
-          <div class="w-11 h-11 rounded-full flex items-center justify-center mx-auto mb-1 text-white font-bold" style="background:var(--sv-secondary)">CB</div>
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-1 text-white font-bold text-sm" style="background:var(--sv-secondary)">CB</div>
           <div class="text-xs font-700">Cristian Becerra</div>
           <div class="text-xs text-slate-400">Apps</div>
         </div>
         <div class="text-center">
-          <div class="w-11 h-11 rounded-full flex items-center justify-center mx-auto mb-1 font-bold" style="background:var(--sv-accent);color:#2b3a13">NP</div>
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-1 font-bold text-sm" style="background:var(--sv-accent);color:#2b3a13">NP</div>
           <div class="text-xs font-700">Neider Peña</div>
           <div class="text-xs text-slate-400">Expediente <span class="tag tag-green" style="font-size:8px;padding:0 5px">Nuevo</span></div>
         </div>
         <div class="text-center">
-          <div class="w-11 h-11 rounded-full flex items-center justify-center mx-auto mb-1 font-bold" style="background:#c9d4c4;color:#5b7362">MA</div>
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-1 font-bold text-sm" style="background:#c9d4c4;color:#5b7362">MA</div>
           <div class="text-xs font-700">Miguel Aguirre</div>
           <div class="text-xs text-slate-400">Backend</div>
         </div>
@@ -217,27 +264,31 @@
             <span class="tag" style="background:color-mix(in srgb, var(--sv-accent) 20%, transparent);color:var(--sv-accent);border:1px solid color-mix(in srgb, var(--sv-accent) 40%, transparent)">30 HU · 100%</span>
           </div>
           <h2 class="text-3xl font-black leading-tight" style="color:#f4f9f4">
-            Isa Live: voz en tiempo real
+            <i class="fas fa-microphone-lines" style="color:var(--sv-accent);font-size:28px;margin-right:8px"></i>Isa Live: voz en tiempo real
           </h2>
-          <p class="mt-1 text-sm" style="color:#a9c2ac">Wilson Pabon · Gemini Live · WebSocket · Avatar 16 estados</p>
+          <p class="mt-1 text-sm" style="color:#a9c2ac">Wilson Pabon · <span style="color:var(--sv-accent);font-weight:700">Gemini Live</span> · <span style="color:var(--sv-accent);font-weight:700">WebSocket</span> · Avatar 16 estados</p>
         </div>
         <div class="text-6xl opacity-10 font-black" style="color:var(--sv-accent)">01</div>
       </div>
 
       <div class="grid grid-cols-4 gap-3 mb-5">
         <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:12px;text-align:center">
+          <div style="width:36px;height:36px;border-radius:9px;background:color-mix(in srgb, var(--sv-accent) 15%, transparent);margin:0 auto 4px;display:flex;align-items:center;justify-content:center"><i class="fas fa-list-check" style="color:var(--sv-accent);font-size:15px"></i></div>
           <div class="text-2xl font-black" style="color:var(--sv-accent)">30</div>
           <div class="text-xs font-700" style="color:#cfe0d1">HU cerradas</div>
         </div>
         <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:12px;text-align:center">
+          <div style="width:36px;height:36px;border-radius:9px;background:color-mix(in srgb, var(--sv-accent) 15%, transparent);margin:0 auto 4px;display:flex;align-items:center;justify-content:center"><i class="fas fa-face-smile" style="color:var(--sv-accent);font-size:15px"></i></div>
           <div class="text-2xl font-black" style="color:var(--sv-accent)">16</div>
           <div class="text-xs font-700" style="color:#cfe0d1">Estados avatar</div>
         </div>
         <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:12px;text-align:center">
+          <div style="width:36px;height:36px;border-radius:9px;background:color-mix(in srgb, var(--sv-accent) 15%, transparent);margin:0 auto 4px;display:flex;align-items:center;justify-content:center"><i class="fas fa-clock" style="color:var(--sv-accent);font-size:15px"></i></div>
           <div class="text-2xl font-black" style="color:var(--sv-accent)">20m</div>
           <div class="text-xs font-700" style="color:#cfe0d1">Sesión máx.</div>
         </div>
         <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:12px;padding:12px;text-align:center">
+          <div style="width:36px;height:36px;border-radius:9px;background:color-mix(in srgb, var(--sv-accent) 15%, transparent);margin:0 auto 4px;display:flex;align-items:center;justify-content:center"><i class="fas fa-circle-check" style="color:var(--sv-accent);font-size:15px"></i></div>
           <div class="text-2xl font-black" style="color:var(--sv-accent)">100%</div>
           <div class="text-xs font-700" style="color:#cfe0d1">Sprint completo</div>
         </div>
@@ -245,16 +296,16 @@
 
       <div class="grid grid-cols-2 gap-3">
         <div class="space-y-1.5">
-          <div class="text-xs font-800 mb-1" style="color:var(--sv-accent)">VOZ EN TIEMPO REAL</div>
-          <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:7px 10px" class="text-xs flex items-center gap-2"><i class="fas fa-microphone" style="color:var(--sv-accent)"></i><span style="color:#cfe0d1">WebSocket /ws/houston/voice/ + Gemini Live</span></div>
-          <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:7px 10px" class="text-xs flex items-center gap-2"><i class="fas fa-volume-high" style="color:var(--sv-accent)"></i><span style="color:#cfe0d1">Detección silencio + barge-in natural</span></div>
-          <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:7px 10px" class="text-xs flex items-center gap-2"><i class="fas fa-face-smile" style="color:var(--sv-accent)"></i><span style="color:#cfe0d1">Avatar reactivo 16 poses WebP</span></div>
+          <div class="text-xs font-800 mb-1" style="color:var(--sv-accent)"><i class="fas fa-tower-broadcast mr-1"></i>VOZ EN TIEMPO REAL</div>
+          <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 12px" class="text-xs flex items-center gap-3"><div style="width:30px;height:30px;border-radius:8px;background:color-mix(in srgb, var(--sv-accent) 15%, transparent);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fas fa-microphone" style="color:var(--sv-accent);font-size:13px"></i></div><span style="color:#cfe0d1"><span style="color:var(--sv-accent);font-weight:700">WebSocket</span> /ws/houston/voice/ + <span style="color:var(--sv-accent);font-weight:700">Gemini Live</span></span></div>
+          <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 12px" class="text-xs flex items-center gap-3"><div style="width:30px;height:30px;border-radius:8px;background:color-mix(in srgb, var(--sv-accent) 15%, transparent);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fas fa-volume-high" style="color:var(--sv-accent);font-size:13px"></i></div><span style="color:#cfe0d1">Detección <span style="color:var(--sv-accent);font-weight:700">silencio</span> + barge-in natural</span></div>
+          <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 12px" class="text-xs flex items-center gap-3"><div style="width:30px;height:30px;border-radius:8px;background:color-mix(in srgb, var(--sv-accent) 15%, transparent);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fas fa-face-smile" style="color:var(--sv-accent);font-size:13px"></i></div><span style="color:#cfe0d1">Avatar reactivo <span style="color:var(--sv-accent);font-weight:700">16 poses WebP</span></span></div>
         </div>
         <div class="space-y-1.5">
-          <div class="text-xs font-800 mb-1" style="color:var(--sv-accent)">CAPACIDADES</div>
-          <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:7px 10px" class="text-xs flex items-center gap-2"><i class="fas fa-globe" style="color:var(--sv-accent)"></i><span style="color:#cfe0d1">Navegación web con citación de fuentes</span></div>
-          <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:7px 10px" class="text-xs flex items-center gap-2"><i class="fab fa-whatsapp" style="color:var(--sv-accent)"></i><span style="color:#cfe0d1">WhatsApp: audios + notas de voz + catálogos</span></div>
-          <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:7px 10px" class="text-xs flex items-center gap-2"><i class="fas fa-lightbulb" style="color:var(--sv-accent)"></i><span style="color:#cfe0d1">Prototipo "Oye Isa" + visualización productos</span></div>
+          <div class="text-xs font-800 mb-1" style="color:var(--sv-accent)"><i class="fas fa-puzzle-piece mr-1"></i>CAPACIDADES</div>
+          <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 12px" class="text-xs flex items-center gap-3"><div style="width:30px;height:30px;border-radius:8px;background:color-mix(in srgb, var(--sv-accent) 15%, transparent);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fas fa-globe" style="color:var(--sv-accent);font-size:13px"></i></div><span style="color:#cfe0d1">Navegación web con <span style="color:var(--sv-accent);font-weight:700">citación de fuentes</span></span></div>
+          <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 12px" class="text-xs flex items-center gap-3"><div style="width:30px;height:30px;border-radius:8px;background:color-mix(in srgb, var(--sv-secondary) 20%, transparent);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fab fa-whatsapp" style="color:var(--sv-secondary);font-size:15px"></i></div><span style="color:#cfe0d1"><span style="color:var(--sv-accent);font-weight:700">WhatsApp</span>: audios + notas de voz + catálogos</span></div>
+          <div style="background:#ffffff0d;border:1px solid #2c3e30;border-radius:8px;padding:8px 12px" class="text-xs flex items-center gap-3"><div style="width:30px;height:30px;border-radius:8px;background:color-mix(in srgb, var(--sv-accent) 15%, transparent);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fas fa-lightbulb" style="color:var(--sv-accent);font-size:13px"></i></div><span style="color:#cfe0d1">Prototipo <span style="color:var(--sv-accent);font-weight:700">"Oye Isa"</span> + visualización productos</span></div>
         </div>
       </div>
     </div>
@@ -272,90 +323,163 @@
             <span class="tag tag-prod">✓ 10/12 (83%)</span>
           </div>
           <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
-            Compra completa en WhatsApp
+            <i class="fab fa-whatsapp" style="color:var(--sv-teal);font-size:30px;margin-right:8px"></i>Compra completa en WhatsApp
           </h2>
-          <p class="text-slate-500 text-sm mt-1">Wilson Pabon · Wompi PSE/Bancolombia · OTP · Inventario real-time</p>
+          <p class="text-slate-500 text-sm mt-1">Wilson Pabon · <span class="kw-teal">Wompi</span> PSE/Bancolombia · <span class="kw-teal">OTP</span> · 59 fixes adversarial</p>
         </div>
         <div class="text-6xl opacity-10 font-black" style="color:var(--sv-teal)">02</div>
       </div>
 
-      <div class="grid grid-cols-3 gap-4 mb-4">
-        <div class="rounded-2xl p-4" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 18%, white)">
+      <div class="grid grid-cols-3 gap-3 mb-3">
+        <div class="rounded-2xl p-3" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 18%, white)">
           <div class="flex items-center gap-2 mb-2">
-            <div style="width:32px;height:32px;border-radius:8px;background:var(--sv-teal);display:flex;align-items:center;justify-content:center"><i class="fas fa-cart-shopping" style="color:#fff;font-size:13px"></i></div>
+            <div class="ico-lg" style="background:var(--sv-teal)"><i class="fas fa-cart-shopping" style="color:#fff;font-size:18px"></i></div>
             <div class="text-sm font-800 text-slate-800">Pedido completo</div>
           </div>
-          <div class="text-xs text-slate-600">Direcciones, tipo entrega, asesor + <strong>validación inventario real-time</strong></div>
+          <div class="text-xs text-slate-600">Catálogo, carrito, <span class="kw-teal">checkout</span> por texto o voz, validación <span class="kw-teal">inventario real-time</span></div>
         </div>
-        <div class="rounded-2xl p-4" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 18%, white)">
+        <div class="rounded-2xl p-3" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 18%, white)">
           <div class="flex items-center gap-2 mb-2">
-            <div style="width:32px;height:32px;border-radius:8px;background:var(--sv-teal);display:flex;align-items:center;justify-content:center"><i class="fas fa-credit-card" style="color:#fff;font-size:13px"></i></div>
+            <div class="ico-lg" style="background:var(--sv-teal)"><i class="fas fa-credit-card" style="color:#fff;font-size:18px"></i></div>
             <div class="text-sm font-800 text-slate-800">Pagos Wompi</div>
           </div>
-          <div class="text-xs text-slate-600">PSE + Bancolombia para compras <strong>&gt;$40K</strong>. Botón "Ya pagué" verifica estado</div>
+          <div class="text-xs text-slate-600"><span class="kw-teal">PSE</span> + <span class="kw-teal">Bancolombia</span> para compras <strong>&gt;$40K</strong>. Botón "Ya pagué" verifica estado</div>
         </div>
-        <div class="rounded-2xl p-4" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 18%, white)">
+        <div class="rounded-2xl p-3" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 18%, white)">
           <div class="flex items-center gap-2 mb-2">
-            <div style="width:32px;height:32px;border-radius:8px;background:var(--sv-teal);display:flex;align-items:center;justify-content:center"><i class="fas fa-shield-halved" style="color:#fff;font-size:13px"></i></div>
-            <div class="text-sm font-800 text-slate-800">OTP + Registro</div>
+            <div class="ico-lg" style="background:var(--sv-teal)"><i class="fas fa-shield-halved" style="color:#fff;font-size:18px"></i></div>
+            <div class="text-sm font-800 text-slate-800">OTP + Quejas</div>
           </div>
-          <div class="text-xs text-slate-600">Autenticación email/WhatsApp, derivación a soporte, enrolamiento nuevos clientes</div>
+          <div class="text-xs text-slate-600">Verificación <span class="kw-teal">código WhatsApp/email</span>, escalado a soporte, fotos de factura, <span class="kw-teal">ElevenLabs</span> voz</div>
         </div>
       </div>
 
+      <div class="grid grid-cols-4 gap-2 mb-3">
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:var(--sv-teal)"><i class="fas fa-headset" style="color:#fff;font-size:13px"></i></div><div><div class="text-xs font-700 text-slate-800">Portal soporte</div><div class="text-xs text-slate-400">Lista en ms (antes 16s)</div></div></div>
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:var(--sv-teal)"><i class="fas fa-box-archive" style="color:#fff;font-size:13px"></i></div><div><div class="text-xs font-700 text-slate-800">Archivado auto</div><div class="text-xs text-slate-400">Casos a 60 días + cron</div></div></div>
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:var(--sv-teal)"><i class="fas fa-user-plus" style="color:#fff;font-size:13px"></i></div><div><div class="text-xs font-700 text-slate-800">Registro portal</div><div class="text-xs text-slate-400">Sin Google Form</div></div></div>
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:var(--sv-teal)"><i class="fas fa-volume-high" style="color:#fff;font-size:13px"></i></div><div><div class="text-xs font-700 text-slate-800">Audios asesor</div><div class="text-xs text-slate-400">ffmpeg + notas voz</div></div></div>
+      </div>
+
       <div class="impact impact-teal">
+        <i class="fas fa-bolt" style="color:var(--sv-teal);margin-right:6px"></i>
         <strong style="color:var(--sv-teal)">Canal de venta conversacional completo.</strong>
-        <span class="text-slate-600"> Pendiente: plantilla OTP en Meta Business Manager + prueba compra real con Wompi.</span>
+        <span class="text-slate-600"> Pendiente: plantilla <span class="kw-teal">OTP en Meta Business Manager</span> + prueba compra real con Wompi.</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ══════ SLIDE 4 — MULTI-AGENTE (Sprint 8) ══════ -->
+<!-- ══════ SLIDE 4 — SERVIMAX CLUB (CONSTRUIDO) ══════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-forest">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-4">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill pill-month">Oct</span>
+            <span class="tag tag-prod">✓ Portal en producción</span>
+          </div>
+          <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
+            <i class="fas fa-store" style="color:var(--sv-forest);font-size:26px;margin-right:8px"></i>Servimax Club — Portal Aliado
+          </h2>
+          <p class="text-slate-500 text-sm mt-1">Jeferson Camero · <span class="kw-forest">homePageServimaxOfficial</span> · 25+ commits · Pagos digitales</p>
+        </div>
+        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-forest)">03</div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-3 mb-3">
+        <div class="rounded-2xl p-3" style="background:color-mix(in srgb, var(--sv-forest) 5%, white);border:1px solid color-mix(in srgb, var(--sv-forest) 18%, white)">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="ico-lg" style="background:var(--sv-forest)"><i class="fas fa-id-card" style="color:#fff;font-size:18px"></i></div>
+            <div class="text-sm font-800 text-slate-800">Registro aliado</div>
+          </div>
+          <div class="text-xs text-slate-600"><span class="kw-forest">Interno/externo</span>, zona, dirección, barrio. Ruta <span class="kw-forest">/club-servimax</span></div>
+        </div>
+        <div class="rounded-2xl p-3" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 18%, white)">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="ico-lg" style="background:var(--sv-teal)"><i class="fas fa-credit-card" style="color:#fff;font-size:18px"></i></div>
+            <div class="text-sm font-800 text-slate-800">Pagos digitales</div>
+          </div>
+          <div class="text-xs text-slate-600">Abono desde celular <span class="kw-teal">Bancolombia/PSE</span>. Cuotas por tipo congelado del pedido</div>
+        </div>
+        <div class="rounded-2xl p-3" style="background:color-mix(in srgb, var(--sv-secondary) 5%, white);border:1px solid color-mix(in srgb, var(--sv-secondary) 18%, white)">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="ico-lg" style="background:var(--sv-secondary)"><i class="fas fa-images" style="color:#fff;font-size:18px"></i></div>
+            <div class="text-sm font-800 text-slate-800">Portafolio visual</div>
+          </div>
+          <div class="text-xs text-slate-600"><span class="kw-green">Fotos de productos</span>, carrusel de pasos configurados, banner especial a ancho completo</div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-2 mb-3">
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-forest) 10%, white)"><i class="fas fa-eye" style="color:var(--sv-forest);font-size:13px"></i></div><div><div class="text-xs font-700 text-slate-800">Split <span class="kw-forest">Servimax / aliado</span></div><div class="text-xs text-slate-400">El aliado ve su margen de un vistazo</div></div></div>
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-calendar-days" style="color:var(--sv-primary);font-size:13px"></i></div><div><div class="text-xs font-700 text-slate-800">Día entrega especiales</div><div class="text-xs text-slate-400">El aliado elige fecha</div></div></div>
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-teal) 12%, white)"><i class="fas fa-money-bill-wave" style="color:var(--sv-teal);font-size:13px"></i></div><div><div class="text-xs font-700 text-slate-800">Recaudo + guía pagos</div><div class="text-xs text-slate-400">Pago aprobado verde en vivo</div></div></div>
+      </div>
+
+      <div class="impact impact-forest">
+        <i class="fas fa-rocket" style="color:var(--sv-forest);margin-right:6px"></i>
+        <strong style="color:var(--sv-forest)">Portal funcional, no solo planificado.</strong>
+        <span class="text-slate-600"> Registro, portafolio, pagos y recaudo operando. Quedan 17 US épicas (B2B, B2C, pasarela, ERP) para Sprint 11.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ SLIDE 5 — TEMPORADAS / CASHBACK / HALLOWEEN ══════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-lime">
     <div class="p-8">
       <div class="flex items-start justify-between mb-4">
         <div>
           <div class="flex items-center gap-2 mb-2">
-            <span class="pill pill-month">Sprint 8</span>
-            <span class="tag tag-prod">✓ 4/4 · 100%</span>
+            <span class="pill pill-month">Sep – Oct</span>
+            <span class="tag tag-prod">Motor Django + Node</span>
           </div>
           <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
-            Infraestructura Multi-Agente
+            <i class="fas fa-gift" style="color:#4c6b1f;font-size:26px;margin-right:8px"></i>Temporadas, Cashback & Halloween
           </h2>
-          <p class="text-slate-500 text-sm mt-1">Wilson Pabon · delegate_to_agent · RAG · Gobernanza de costos</p>
+          <p class="text-slate-500 text-sm mt-1">Jeferson Camero + Neider Peña · <span class="kw-accent">servimax-backend</span> + <span class="kw-accent">servimaxUsuariosBack</span></p>
         </div>
-        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-accent)">03</div>
+        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-accent)">04</div>
       </div>
 
-      <div class="grid grid-cols-3 gap-4 mb-4">
-        <div class="rounded-2xl p-4 text-center" style="background:color-mix(in srgb, var(--sv-accent) 10%, white);border:1px solid color-mix(in srgb, var(--sv-accent) 25%, white)">
-          <div style="width:40px;height:40px;border-radius:10px;background:color-mix(in srgb, var(--sv-accent) 22%, white);margin:0 auto 8px;display:flex;align-items:center;justify-content:center"><i class="fas fa-arrows-split-up-and-left" style="color:#4c6b1f"></i></div>
-          <div class="text-sm font-800 text-slate-800">Delegación asíncrona</div>
-          <div class="text-xs text-slate-500 mt-1">Ventas delega a Facturación sin bloquearse</div>
+      <div class="grid grid-cols-3 gap-3 mb-3">
+        <div class="rounded-2xl p-3" style="background:color-mix(in srgb, var(--sv-accent) 10%, white);border:1px solid color-mix(in srgb, var(--sv-accent) 25%, white)">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="ico-lg" style="background:var(--sv-accent)"><i class="fas fa-dice" style="color:#2b3a13;font-size:18px"></i></div>
+            <div class="text-sm font-800 text-slate-800">Motor de salas</div>
+          </div>
+          <div class="text-xs text-slate-600"><span class="kw-accent">Ruleta de match</span>, banners, catálogo de respaldo, won_option_ids. Puente Django ↔ Node</div>
         </div>
-        <div class="rounded-2xl p-4 text-center" style="background:color-mix(in srgb, var(--sv-teal) 8%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 22%, white)">
-          <div style="width:40px;height:40px;border-radius:10px;background:color-mix(in srgb, var(--sv-teal) 15%, white);margin:0 auto 8px;display:flex;align-items:center;justify-content:center"><i class="fas fa-brain" style="color:var(--sv-teal)"></i></div>
-          <div class="text-sm font-800 text-slate-800">RAG en aprendizajes</div>
-          <div class="text-xs text-slate-500 mt-1">Búsqueda semántica en AgentLearning</div>
+        <div class="rounded-2xl p-3" style="background:color-mix(in srgb, var(--sv-secondary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-secondary) 20%, white)">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="ico-lg" style="background:var(--sv-secondary)"><i class="fas fa-wallet" style="color:#fff;font-size:18px"></i></div>
+            <div class="text-sm font-800 text-slate-800">Cashback billetera</div>
+          </div>
+          <div class="text-xs text-slate-600"><span class="kw-green">Cajitas</span> con tienda y productos por lotes. Saldo restringido en <span class="kw-green">checkout</span> y redención</div>
         </div>
-        <div class="rounded-2xl p-4 text-center" style="background:color-mix(in srgb, var(--sv-primary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 18%, white)">
-          <div style="width:40px;height:40px;border-radius:10px;background:color-mix(in srgb, var(--sv-primary) 12%, white);margin:0 auto 8px;display:flex;align-items:center;justify-content:center"><i class="fas fa-gauge-high" style="color:var(--sv-primary)"></i></div>
-          <div class="text-sm font-800 text-slate-800">Gobernanza de costos</div>
-          <div class="text-xs text-slate-500 mt-1">Topes por agente + alertas proactivas</div>
+        <div class="rounded-2xl p-3" style="background:color-mix(in srgb, var(--sv-primary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 18%, white)">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="ico-lg" style="background:var(--sv-primary)"><i class="fas fa-ghost" style="color:#fff;font-size:18px"></i></div>
+            <div class="text-sm font-800 text-slate-800">Halloween</div>
+          </div>
+          <div class="text-xs text-slate-600">Reto 2 <span class="kw-primary">Caldero</span> + Reto 3 <span class="kw-primary">Foto aterradora</span> (Neider HU-44). 4 HU, 17 pts</div>
         </div>
       </div>
 
-      <div class="impact impact-lime">
-        <strong style="color:#4c6b1f">Base para Isa Live.</strong>
-        <span class="text-slate-600"> Los agentes cooperan entre áreas, recuerdan sin quemar tokens y operan con topes de costo.</span>
+      <div class="grid grid-cols-4 gap-2">
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-accent) 18%, white)"><i class="fas fa-arrows-rotate" style="color:#4c6b1f;font-size:13px"></i></div><div><div class="text-xs font-700 text-slate-800">Obsequios / cupo</div><div class="text-xs text-slate-400">Devolver al anular pedido</div></div></div>
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-accent) 18%, white)"><i class="fas fa-stairs" style="color:#4c6b1f;font-size:13px"></i></div><div><div class="text-xs font-700 text-slate-800">Escalones código</div><div class="text-xs text-slate-400">Enriquecido en copilado</div></div></div>
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-shield-halved" style="color:var(--sv-primary);font-size:13px"></i></div><div><div class="text-xs font-700 text-slate-800"><i class="fas fa-bug" style="font-size:9px;margin-right:3px"></i>SD-397 Seguridad</div><div class="text-xs text-slate-400">Cédula URL → ID 8h + POST</div></div></div>
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-eye" style="color:var(--sv-secondary);font-size:13px"></i></div><div><div class="text-xs font-700 text-slate-800">Redimido visible</div><div class="text-xs text-slate-400">Se marca, no se esconde</div></div></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ══════ SLIDE 5 — CRISTIAN BECERRA ══════ -->
+<!-- ══════ SLIDE 6 — CONTABILIDAD / DIAN / TESORERÍA ══════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-primary">
     <div class="p-8">
@@ -363,40 +487,149 @@
         <div>
           <div class="flex items-center gap-2 mb-2">
             <span class="pill pill-month">Sep – Oct</span>
-            <span class="tag tag-prod">7 entregables</span>
+            <span class="tag tag-prod">Pegasus · servimax-backend</span>
           </div>
           <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
-            Cristian Becerra — Estabilidad
+            <i class="fas fa-file-invoice-dollar" style="color:var(--sv-primary);font-size:26px;margin-right:8px"></i>Contabilidad, DIAN & Tesorería
           </h2>
-          <p class="text-slate-500 text-sm mt-1">Serviplata · Crashes resueltos · Facturas PDF · Abastecimiento</p>
+          <p class="text-slate-500 text-sm mt-1">Jeferson Camero · 60+ commits · Comprobantes L1–L6 · <span class="kw-primary">Siigo</span> · Dispersión</p>
         </div>
-        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-primary)">04</div>
+        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-primary)">05</div>
       </div>
 
-      <div class="grid grid-cols-2 gap-3 mb-3">
-        <div class="rounded-xl p-3" style="background:color-mix(in srgb, var(--sv-primary) 5%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 18%, white)">
-          <div class="flex items-center gap-2 mb-1"><span class="pill pill-primary text-xs">SD-195</span><span class="tag tag-prod" style="font-size:9px">Prod</span></div>
-          <div class="text-sm font-700 text-slate-800">Módulo Serviplata contabilidad</div>
-          <div class="text-xs text-slate-500">Movimientos, saldos, inconsistencias de billeteras</div>
+      <div class="grid grid-cols-3 gap-3 mb-3">
+        <div class="rounded-2xl p-3" style="background:color-mix(in srgb, var(--sv-primary) 5%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 18%, white)">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="ico-lg" style="background:var(--sv-primary)"><i class="fas fa-receipt" style="color:#fff;font-size:18px"></i></div>
+            <div class="text-sm font-800 text-slate-800">Comprobantes L1–L6</div>
+          </div>
+          <div class="text-xs text-slate-600"><span class="kw-primary">Retenciones</span>, cierre de flujo, partidas abiertas, centros de costo <span class="kw-primary">Siigo</span>, detector duplicados</div>
         </div>
-        <div class="rounded-xl p-3" style="background:color-mix(in srgb, var(--sv-secondary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-secondary) 20%, white)">
-          <div class="flex items-center gap-2 mb-1"><span class="pill pill-green text-xs">SD-273</span><span class="tag tag-prod" style="font-size:9px">Prod</span></div>
-          <div class="text-sm font-700 text-slate-800">Direcciones facturas PDF</div>
-          <div class="text-xs text-slate-500">Dirección/barrio + sumas PSE. 58 facturas validadas</div>
+        <div class="rounded-2xl p-3" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 18%, white)">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="ico-lg" style="background:var(--sv-teal)"><i class="fas fa-building-columns" style="color:#fff;font-size:18px"></i></div>
+            <div class="text-sm font-800 text-slate-800">Dispersión / Pagos</div>
+          </div>
+          <div class="text-xs text-slate-600">Importar TXT <span class="kw-teal">Siigo Nómina</span>, XLSX formato SAT, lotes de pago, pronto pago FA por proveedor</div>
+        </div>
+        <div class="rounded-2xl p-3" style="background:color-mix(in srgb, var(--sv-secondary) 5%, white);border:1px solid color-mix(in srgb, var(--sv-secondary) 18%, white)">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="ico-lg" style="background:var(--sv-secondary)"><i class="fas fa-file-code" style="color:#fff;font-size:18px"></i></div>
+            <div class="text-sm font-800 text-slate-800">DIAN + Liquidación</div>
+          </div>
+          <div class="text-xs text-slate-600">Parser <span class="kw-green">direcciones DANE</span>, rescate SOAP, timeout/reintento. QR pagos conductor, abonos por asesor</div>
         </div>
       </div>
 
-      <div class="grid grid-cols-4 gap-2">
-        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:var(--sv-primary);width:24px;height:24px"><i class="fas fa-mobile-screen" style="color:#fff;font-size:10px"></i></div><div><div class="text-xs font-700 text-slate-800">Crash inicio</div><div class="text-xs text-slate-400">RN-fs carpeta</div></div></div>
-        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:var(--sv-primary);width:24px;height:24px"><i class="fas fa-signature" style="color:#fff;font-size:10px"></i></div><div><div class="text-xs font-700 text-slate-800">Crash firmas</div><div class="text-xs text-slate-400">Compressor B64</div></div></div>
-        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:#fef3c7;width:24px;height:24px"><span style="font-size:11px">📅</span></div><div><div class="text-xs font-700 text-slate-800">Fechas banners</div><div class="text-xs text-slate-400">UTC+yyyy</div></div></div>
-        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:#fef3c7;width:24px;height:24px"><span style="font-size:11px">📦</span></div><div><div class="text-xs font-700 text-slate-800">Abastecimiento</div><div class="text-xs text-slate-400">Fase 1 diseño</div></div></div>
+      <div class="grid grid-cols-3 gap-2">
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:var(--sv-primary)"><i class="fas fa-scale-balanced" style="color:#fff;font-size:12px"></i></div><div><div class="text-xs font-700 text-slate-800">Refrigerados G2</div><div class="text-xs text-slate-400">Neto reconstruido</div></div></div>
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:var(--sv-teal)"><i class="fas fa-truck-fast" style="color:#fff;font-size:12px"></i></div><div><div class="text-xs font-700 text-slate-800">Seguimiento conductor</div><div class="text-xs text-slate-400">Alias + auxiliar + devs</div></div></div>
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:var(--sv-secondary)"><i class="fas fa-flask-vial" style="color:#fff;font-size:12px"></i></div><div><div class="text-xs font-700 text-slate-800">Visor «En Siigo»</div><div class="text-xs text-slate-400">Cache incremental + sync</div></div></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ══════ SLIDE 6 — NEIDER PEÑA ══════ -->
+<!-- ══════ SLIDE 7 — MI PAGO + MINIMERCADOS + DEPLOY FIX ══════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-teal">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-4">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill pill-month">Sep – Oct</span>
+            <span class="tag tag-prod">Producción</span>
+          </div>
+          <h2 class="text-2xl font-black leading-tight" style="color:var(--sv-text)">
+            <i class="fas fa-truck" style="color:var(--sv-teal);font-size:24px;margin-right:8px"></i>Mi Pago, Minimercados & Infra
+          </h2>
+          <p class="text-slate-500 text-sm mt-1">Jeferson Camero · <span class="kw-teal">servimaxDriverApp</span> + <span class="kw-teal">servimaxSalesBack</span> + 6 repos deploy</p>
+        </div>
+        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-teal)">06</div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-3 mb-3">
+        <div class="rounded-2xl p-3" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 18%, white)">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="ico-lg" style="background:var(--sv-teal)"><i class="fas fa-money-bill-transfer" style="color:#fff;font-size:16px"></i></div>
+            <div class="text-sm font-800 text-slate-800">Mi Pago — Fletes</div>
+          </div>
+          <div class="text-xs text-slate-600">Pestaña <span class="kw-teal">Fletes</span> en App Conductores. Modo maestro, filtro por segmento, PDF de pagos, token tras login</div>
+        </div>
+        <div class="rounded-2xl p-3" style="background:color-mix(in srgb, var(--sv-accent) 10%, white);border:1px solid color-mix(in srgb, var(--sv-accent) 25%, white)">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="ico-lg" style="background:var(--sv-accent)"><i class="fas fa-basket-shopping" style="color:#2b3a13;font-size:16px"></i></div>
+            <div class="text-sm font-800 text-slate-800">Minimercados Boyacá</div>
+          </div>
+          <div class="text-xs text-slate-600">Lista de precios <span class="kw-accent">10 al 16%</span>. Ocultar sin precio, pedidos presenciales de la asesora, dominio apagable</div>
+        </div>
+        <div class="rounded-2xl p-3" style="background:color-mix(in srgb, var(--sv-primary) 5%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 18%, white)">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="ico-lg" style="background:var(--sv-primary)"><i class="fas fa-server" style="color:#fff;font-size:16px"></i></div>
+            <div class="text-sm font-800 text-slate-800">Deploy fix (6 repos)</div>
+          </div>
+          <div class="text-xs text-slate-600"><span class="kw-primary">chown recursivo</span> rompía MySQL en cada deploy. Fix: --no-deps, chown solo /opt/servimax</div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-2">
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-teal) 12%, white)"><i class="fas fa-box-open" style="color:var(--sv-teal);font-size:13px"></i></div><div><div class="text-xs font-700 text-slate-800">Agotados sin bloqueo</div><div class="text-xs text-slate-400">Bandera Django, no espera</div></div></div>
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-arrows-rotate" style="color:var(--sv-secondary);font-size:13px"></i></div><div><div class="text-xs font-700 text-slate-800">Retry pedidos Ábako</div><div class="text-xs text-slate-400">Los que nunca llegaron</div></div></div>
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-magnifying-glass" style="color:var(--sv-primary);font-size:13px"></i></div><div><div class="text-xs font-700 text-slate-800">Búsqueda productos</div><div class="text-xs text-slate-400">Código + marca + paginación</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ SLIDE 8 — CRISTIAN BECERRA ══════ -->
+<div class="slide px-10 py-8">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-primary">
+    <div class="p-8">
+      <div class="flex items-start justify-between mb-4">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill pill-month">Sep – Oct</span>
+            <span class="tag tag-prod">33 commits · 8 repos</span>
+          </div>
+          <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
+            <i class="fas fa-mobile-screen-button" style="color:var(--sv-primary);font-size:26px;margin-right:8px"></i>Cristian Becerra — Apps & Estabilidad
+          </h2>
+          <p class="text-slate-500 text-sm mt-1"><span class="kw-primary">Serviplata</span> · PDFs · Performance · Minimercados ETL · No-visita</p>
+        </div>
+        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-primary)">07</div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3 mb-3">
+        <div class="rounded-xl p-3" style="background:color-mix(in srgb, var(--sv-primary) 5%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 18%, white)">
+          <div class="flex items-center gap-2 mb-1">
+            <div style="width:32px;height:32px;border-radius:8px;background:var(--sv-primary);display:flex;align-items:center;justify-content:center"><i class="fas fa-wallet" style="color:#fff;font-size:14px"></i></div>
+            <span class="pill pill-primary text-xs">SD-195</span><span class="tag tag-prod" style="font-size:9px">Prod</span>
+          </div>
+          <div class="text-sm font-700 text-slate-800">Módulo <span class="kw-primary">Serviplata</span> contabilidad</div>
+          <div class="text-xs text-slate-500">Movimientos, saldos, auditoría billetera cashback</div>
+        </div>
+        <div class="rounded-xl p-3" style="background:color-mix(in srgb, var(--sv-secondary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-secondary) 20%, white)">
+          <div class="flex items-center gap-2 mb-1">
+            <div style="width:32px;height:32px;border-radius:8px;background:var(--sv-secondary);display:flex;align-items:center;justify-content:center"><i class="fas fa-file-pdf" style="color:#fff;font-size:14px"></i></div>
+            <span class="pill pill-green text-xs">SD-273</span><span class="tag tag-prod" style="font-size:9px">Prod</span>
+          </div>
+          <div class="text-sm font-700 text-slate-800">Direcciones facturas <span class="kw-green">PDF</span></div>
+          <div class="text-xs text-slate-500">Dirección/barrio + sumas PSE. <span class="kw-green">58 facturas</span> validadas. reportlab fix Python 3.9</div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-5 gap-2">
+        <div class="feat-row" style="padding:6px 8px"><div class="feat-ico" style="background:var(--sv-primary)"><i class="fas fa-bolt" style="color:#fff;font-size:12px"></i></div><div><div class="text-xs font-700 text-slate-800">Paralelizar queries</div><div class="text-xs text-slate-400">getProductByCode</div></div></div>
+        <div class="feat-row" style="padding:6px 8px"><div class="feat-ico" style="background:var(--sv-primary)"><i class="fas fa-mobile-screen" style="color:#fff;font-size:12px"></i></div><div><div class="text-xs font-700 text-slate-800">Crash Android 16</div><div class="text-xs text-slate-400">RNFS Promise</div></div></div>
+        <div class="feat-row" style="padding:6px 8px"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-teal) 12%, white)"><i class="fas fa-basket-shopping" style="color:var(--sv-teal);font-size:12px"></i></div><div><div class="text-xs font-700 text-slate-800">Minimercados ETL</div><div class="text-xs text-slate-400">Lista 10 Ábako</div></div></div>
+        <div class="feat-row" style="padding:6px 8px"><div class="feat-ico" style="background:#fef3c7"><i class="fas fa-route" style="color:#b45309;font-size:12px"></i></div><div><div class="text-xs font-700 text-slate-800">No-visita web</div><div class="text-xs text-slate-400">Botones selección</div></div></div>
+        <div class="feat-row" style="padding:6px 8px"><div class="feat-ico" style="background:#fef3c7"><i class="fas fa-calendar-days" style="color:#b45309;font-size:12px"></i></div><div><div class="text-xs font-700 text-slate-800">Banners UTC</div><div class="text-xs text-slate-400">Fecha un día adelantada</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ SLIDE 9 — NEIDER PEÑA ══════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-green">
     <div class="p-8">
@@ -407,146 +640,147 @@
             <span class="tag tag-green">Nuevo · 30 ítems · 90 pts</span>
           </div>
           <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
-            Neider Peña — 3 proyectos
+            <i class="fas fa-id-card-clip" style="color:var(--sv-secondary);font-size:26px;margin-right:8px"></i>Neider Peña — 3 proyectos
           </h2>
-          <p class="text-slate-500 text-sm mt-1">98 commits · Expediente Digital · Halloween · Crédito tenderos</p>
+          <p class="text-slate-500 text-sm mt-1">98 commits · <span class="kw-green">Expediente Digital</span> · <span class="kw-primary">Halloween</span> · <span class="kw-teal">Crédito</span> tenderos</p>
         </div>
-        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-secondary)">05</div>
+        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-secondary)">08</div>
       </div>
 
       <div class="grid grid-cols-3 gap-3 mb-4">
         <div class="rounded-xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-secondary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-secondary) 20%, white)">
+          <div style="width:40px;height:40px;border-radius:10px;background:var(--sv-secondary);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><i class="fas fa-folder-open" style="color:#fff;font-size:16px"></i></div>
           <div class="text-xl font-800" style="color:var(--sv-secondary)">24</div>
           <div class="text-xs font-700 text-slate-700">Expediente Digital</div>
           <div class="text-xs text-slate-400">67 pts · 3 sprints</div>
         </div>
         <div class="rounded-xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-primary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 20%, white)">
+          <div style="width:40px;height:40px;border-radius:10px;background:var(--sv-primary);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><i class="fas fa-ghost" style="color:#fff;font-size:16px"></i></div>
           <div class="text-xl font-800" style="color:var(--sv-primary)">4</div>
-          <div class="text-xs font-700 text-slate-700">Halloween 🎃</div>
+          <div class="text-xs font-700 text-slate-700">Halloween</div>
           <div class="text-xs text-slate-400">17 pts · Retos 2 y 3</div>
         </div>
         <div class="rounded-xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-teal) 6%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 20%, white)">
+          <div style="width:40px;height:40px;border-radius:10px;background:var(--sv-teal);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><i class="fas fa-hand-holding-dollar" style="color:#fff;font-size:16px"></i></div>
           <div class="text-xl font-800" style="color:var(--sv-teal)">2</div>
           <div class="text-xs font-700 text-slate-700">Crédito Tenderos</div>
           <div class="text-xs text-slate-400">6 pts · En pausa</div>
         </div>
       </div>
 
-      <div class="grid grid-cols-2 gap-3 mb-3">
+      <div class="grid grid-cols-2 gap-3">
         <div class="space-y-1.5">
-          <div class="sec-lbl">Expediente Digital — Billetera Refrigerados</div>
-          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-database" style="color:var(--sv-secondary)"></i></div><div><div class="text-xs font-700 text-slate-800">Sprint 0 — Definición (5 HU)</div><div class="text-xs text-slate-400">MVP, contrato API v1, matriz privacidad</div></div></div>
-          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-server" style="color:var(--sv-secondary)"></i></div><div><div class="text-xs font-700 text-slate-800">Sprint 1 — Backend (6 HU)</div><div class="text-xs text-slate-400">customer_profile, datos sintéticos, auditoría</div></div></div>
-          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-laptop-code" style="color:var(--sv-secondary)"></i></div><div><div class="text-xs font-700 text-slate-800">Sprint 2 — Interfaz (13 HU)</div><div class="text-xs text-slate-400">Bloques A/B/C, mapa Leaflet, selector tiendas</div></div></div>
+          <div class="sec-lbl"><i class="fas fa-folder-open mr-1" style="color:var(--sv-secondary)"></i>Expediente Digital — Billetera Refrigerados</div>
+          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-database" style="color:var(--sv-secondary);font-size:14px"></i></div><div><div class="text-xs font-700 text-slate-800">Sprint 0 — Definición (5 HU)</div><div class="text-xs text-slate-400"><span class="kw">MVP</span>, contrato API v1, matriz privacidad</div></div></div>
+          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-server" style="color:var(--sv-secondary);font-size:14px"></i></div><div><div class="text-xs font-700 text-slate-800">Sprint 1 — Backend (6 HU)</div><div class="text-xs text-slate-400"><span class="kw-green">customer_profile</span>, datos sintéticos, auditoría</div></div></div>
+          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-laptop-code" style="color:var(--sv-secondary);font-size:14px"></i></div><div><div class="text-xs font-700 text-slate-800">Sprint 2 — Interfaz (13 HU)</div><div class="text-xs text-slate-400">Bloques A/B/C, mapa <span class="kw-green">Leaflet</span>, selector tiendas</div></div></div>
         </div>
         <div class="space-y-1.5">
-          <div class="sec-lbl">Halloween + Crédito</div>
-          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-ghost" style="color:var(--sv-primary)"></i></div><div><div class="text-xs font-700 text-slate-800">Reto 2 — Caldero (HU-42/43)</div><div class="text-xs text-slate-400">Lógica premio + pantalla app + config web</div></div></div>
-          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-camera" style="color:var(--sv-primary)"></i></div><div><div class="text-xs font-700 text-slate-800">Reto 3 — Foto aterradora (HU-44/45)</div><div class="text-xs text-slate-400">Captura → revisión → pago premio</div></div></div>
-          <div class="feat-row" style="background:color-mix(in srgb, var(--sv-primary) 4%, white);border-color:color-mix(in srgb, var(--sv-primary) 15%, white)"><div class="feat-ico" style="background:var(--sv-primary)"><i class="fas fa-shield-halved" style="color:#fff"></i></div><div><div class="text-xs font-700 text-slate-800">🐞 SD-397 Bug seguridad</div><div class="text-xs text-slate-400">Cédula en URL → ID aleatorio 8h + POST</div></div></div>
+          <div class="sec-lbl"><i class="fas fa-ghost mr-1" style="color:var(--sv-primary)"></i>Halloween + Crédito</div>
+          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-fire" style="color:var(--sv-primary);font-size:14px"></i></div><div><div class="text-xs font-700 text-slate-800">Reto 2 — Caldero (HU-42/43)</div><div class="text-xs text-slate-400">Lógica <span class="kw-primary">premio</span> + pantalla app + config web</div></div></div>
+          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-camera" style="color:var(--sv-primary);font-size:14px"></i></div><div><div class="text-xs font-700 text-slate-800">Reto 3 — Foto aterradora (HU-44/45)</div><div class="text-xs text-slate-400">Captura → revisión → pago <span class="kw-primary">premio</span></div></div></div>
+          <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-teal) 10%, white)"><i class="fas fa-pause" style="color:var(--sv-teal);font-size:14px"></i></div><div><div class="text-xs font-700 text-slate-800">Crédito tenderos (2 HU)</div><div class="text-xs text-slate-400">Onboarding crediticio · En pausa</div></div></div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ══════ SLIDE 7 — SERVIMAX CLUB ══════ -->
+<!-- ══════ SLIDE 10 — MULTI-AGENTE (Sprint 8) ══════ -->
 <div class="slide px-10 py-8">
-  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-forest">
+  <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-lime">
     <div class="p-8">
       <div class="flex items-start justify-between mb-4">
         <div>
           <div class="flex items-center gap-2 mb-2">
-            <span class="pill pill-month">Planificación</span>
-            <span class="tag tag-roadmap">Épica SD-176</span>
+            <span class="pill pill-month">Sprint 8</span>
+            <span class="tag tag-prod">✓ 4/4 · 100%</span>
           </div>
           <h2 class="text-3xl font-black leading-tight" style="color:var(--sv-text)">
-            Servimax Club — 17 US
+            <i class="fas fa-robot" style="color:#4c6b1f;font-size:28px;margin-right:8px"></i>Infraestructura Multi-Agente
           </h2>
-          <p class="text-slate-500 text-sm mt-1">Gestión de modalidad · Usuarios internos · Cuotas · B2B · B2C · Pasarela · ERP</p>
+          <p class="text-slate-500 text-sm mt-1">Wilson Pabon · <span class="kw-accent">delegate_to_agent</span> · <span class="kw-accent">RAG</span> · Gobernanza de costos</p>
         </div>
-        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-forest)">06</div>
+        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-accent)">09</div>
       </div>
 
-      <div class="grid grid-cols-5 gap-2 mb-4">
-        <div class="rounded-xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-primary) 5%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 18%, white)">
-          <div class="text-lg font-800" style="color:var(--sv-primary)">3</div>
-          <div class="text-xs font-700 text-slate-600">Central</div>
+      <div class="grid grid-cols-3 gap-4 mb-4">
+        <div class="rounded-2xl p-4 text-center" style="background:color-mix(in srgb, var(--sv-accent) 10%, white);border:1px solid color-mix(in srgb, var(--sv-accent) 25%, white)">
+          <div class="ico-lg" style="background:color-mix(in srgb, var(--sv-accent) 22%, white);margin:0 auto 8px"><i class="fas fa-arrows-split-up-and-left" style="color:#4c6b1f;font-size:18px"></i></div>
+          <div class="text-sm font-800 text-slate-800">Delegación asíncrona</div>
+          <div class="text-xs text-slate-500 mt-1"><span class="kw-accent">Ventas</span> delega a <span class="kw-accent">Facturación</span> sin bloquearse</div>
         </div>
-        <div class="rounded-xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-secondary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-secondary) 20%, white)">
-          <div class="text-lg font-800" style="color:var(--sv-secondary)">4</div>
-          <div class="text-xs font-700 text-slate-600">B2B</div>
+        <div class="rounded-2xl p-4 text-center" style="background:color-mix(in srgb, var(--sv-teal) 8%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 22%, white)">
+          <div class="ico-lg" style="background:color-mix(in srgb, var(--sv-teal) 15%, white);margin:0 auto 8px"><i class="fas fa-brain" style="color:var(--sv-teal);font-size:18px"></i></div>
+          <div class="text-sm font-800 text-slate-800">RAG en aprendizajes</div>
+          <div class="text-xs text-slate-500 mt-1">Búsqueda <span class="kw-teal">semántica</span> en <span class="kw-teal">AgentLearning</span></div>
         </div>
-        <div class="rounded-xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-teal) 6%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 20%, white)">
-          <div class="text-lg font-800" style="color:var(--sv-teal)">6</div>
-          <div class="text-xs font-700 text-slate-600">B2C</div>
-        </div>
-        <div class="rounded-xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-accent) 14%, white);border:1px solid color-mix(in srgb, var(--sv-accent) 30%, white)">
-          <div class="text-lg font-800" style="color:#4c6b1f">2</div>
-          <div class="text-xs font-700 text-slate-600">Pasarela</div>
-        </div>
-        <div class="rounded-xl p-3 text-center" style="background:color-mix(in srgb, var(--sv-forest) 8%, white);border:1px solid color-mix(in srgb, var(--sv-forest) 22%, white)">
-          <div class="text-lg font-800" style="color:var(--sv-forest)">2</div>
-          <div class="text-xs font-700 text-slate-600">ERP</div>
+        <div class="rounded-2xl p-4 text-center" style="background:color-mix(in srgb, var(--sv-primary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 18%, white)">
+          <div class="ico-lg" style="background:color-mix(in srgb, var(--sv-primary) 12%, white);margin:0 auto 8px"><i class="fas fa-gauge-high" style="color:var(--sv-primary);font-size:18px"></i></div>
+          <div class="text-sm font-800 text-slate-800">Gobernanza de costos</div>
+          <div class="text-xs text-slate-500 mt-1">Topes por <span class="kw-primary">agente</span> + alertas proactivas</div>
         </div>
       </div>
 
-      <div class="grid grid-cols-3 gap-2">
-        <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-forest) 10%, white)"><i class="fas fa-user-plus" style="color:var(--sv-forest)"></i></div><div><div class="text-xs font-700 text-slate-800">Gestión usuarios internos</div><div class="text-xs text-slate-400">Creación y admin de la modalidad Club</div></div></div>
-        <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-primary) 10%, white)"><i class="fas fa-calendar-days" style="color:var(--sv-primary)"></i></div><div><div class="text-xs font-700 text-slate-800">Plan 6 cuotas automático</div><div class="text-xs text-slate-400">US-01 · Pedido → plan diferido</div></div></div>
-        <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-teal) 12%, white)"><i class="fas fa-store" style="color:var(--sv-teal)"></i></div><div><div class="text-xs font-700 text-slate-800">Portal B2C Servimax Online</div><div class="text-xs text-slate-400">US-10 · Identidad naranja, OTP</div></div></div>
-        <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-accent) 22%, white)"><i class="fas fa-link" style="color:#4c6b1f"></i></div><div><div class="text-xs font-700 text-slate-800">Links por asesor</div><div class="text-xs text-slate-400">US-11 · Compra B2C → presupuesto</div></div></div>
-        <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-forest) 10%, white)"><i class="fas fa-shield-halved" style="color:var(--sv-forest)"></i></div><div><div class="text-xs font-700 text-slate-800">Filtro antifraude B2C</div><div class="text-xs text-slate-400">US-12 · Detectar tendero existente</div></div></div>
-        <div class="feat-row"><div class="feat-ico" style="background:color-mix(in srgb, var(--sv-secondary) 12%, white)"><i class="fas fa-receipt" style="color:var(--sv-secondary)"></i></div><div><div class="text-xs font-700 text-slate-800">Código unificado ecom + pasarela</div><div class="text-xs text-slate-400">US-15/16 · Pronto pago + multicanal</div></div></div>
+      <div class="impact impact-lime">
+        <i class="fas fa-layer-group" style="color:#4c6b1f;margin-right:6px"></i>
+        <strong style="color:#4c6b1f">Base para Isa Live.</strong>
+        <span class="text-slate-600"> Los agentes cooperan entre áreas, recuerdan sin quemar tokens y operan con topes de costo.</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ══════ SLIDE 8 — EL BIMESTRE EN NÚMEROS ══════ -->
+<!-- ══════ SLIDE 11 — EL BIMESTRE EN NÚMEROS ══════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-primary">
     <div class="p-8">
       <div class="flex items-start justify-between mb-4">
         <div>
-          <span class="pill pill-primary mb-2 inline-block">📊 El Bimestre en Números</span>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill pill-primary"><i class="fas fa-chart-column mr-1"></i>El Bimestre en Números</span>
+          </div>
           <h2 class="text-2xl font-black leading-tight" style="color:var(--sv-text)">
-            2,079 cambios · 8 semanas · 11 repos
+            <span class="kw-primary">2,079</span> cambios · <span class="kw-primary">8</span> semanas · <span class="kw-primary">18</span> repos
           </h2>
         </div>
-        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-primary)">07</div>
+        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-primary)">10</div>
       </div>
 
       <div class="mb-5">
-        <div class="sec-lbl">Commits por persona</div>
-        <div class="space-y-1.5">
+        <div class="sec-lbl"><i class="fas fa-users mr-1" style="color:var(--sv-primary)"></i>Commits por persona</div>
+        <div class="space-y-2">
           <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0" style="background:var(--sv-primary)">JC</div>
             <div class="w-28 text-xs font-600 text-slate-700 text-right">Jeferson Camero</div>
             <div class="flex-1 bg-slate-100 rounded-full h-5 overflow-hidden"><div class="cbar h-5" style="width:73%;background:linear-gradient(90deg,var(--sv-primary),#a3123f)"></div></div>
-            <div class="w-32 text-xs font-800 text-slate-600">1,523 · Lead</div>
+            <div class="w-32 text-xs font-800 text-slate-600">1,523 · <span class="kw-primary">Lead</span></div>
           </div>
           <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0" style="background:var(--sv-teal)">WP</div>
             <div class="w-28 text-xs font-600 text-slate-700 text-right">Wilson Pabon</div>
             <div class="flex-1 bg-slate-100 rounded-full h-5 overflow-hidden"><div class="cbar h-5" style="width:14.5%;background:linear-gradient(90deg,var(--sv-teal),#0a5750)"></div></div>
-            <div class="w-32 text-xs font-800 text-slate-600">302 · Isa Live</div>
+            <div class="w-32 text-xs font-800 text-slate-600">302 · <span class="kw-teal">Isa</span></div>
           </div>
           <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0" style="background:var(--sv-accent);color:#2b3a13">NP</div>
             <div class="w-28 text-xs font-600 text-slate-700 text-right">Neider Peña</div>
             <div class="flex-1 bg-slate-100 rounded-full h-5 overflow-hidden"><div class="cbar h-5" style="width:4.7%;background:linear-gradient(90deg,var(--sv-accent),#7a9a2e);min-width:12px"></div></div>
             <div class="w-32 text-xs font-800 text-slate-600">98 <span class="tag tag-green" style="font-size:8px;padding:0 5px">Nuevo</span></div>
           </div>
           <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0" style="background:var(--sv-secondary)">CB</div>
             <div class="w-28 text-xs font-600 text-slate-700 text-right">Cristian Becerra</div>
             <div class="flex-1 bg-slate-100 rounded-full h-5 overflow-hidden"><div class="cbar h-5" style="width:4.3%;background:linear-gradient(90deg,var(--sv-secondary),#0a7d3b);min-width:12px"></div></div>
-            <div class="w-32 text-xs font-800 text-slate-600">90 · Apps</div>
+            <div class="w-32 text-xs font-800 text-slate-600">90 · <span class="kw-green">Apps</span></div>
           </div>
         </div>
       </div>
 
       <div style="background:#f8faf6;border:1px solid #e4e9dd;border-radius:12px;padding:12px 16px;">
         <div class="flex items-center justify-between mb-2">
-          <div class="text-xs font-700 text-slate-500 uppercase tracking-wide">Cambios por semana (Sep 1 – Oct 27)</div>
-          <div class="text-xs text-slate-400">Pico: Oct 20-27 → 393</div>
+          <div class="text-xs font-700 text-slate-500 uppercase tracking-wide"><i class="fas fa-chart-bar mr-1" style="color:var(--sv-primary)"></i>Cambios por semana (Sep 1 – Oct 27)</div>
+          <div class="text-xs text-slate-400">Pico: Oct 20-27 → <span class="kw-primary">393</span></div>
         </div>
         <div style="height:170px;position:relative">
           <canvas id="chart-cambios-semana"></canvas>
@@ -556,33 +790,38 @@
   </div>
 </div>
 
-<!-- ══════ SLIDE 9 — COSTOS GCP ══════ -->
+<!-- ══════ SLIDE 12 — COSTOS GCP ══════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-teal">
     <div class="p-8">
       <div class="flex items-start justify-between mb-4">
         <div>
-          <span class="pill pill-teal mb-2 inline-block">☁️ Costos GCP — Octubre</span>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill pill-teal"><i class="fas fa-cloud mr-1"></i>Costos GCP — Octubre</span>
+          </div>
           <h2 class="text-2xl font-black leading-tight" style="color:var(--sv-text)">
-            COP $1.07M actual · sin BQ: $749K
+            COP <span class="kw-teal">$1.07M</span> actual · sin BQ: <span class="kw-green">$749K</span>
           </h2>
           <p class="text-slate-500 text-sm mt-1">Oct 1–27 · 1.51% ahorros · ▼ COP $16K vs septiembre</p>
         </div>
-        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-teal)">08</div>
+        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-teal)">11</div>
       </div>
 
       <div class="grid grid-cols-3 gap-3 mb-5">
         <div class="rounded-2xl p-4 text-center" style="background:color-mix(in srgb, var(--sv-teal) 6%, white);border:1px solid color-mix(in srgb, var(--sv-teal) 20%, white)">
+          <div style="width:38px;height:38px;border-radius:10px;background:var(--sv-teal);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><i class="fas fa-cloud" style="color:#fff;font-size:16px"></i></div>
           <div class="text-xs font-800 text-slate-500 mb-1">TOTAL ACTUAL</div>
           <div class="kpi-sm" style="color:var(--sv-teal)">$1.07M</div>
           <div class="text-xs text-slate-400 mt-1">COP · Oct 1–27</div>
         </div>
         <div class="rounded-2xl p-4 text-center" style="background:color-mix(in srgb, var(--sv-secondary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-secondary) 20%, white)">
+          <div style="width:38px;height:38px;border-radius:10px;background:var(--sv-secondary);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><i class="fas fa-server" style="color:#fff;font-size:16px"></i></div>
           <div class="text-xs font-800 text-slate-500 mb-1">SIN BIGQUERY</div>
           <div class="kpi-sm" style="color:var(--sv-secondary)">$749K</div>
           <div class="text-xs text-slate-400 mt-1">COP · infraestructura core</div>
         </div>
         <div class="rounded-2xl p-4 text-center" style="background:color-mix(in srgb, var(--sv-primary) 6%, white);border:1px solid color-mix(in srgb, var(--sv-primary) 18%, white)">
+          <div style="width:38px;height:38px;border-radius:10px;background:var(--sv-primary);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><i class="fas fa-magnifying-glass-chart" style="color:#fff;font-size:16px"></i></div>
           <div class="text-xs font-800 text-slate-500 mb-1">BIGQUERY</div>
           <div class="kpi-sm" style="color:var(--sv-primary)">$320K</div>
           <div class="text-xs text-slate-400 mt-1">COP · ▲18% vs sep · uso elevado</div>
@@ -590,7 +829,7 @@
       </div>
 
       <div style="background:#f8faf6;border:1px solid #e4e9dd;border-radius:12px;padding:12px 16px;">
-        <div class="text-xs font-700 text-slate-500 uppercase tracking-wide mb-2">Costo por servicio (COP) — Oct 1-27</div>
+        <div class="text-xs font-700 text-slate-500 uppercase tracking-wide mb-2"><i class="fas fa-chart-bar mr-1" style="color:var(--sv-teal)"></i>Costo por servicio (COP) — Oct 1-27</div>
         <div style="height:200px;position:relative">
           <canvas id="chart-costos-servicio"></canvas>
         </div>
@@ -599,55 +838,57 @@
   </div>
 </div>
 
-<!-- ══════ SLIDE 10 — ROADMAP ══════ -->
+<!-- ══════ SLIDE 13 — ROADMAP ══════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden accent-lime">
     <div class="p-8">
       <div class="flex items-start justify-between mb-4">
         <div>
-          <span class="pill pill-lime mb-2 inline-block">🚀 Lo que sigue</span>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill pill-lime"><i class="fas fa-rocket mr-1"></i>Lo que sigue</span>
+          </div>
           <h2 class="text-2xl font-black leading-tight" style="color:var(--sv-text)">
-            Noviembre: Isa a producción + Servimax Club
+            Noviembre: <span class="kw-teal">Isa</span> a producción + <span class="kw-forest">Club</span> épicas
           </h2>
         </div>
-        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-accent)">09</div>
+        <div class="text-6xl opacity-10 font-black" style="color:var(--sv-accent)">12</div>
       </div>
 
-      <div class="sec-lbl">Bloqueantes para producción</div>
+      <div class="sec-lbl"><i class="fas fa-triangle-exclamation mr-1" style="color:var(--sv-primary)"></i>Bloqueantes para producción</div>
       <div class="space-y-1.5 mb-4">
         <div class="feat-row" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border-color:color-mix(in srgb, var(--sv-teal) 18%, white)">
-          <div class="feat-ico" style="background:var(--sv-teal)"><i class="fab fa-whatsapp" style="color:#fff"></i></div>
-          <div style="flex:1"><div class="text-xs font-700 text-slate-800">Plantilla OTP en Meta Business Manager</div></div>
+          <div class="feat-ico" style="background:var(--sv-teal)"><i class="fab fa-whatsapp" style="color:#fff;font-size:16px"></i></div>
+          <div style="flex:1"><div class="text-xs font-700 text-slate-800">Plantilla <span class="kw-teal">OTP</span> en <span class="kw-teal">Meta Business Manager</span></div></div>
           <span class="tag tag-roadmap" style="flex-shrink:0;font-size:9px">Bloqueante</span>
         </div>
         <div class="feat-row" style="background:color-mix(in srgb, var(--sv-teal) 5%, white);border-color:color-mix(in srgb, var(--sv-teal) 18%, white)">
-          <div class="feat-ico" style="background:var(--sv-teal)"><i class="fas fa-credit-card" style="color:#fff"></i></div>
-          <div style="flex:1"><div class="text-xs font-700 text-slate-800">Prueba compra real Wompi + contabilidad</div></div>
+          <div class="feat-ico" style="background:var(--sv-teal)"><i class="fas fa-credit-card" style="color:#fff;font-size:14px"></i></div>
+          <div style="flex:1"><div class="text-xs font-700 text-slate-800">Prueba compra real <span class="kw-teal">Wompi</span> + contabilidad</div></div>
           <span class="tag tag-roadmap" style="flex-shrink:0;font-size:9px">Bloqueante</span>
         </div>
       </div>
 
-      <div class="sec-lbl">Pendientes del bimestre</div>
+      <div class="sec-lbl"><i class="fas fa-hourglass-half mr-1" style="color:#8a9a89"></i>Pendientes del bimestre</div>
       <div class="grid grid-cols-2 gap-1.5 mb-4">
-        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:var(--sv-primary);width:24px;height:24px"><i class="fas fa-image" style="color:#fff;font-size:10px"></i></div><div><div class="text-xs font-700 text-slate-800">SD-251 · Bug imágenes portal</div><div class="text-xs text-slate-400">3 servicios con librería defectuosa</div></div></div>
-        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:#c9d4c4;width:24px;height:24px"><i class="fas fa-magnifying-glass" style="color:#5b7362;font-size:10px"></i></div><div><div class="text-xs font-700 text-slate-800">SD-121 · Estudio competencia</div><div class="text-xs text-slate-400">Benchmark Rappi/Cornershop</div></div></div>
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:var(--sv-primary)"><i class="fas fa-image" style="color:#fff;font-size:13px"></i></div><div><div class="text-xs font-700 text-slate-800">SD-251 · Bug <span class="kw-primary">imágenes</span> portal</div><div class="text-xs text-slate-400">3 servicios con librería defectuosa</div></div></div>
+        <div class="feat-row" style="padding:6px 10px"><div class="feat-ico" style="background:#c9d4c4"><i class="fas fa-magnifying-glass" style="color:#5b7362;font-size:13px"></i></div><div><div class="text-xs font-700 text-slate-800">SD-121 · Estudio <span class="kw">competencia</span></div><div class="text-xs text-slate-400">Benchmark Rappi/Cornershop</div></div></div>
       </div>
 
-      <div class="sec-lbl">Arranca en noviembre</div>
+      <div class="sec-lbl"><i class="fas fa-flag-checkered mr-1" style="color:var(--sv-accent)"></i>Arranca en noviembre</div>
       <div class="space-y-1.5">
         <div class="feat-row" style="background:color-mix(in srgb, var(--sv-forest) 5%, white);border-color:color-mix(in srgb, var(--sv-forest) 18%, white)">
-          <div class="feat-ico" style="background:var(--sv-forest)"><i class="fas fa-tree" style="color:#fff"></i></div>
-          <div style="flex:1"><div class="text-xs font-700 text-slate-800">Servimax Club — 17 historias</div></div>
+          <div class="feat-ico" style="background:var(--sv-forest)"><i class="fas fa-store" style="color:#fff;font-size:14px"></i></div>
+          <div style="flex:1"><div class="text-xs font-700 text-slate-800"><span class="kw-forest">Servimax Club</span> — 17 épicas (B2B, B2C, pasarela, ERP)</div></div>
           <span class="tag tag-roadmap" style="flex-shrink:0;font-size:9px">Sprint 11</span>
         </div>
         <div class="feat-row" style="background:color-mix(in srgb, var(--sv-secondary) 5%, white);border-color:color-mix(in srgb, var(--sv-secondary) 18%, white)">
-          <div class="feat-ico" style="background:var(--sv-secondary)"><i class="fas fa-phone" style="color:#fff"></i></div>
-          <div style="flex:1"><div class="text-xs font-700 text-slate-800">SD-322 · Bot llamadas telefónicas Isa</div></div>
+          <div class="feat-ico" style="background:var(--sv-secondary)"><i class="fas fa-phone" style="color:#fff;font-size:14px"></i></div>
+          <div style="flex:1"><div class="text-xs font-700 text-slate-800">SD-322 · Bot <span class="kw-green">llamadas telefónicas</span> Isa</div></div>
           <span class="tag tag-roadmap" style="flex-shrink:0;font-size:9px">Épica nueva</span>
         </div>
         <div class="feat-row">
-          <div class="feat-ico" style="background:#c9d4c4"><i class="fas fa-file-lines" style="color:#5b7362"></i></div>
-          <div style="flex:1"><div class="text-xs font-700 text-slate-800">SD-293 · Automatización informes contabilidad</div></div>
+          <div class="feat-ico" style="background:#c9d4c4"><i class="fas fa-file-lines" style="color:#5b7362;font-size:14px"></i></div>
+          <div style="flex:1"><div class="text-xs font-700 text-slate-800">SD-293 · Automatización <span class="kw">informes</span> contabilidad</div></div>
           <span class="tag tag-progress" style="flex-shrink:0;font-size:9px">Sprint 10</span>
         </div>
       </div>
@@ -655,32 +896,55 @@
   </div>
 </div>
 
-<!-- ══════ SLIDE 11 — CIERRE ══════ -->
+<!-- ══════ SLIDE 14 — CIERRE ══════ -->
 <div class="slide px-10 py-8">
   <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
     <div class="h-1.5 w-full" style="background:linear-gradient(90deg,var(--sv-primary),var(--sv-secondary),var(--sv-accent),var(--sv-teal))"></div>
     <div class="p-8">
       <h2 class="text-3xl font-black leading-tight mb-5" style="color:var(--sv-text)">
-        6 frentes cerrados —<br>el equipo creció y entregó
+        <span style="color:var(--sv-primary)">10+ frentes</span> cerrados —<br>el equipo creció y entregó
       </h2>
 
       <div class="grid grid-cols-5 gap-3 mb-5">
-        <div class="text-center"><div class="kpi-sm" style="color:var(--sv-primary)">2,079</div><div class="text-xs text-slate-600 font-600 mt-1">Commits</div></div>
-        <div class="text-center"><div class="kpi-sm" style="color:var(--sv-secondary)">81+</div><div class="text-xs text-slate-600 font-600 mt-1">Tareas</div></div>
-        <div class="text-center"><div class="kpi-sm" style="color:var(--sv-teal)">$1.07M</div><div class="text-xs text-slate-600 font-600 mt-1">GCP COP</div></div>
-        <div class="text-center"><div class="kpi-sm" style="color:#4c6b1f">5</div><div class="text-xs text-slate-600 font-600 mt-1">Contribuidores</div></div>
-        <div class="text-center"><div class="kpi-sm" style="color:var(--sv-primary)">95.7%</div><div class="text-xs text-slate-600 font-600 mt-1">Avance Wilson</div></div>
+        <div class="text-center">
+          <div style="width:40px;height:40px;border-radius:10px;background:var(--sv-primary);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><i class="fas fa-code-branch" style="color:#fff;font-size:16px"></i></div>
+          <div class="kpi-sm" style="color:var(--sv-primary)">2,079</div>
+          <div class="text-xs text-slate-600 font-600 mt-1">Commits</div>
+        </div>
+        <div class="text-center">
+          <div style="width:40px;height:40px;border-radius:10px;background:var(--sv-secondary);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><i class="fas fa-clipboard-check" style="color:#fff;font-size:16px"></i></div>
+          <div class="kpi-sm" style="color:var(--sv-secondary)">100+</div>
+          <div class="text-xs text-slate-600 font-600 mt-1">Tareas</div>
+        </div>
+        <div class="text-center">
+          <div style="width:40px;height:40px;border-radius:10px;background:var(--sv-teal);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><i class="fas fa-cloud" style="color:#fff;font-size:16px"></i></div>
+          <div class="kpi-sm" style="color:var(--sv-teal)">$1.07M</div>
+          <div class="text-xs text-slate-600 font-600 mt-1">GCP COP</div>
+        </div>
+        <div class="text-center">
+          <div style="width:40px;height:40px;border-radius:10px;background:var(--sv-accent);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><i class="fab fa-github" style="color:#2b3a13;font-size:16px"></i></div>
+          <div class="kpi-sm" style="color:#4c6b1f">18</div>
+          <div class="text-xs text-slate-600 font-600 mt-1">Repos</div>
+        </div>
+        <div class="text-center">
+          <div style="width:40px;height:40px;border-radius:10px;background:var(--sv-primary);margin:0 auto 6px;display:flex;align-items:center;justify-content:center"><i class="fas fa-trophy" style="color:#fff;font-size:14px"></i></div>
+          <div class="kpi-sm" style="color:var(--sv-primary)">95.7%</div>
+          <div class="text-xs text-slate-600 font-600 mt-1">Avance Wilson</div>
+        </div>
       </div>
 
-      <div class="flex items-center gap-4 mb-5">
-        <div class="flex items-center gap-1.5"><span class="tag tag-prod">✓ S8</span><span class="text-xs text-slate-500">Multi-agente</span></div>
-        <div class="flex items-center gap-1.5"><span class="tag tag-prod">✓ S9</span><span class="text-xs text-slate-500">Isa Live 30/30</span></div>
-        <div class="flex items-center gap-1.5"><span class="tag tag-progress">S10</span><span class="text-xs text-slate-500">WhatsApp 10/12</span></div>
+      <div class="flex flex-wrap items-center gap-3 mb-5">
+        <div class="flex items-center gap-1.5"><i class="fas fa-robot" style="color:#0a7d3b;font-size:12px"></i><span class="tag tag-prod">✓ S8</span><span class="text-xs text-slate-500">Multi-agente</span></div>
+        <div class="flex items-center gap-1.5"><i class="fas fa-microphone" style="color:#0a7d3b;font-size:12px"></i><span class="tag tag-prod">✓ S9</span><span class="text-xs text-slate-500">Isa Live <span class="kw-green">30/30</span></span></div>
+        <div class="flex items-center gap-1.5"><i class="fab fa-whatsapp" style="color:var(--sv-teal);font-size:13px"></i><span class="tag tag-progress">S10</span><span class="text-xs text-slate-500">WhatsApp <span class="kw-teal">10/12</span></span></div>
+        <div class="flex items-center gap-1.5"><i class="fas fa-store" style="color:var(--sv-forest);font-size:11px"></i><span class="tag tag-prod">✓</span><span class="text-xs text-slate-500">Club portal</span></div>
+        <div class="flex items-center gap-1.5"><i class="fas fa-gift" style="color:#4c6b1f;font-size:11px"></i><span class="tag tag-prod">✓</span><span class="text-xs text-slate-500">Temporadas</span></div>
+        <div class="flex items-center gap-1.5"><i class="fas fa-file-invoice-dollar" style="color:var(--sv-primary);font-size:11px"></i><span class="tag tag-prod">✓</span><span class="text-xs text-slate-500">Contabilidad</span></div>
       </div>
 
       <div class="rounded-xl p-4" style="background:linear-gradient(135deg,color-mix(in srgb, var(--sv-accent) 14%, white),color-mix(in srgb, var(--sv-secondary) 8%, white));border:1px solid color-mix(in srgb, var(--sv-secondary) 22%, white)">
         <p class="text-slate-800 text-sm font-500 leading-relaxed">
-          Isa pasó de agente interno a asistente de voz con Gemini Live, cerró el embudo de compra en WhatsApp con Wompi, y Neider entregó el Expediente Digital completo en su primer bimestre. Siguiente parada: Servimax Club.
+          <span class="kw-green">Isa</span> pasó de agente a asistente de <span class="kw-teal">voz</span> con Gemini Live y cerró la compra en <span class="kw-teal">WhatsApp</span>. <span class="kw-forest">Servimax Club</span> ya tiene portal con pagos digitales. El motor de <span class="kw-accent">Temporadas</span> y <span class="kw-primary">Halloween</span> operan con cajitas, cashback y salas. <span class="kw-primary">Contabilidad</span> cerró el flujo de comprobantes con Siigo. <span class="kw-green">Neider</span> entregó el Expediente Digital en su primer bimestre.
         </p>
         <div class="text-xs font-700 mt-2" style="color:#0a5c2c">Servimax · Ingeniería · Sprints 8, 9 y 10</div>
       </div>
